@@ -3316,99 +3316,425 @@ Plataforma: TikTok / Reels</pre>
         </div>
       `}},
 
-      // 4 — INTERACTIVE: Instalación Windows / Mac
+      // 4 — INTERACTIVE: Instalación visual Windows / macOS
       { type: "rawhtml", data: { html: `
-        <div style='display:flex;flex-direction:column;height:100%;background:linear-gradient(135deg,#0c0805,#080a14);padding:clamp(14px,2.5vw,26px);gap:clamp(10px,1.8vw,16px);'>
-          <div>
-            <span style='font-size:clamp(.82rem,1.5vw,.98rem);font-weight:700;letter-spacing:2px;color:#d97706;text-transform:uppercase;'>Instalación paso a paso</span>
-            <h2 style='font-size:clamp(1.2rem,2.6vw,2rem);font-weight:900;color:#fff;margin-top:4px;'>Elige tu sistema operativo</h2>
-          </div>
-          <!-- OS selector -->
-          <div style='display:flex;gap:10px;'>
-            <button id='c7os-btn-windows' onclick='c7os("windows")' style='flex:1;padding:clamp(8px,1.5vw,13px);border-radius:12px;border:1.5px solid rgba(96,165,250,.3);background:rgba(96,165,250,.07);color:#93c5fd;font-size:clamp(.88rem,1.65vw,1.1rem);font-weight:700;cursor:pointer;transition:all .22s;display:flex;align-items:center;justify-content:center;gap:8px;'>🪟 Windows</button>
-            <button id='c7os-btn-mac' onclick='c7os("mac")' style='flex:1;padding:clamp(8px,1.5vw,13px);border-radius:12px;border:1.5px solid rgba(96,165,250,.3);background:rgba(96,165,250,.07);color:#93c5fd;font-size:clamp(.88rem,1.65vw,1.1rem);font-weight:700;cursor:pointer;transition:all .22s;display:flex;align-items:center;justify-content:center;gap:8px;'>🍎 Mac</button>
-          </div>
-          <!-- Default prompt -->
-          <div id='c7os-default' style='flex:1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;opacity:.35;'>
-            <div style='font-size:clamp(1.8rem,3.5vw,2.6rem);'>👆</div>
-            <div style='font-size:clamp(.68rem,1.25vw,.84rem);color:rgba(255,255,255,.6);'>Selecciona tu sistema operativo</div>
-          </div>
-          <!-- Windows panel -->
-          <div id='c7os-panel-windows' style='display:none;flex:1;flex-direction:column;gap:clamp(7px,1.3vw,11px);'>
-            <div style='display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(6px,1.1vw,10px);flex:1;'>
-              <div style='background:rgba(96,165,250,.07);border:1px solid rgba(96,165,250,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
-                <div style='width:clamp(36px,6.5vw,52px);height:clamp(36px,6.5vw,52px);border-radius:50%;background:rgba(96,165,250,.2);display:flex;align-items:center;justify-content:center;font-size:clamp(1rem,1.9vw,1.3rem);font-weight:900;color:#60a5fa;flex-shrink:0;'>1</div>
-                <div style='font-size:clamp(1.1rem,2.1vw,1.6rem);'>🌐</div>
-                <div style='font-size:clamp(.8rem,1.5vw,1rem);font-weight:700;color:#93c5fd;'>Abre el navegador</div>
-                <div style='font-size:clamp(.7rem,1.3vw,.86rem);color:rgba(255,255,255,.55);line-height:1.4;'>Ve a<br><strong style='color:#60a5fa;'>claude.ai/download</strong></div>
-              </div>
-              <div style='background:rgba(96,165,250,.07);border:1px solid rgba(96,165,250,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
-                <div style='width:clamp(28px,5vw,40px);height:clamp(28px,5vw,40px);border-radius:50%;background:rgba(96,165,250,.15);display:flex;align-items:center;justify-content:center;font-size:clamp(.8rem,1.5vw,1.1rem);font-weight:900;color:#60a5fa;flex-shrink:0;'>2</div>
-                <div style='font-size:clamp(1.1rem,2.1vw,1.6rem);'>💾</div>
-                <div style='font-size:clamp(.8rem,1.5vw,1rem);font-weight:700;color:#93c5fd;'>Descarga</div>
-                <div style='font-size:clamp(.7rem,1.3vw,.86rem);color:rgba(255,255,255,.55);line-height:1.4;'>Clic en<br><strong style='color:#60a5fa;'>"Download for Windows"</strong></div>
-              </div>
-              <div style='background:rgba(96,165,250,.07);border:1px solid rgba(96,165,250,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
-                <div style='width:clamp(28px,5vw,40px);height:clamp(28px,5vw,40px);border-radius:50%;background:rgba(96,165,250,.15);display:flex;align-items:center;justify-content:center;font-size:clamp(.8rem,1.5vw,1.1rem);font-weight:900;color:#60a5fa;flex-shrink:0;'>3</div>
-                <div style='font-size:clamp(1.1rem,2.1vw,1.6rem);'>▶️</div>
-                <div style='font-size:clamp(.8rem,1.5vw,1rem);font-weight:700;color:#93c5fd;'>Ejecuta el instalador</div>
-                <div style='font-size:clamp(.7rem,1.3vw,.86rem);color:rgba(255,255,255,.55);line-height:1.4;'>Abre el archivo<br><strong style='color:#60a5fa;'>ClaudeSetup.exe</strong></div>
-              </div>
-              <div style='background:rgba(96,165,250,.07);border:1px solid rgba(96,165,250,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
-                <div style='width:clamp(28px,5vw,40px);height:clamp(28px,5vw,40px);border-radius:50%;background:rgba(96,165,250,.15);display:flex;align-items:center;justify-content:center;font-size:clamp(.8rem,1.5vw,1.1rem);font-weight:900;color:#60a5fa;flex-shrink:0;'>4</div>
-                <div style='font-size:clamp(1.1rem,2.1vw,1.6rem);'>⚙️</div>
-                <div style='font-size:clamp(.8rem,1.5vw,1rem);font-weight:700;color:#93c5fd;'>Instala</div>
-                <div style='font-size:clamp(.7rem,1.3vw,.86rem);color:rgba(255,255,255,.55);line-height:1.4;'>Sigue el asistente:<br><strong style='color:#60a5fa;'>Next → Install</strong></div>
-              </div>
-              <div style='background:rgba(52,211,153,.07);border:1px solid rgba(52,211,153,.25);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
-                <div style='width:clamp(36px,6.5vw,52px);height:clamp(36px,6.5vw,52px);border-radius:50%;background:rgba(52,211,153,.2);display:flex;align-items:center;justify-content:center;font-size:clamp(1rem,1.9vw,1.3rem);font-weight:900;color:#34d399;flex-shrink:0;'>5</div>
-                <div style='font-size:clamp(1.1rem,2.1vw,1.6rem);'>✅</div>
-                <div style='font-size:clamp(.8rem,1.5vw,1rem);font-weight:700;color:#6ee7b7;'>Inicia sesión</div>
-                <div style='font-size:clamp(.7rem,1.3vw,.86rem);color:rgba(255,255,255,.55);line-height:1.4;'>Abre Claude e ingresa con tu cuenta de<br><strong style='color:#34d399;'>claude.ai</strong></div>
-              </div>
-            </div>
-            <div style='background:rgba(96,165,250,.06);border:1px solid rgba(96,165,250,.15);border-radius:10px;padding:8px 14px;font-size:clamp(.74rem,1.38vw,.9rem);color:rgba(255,255,255,.6);'>💡 <strong style='color:#93c5fd;'>Tip:</strong> Claude se añade automáticamente a la barra de tareas. Usa <strong style='color:#fff;'>Ctrl + Space</strong> o busca "Claude" en el menú inicio para abrirlo rápido.</div>
-          </div>
-          <!-- Mac panel -->
-          <div id='c7os-panel-mac' style='display:none;flex:1;flex-direction:column;gap:clamp(7px,1.3vw,11px);'>
-            <div style='display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(6px,1.1vw,10px);flex:1;'>
-              <div style='background:rgba(244,114,182,.07);border:1px solid rgba(244,114,182,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
-                <div style='width:clamp(36px,6.5vw,52px);height:clamp(36px,6.5vw,52px);border-radius:50%;background:rgba(244,114,182,.2);display:flex;align-items:center;justify-content:center;font-size:clamp(1rem,1.9vw,1.3rem);font-weight:900;color:#f472b6;flex-shrink:0;'>1</div>
-                <div style='font-size:clamp(.7rem,1.3vw,.88rem);'>🌐</div>
-                <div style='font-size:clamp(.8rem,1.5vw,1rem);font-weight:700;color:#f9a8d4;'>Abre Safari</div>
-                <div style='font-size:clamp(.48rem,.86vw,.6rem);color:rgba(255,255,255,.45);line-height:1.4;'>Ve a<br><strong style='color:#f472b6;'>claude.ai/download</strong></div>
-              </div>
-              <div style='background:rgba(244,114,182,.07);border:1px solid rgba(244,114,182,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
-                <div style='width:clamp(28px,5vw,40px);height:clamp(28px,5vw,40px);border-radius:50%;background:rgba(244,114,182,.15);display:flex;align-items:center;justify-content:center;font-size:clamp(.8rem,1.5vw,1.1rem);font-weight:900;color:#f472b6;flex-shrink:0;'>2</div>
-                <div style='font-size:clamp(.7rem,1.3vw,.88rem);'>💾</div>
-                <div style='font-size:clamp(.8rem,1.5vw,1rem);font-weight:700;color:#f9a8d4;'>Descarga</div>
-                <div style='font-size:clamp(.7rem,1.3vw,.86rem);color:rgba(255,255,255,.55);line-height:1.4;'>Clic en<br><strong style='color:#f472b6;'>"Download for Mac"</strong></div>
-              </div>
-              <div style='background:rgba(244,114,182,.07);border:1px solid rgba(244,114,182,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
-                <div style='width:clamp(28px,5vw,40px);height:clamp(28px,5vw,40px);border-radius:50%;background:rgba(244,114,182,.15);display:flex;align-items:center;justify-content:center;font-size:clamp(.8rem,1.5vw,1.1rem);font-weight:900;color:#f472b6;flex-shrink:0;'>3</div>
-                <div style='font-size:clamp(1.1rem,2.1vw,1.6rem);'>📦</div>
-                <div style='font-size:clamp(.8rem,1.5vw,1rem);font-weight:700;color:#f9a8d4;'>Abre el .dmg</div>
-                <div style='font-size:clamp(.7rem,1.3vw,.86rem);color:rgba(255,255,255,.55);line-height:1.4;'>Doble clic en<br><strong style='color:#f472b6;'>Claude.dmg</strong></div>
-              </div>
-              <div style='background:rgba(244,114,182,.07);border:1px solid rgba(244,114,182,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
-                <div style='width:clamp(28px,5vw,40px);height:clamp(28px,5vw,40px);border-radius:50%;background:rgba(244,114,182,.15);display:flex;align-items:center;justify-content:center;font-size:clamp(.8rem,1.5vw,1.1rem);font-weight:900;color:#f472b6;flex-shrink:0;'>4</div>
-                <div style='font-size:clamp(1.1rem,2.1vw,1.6rem);'>📁</div>
-                <div style='font-size:clamp(.8rem,1.5vw,1rem);font-weight:700;color:#f9a8d4;'>Arrastra a Apps</div>
-                <div style='font-size:clamp(.7rem,1.3vw,.86rem);color:rgba(255,255,255,.55);line-height:1.4;'>Mueve Claude a la carpeta<br><strong style='color:#f472b6;'>Applications</strong> 📂</div>
-              </div>
-              <div style='background:rgba(52,211,153,.07);border:1px solid rgba(52,211,153,.25);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
-                <div style='width:clamp(28px,5vw,40px);height:clamp(28px,5vw,40px);border-radius:50%;background:rgba(52,211,153,.15);display:flex;align-items:center;justify-content:center;font-size:clamp(.8rem,1.5vw,1.1rem);font-weight:900;color:#34d399;flex-shrink:0;'>5</div>
-                <div style='font-size:clamp(.7rem,1.3vw,.88rem);'>✅</div>
-                <div style='font-size:clamp(.58rem,1.06vw,.7rem);font-weight:700;color:#6ee7b7;'>Inicia sesión</div>
-                <div style='font-size:clamp(.7rem,1.3vw,.86rem);color:rgba(255,255,255,.55);line-height:1.4;'>Abre Claude desde<br><strong style='color:#34d399;'>Launchpad</strong> e ingresa</div>
-              </div>
-            </div>
-            <div style='background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.15);border-radius:10px;padding:8px 14px;font-size:clamp(.74rem,1.38vw,.9rem);color:rgba(255,255,255,.6);'>💡 <strong style='color:#f9a8d4;'>Tip:</strong> Fija Claude en el Dock para acceder más rápido. Haz clic derecho → <strong style='color:#fff;'>Opciones → Mantener en el Dock</strong>.</div>
-          </div>
+        <div style='display:flex;flex-direction:column;height:100%;background:linear-gradient(135deg,#0c0805,#080a14);padding:clamp(10px,1.8vw,18px);gap:clamp(7px,1.3vw,10px);'>
           <style>
-            .c7os-active { background:rgba(217,119,6,.22)!important; border-color:rgba(217,119,6,.55)!important; color:#fcd34d!important; }
+            @keyframes c7dl{0%{width:0}100%{width:88%}}
+            @keyframes c7dlm{0%{width:0}100%{width:95%}}
+            @keyframes c7idrag{0%,20%{transform:translateX(0);opacity:1}60%,90%{transform:translateX(clamp(38px,7vw,58px));opacity:.45}100%{transform:translateX(0);opacity:1}}
+            @keyframes c7itoast{0%{transform:translateX(130%);opacity:0}10%,80%{transform:translateX(0);opacity:1}100%{transform:translateX(130%);opacity:0}}
+            @keyframes c7ibar{0%{width:0}100%{width:100%}}
+            @keyframes c7iappear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+            .c7dl-bar{animation:c7dl 3s ease-out forwards}
+            .c7dlm-bar{animation:c7dlm 2.5s ease-out forwards}
+            .c7idrag{animation:c7idrag 2.8s ease-in-out infinite}
+            .c7itoast{animation:c7itoast 3.5s ease forwards}
+            .c7ibar{animation:c7ibar 2.5s ease-out forwards}
+            .c7iappear{animation:c7iappear .3s ease forwards}
+            .c7ios-btn{flex:1;padding:clamp(7px,1.3vw,11px);border-radius:10px;border:1.5px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);color:rgba(255,255,255,.45);font-size:clamp(.8rem,1.5vw,1rem);font-weight:700;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:7px;}
+            .c7ios-btn.c7iact{border-color:rgba(217,119,6,.6)!important;background:rgba(217,119,6,.18)!important;color:#fcd34d!important;}
+            .c7idot{width:clamp(22px,4vw,30px);height:clamp(22px,4vw,30px);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:clamp(.52rem,.96vw,.66rem);font-weight:800;cursor:pointer;transition:all .25s;flex-shrink:0;}
+            .c7idot.done{background:rgba(217,119,6,.28);color:#fcd34d;border:1.5px solid rgba(217,119,6,.5);}
+            .c7idot.active{background:#d97706;color:#fff;border:2px solid #fcd34d;box-shadow:0 0 14px rgba(217,119,6,.55);}
+            .c7idot.pending{background:rgba(255,255,255,.05);color:rgba(255,255,255,.2);border:1.5px solid rgba(255,255,255,.1);}
+            .c7inav{padding:clamp(6px,1.1vw,9px) clamp(12px,2.2vw,18px);border-radius:9px;border:1.5px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);color:rgba(255,255,255,.65);font-size:clamp(.74rem,1.38vw,.9rem);font-weight:700;cursor:pointer;transition:all .2s;}
+            .c7inav-next{background:rgba(217,119,6,.18)!important;border-color:rgba(217,119,6,.45)!important;color:#fcd34d!important;}
           </style>
-          <script>document.getElementById('c7os-default').style.display='flex';<\/script>
+
+          <!-- Header -->
+          <div style='flex-shrink:0;'>
+            <span style='font-size:clamp(.78rem,1.45vw,.94rem);font-weight:700;letter-spacing:2px;color:#d97706;text-transform:uppercase;'>Instalación en vivo</span>
+            <h2 style='font-size:clamp(1.1rem,2.4vw,1.85rem);font-weight:900;color:#fff;margin-top:3px;line-height:1.15;'>Así se ve en tu pantalla — paso a paso</h2>
+          </div>
+
+          <!-- OS tabs -->
+          <div style='display:flex;gap:10px;flex-shrink:0;'>
+            <button id='c7ib-win' class='c7ios-btn' onclick='c7install("win",1)'>🪟 Windows</button>
+            <button id='c7ib-mac' class='c7ios-btn' onclick='c7install("mac",1)'>🍎 macOS</button>
+          </div>
+
+          <!-- Default -->
+          <div id='c7idef' style='flex:1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;opacity:.38;'>
+            <div style='font-size:clamp(2rem,4vw,3rem);'>💻</div>
+            <div style='font-size:clamp(.78rem,1.45vw,.94rem);color:rgba(255,255,255,.55);'>Selecciona tu sistema operativo</div>
+          </div>
+
+          <!-- ══ WINDOWS ══ -->
+          <div id='c7ic-win' style='display:none;flex:1;flex-direction:column;gap:clamp(6px,1.1vw,9px);min-height:0;' data-step='1'>
+            <!-- Dots progress -->
+            <div style='display:flex;align-items:center;gap:6px;flex-shrink:0;'>
+              <div id='c7id-win-1' class='c7idot active' onclick='c7install("win",1)'>1</div>
+              <div style='flex:1;height:2px;background:rgba(255,255,255,.08);border-radius:1px;'><div id='c7ip-win-12' style='height:100%;width:0%;background:#d97706;border-radius:1px;transition:width .4s;'></div></div>
+              <div id='c7id-win-2' class='c7idot pending' onclick='c7install("win",2)'>2</div>
+              <div style='flex:1;height:2px;background:rgba(255,255,255,.08);border-radius:1px;'><div id='c7ip-win-23' style='height:100%;width:0%;background:#d97706;border-radius:1px;transition:width .4s;'></div></div>
+              <div id='c7id-win-3' class='c7idot pending' onclick='c7install("win",3)'>3</div>
+              <div style='flex:1;height:2px;background:rgba(255,255,255,.08);border-radius:1px;'><div id='c7ip-win-34' style='height:100%;width:0%;background:#d97706;border-radius:1px;transition:width .4s;'></div></div>
+              <div id='c7id-win-4' class='c7idot pending' onclick='c7install("win",4)'>4</div>
+              <div style='flex:1;height:2px;background:rgba(255,255,255,.08);border-radius:1px;'><div id='c7ip-win-45' style='height:100%;width:0%;background:#d97706;border-radius:1px;transition:width .4s;'></div></div>
+              <div id='c7id-win-5' class='c7idot pending' onclick='c7install("win",5)'>✓</div>
+            </div>
+            <!-- Screen -->
+            <div style='flex:1;position:relative;min-height:0;border-radius:10px;overflow:hidden;box-shadow:0 4px 30px rgba(0,0,0,.5);'>
+
+              <!-- Win 1: Chrome → claude.ai/download -->
+              <div id='c7is-win-1' class='c7iappear' style='position:absolute;inset:0;display:flex;flex-direction:column;background:#202020;font-family:Segoe UI,sans-serif;'>
+                <div style='background:#323232;padding:clamp(5px,.9vw,7px) 10px;display:flex;align-items:center;gap:7px;flex-shrink:0;border-bottom:1px solid rgba(0,0,0,.3);'>
+                  <div style='display:flex;gap:4px;'><div style='width:10px;height:10px;border-radius:50%;background:#4a4a4a;'></div><div style='width:10px;height:10px;border-radius:50%;background:#4a4a4a;'></div><div style='width:10px;height:10px;border-radius:50%;background:#4a4a4a;'></div></div>
+                  <div style='background:#292929;border-radius:5px 5px 0 0;padding:3px 12px;font-size:clamp(.46rem,.85vw,.58rem);color:rgba(255,255,255,.6);display:flex;align-items:center;gap:4px;flex-shrink:0;'>
+                    <div style='width:12px;height:12px;border-radius:2px;background:linear-gradient(135deg,#d97706,#92400e);display:flex;align-items:center;justify-content:center;font-size:8px;flex-shrink:0;'>🤖</div>
+                    Claude — Download
+                  </div>
+                  <div style='flex:1;background:rgba(255,255,255,.07);border-radius:18px;padding:3px 10px;font-size:clamp(.46rem,.85vw,.58rem);color:rgba(255,255,255,.45);display:flex;align-items:center;gap:4px;'>
+                    <span style='color:#34d399;'>🔒</span> claude.ai/download
+                  </div>
+                  <div style='display:flex;gap:6px;margin-left:4px;'>
+                    <div style='width:clamp(16px,2.8vw,22px);height:clamp(16px,2.8vw,22px);border-radius:3px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;font-size:clamp(.6rem,1.1vw,.8rem);color:rgba(255,255,255,.4);'>—</div>
+                    <div style='width:clamp(16px,2.8vw,22px);height:clamp(16px,2.8vw,22px);border-radius:3px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;font-size:clamp(.6rem,1.1vw,.8rem);color:rgba(255,255,255,.4);'>⤢</div>
+                    <div style='width:clamp(16px,2.8vw,22px);height:clamp(16px,2.8vw,22px);border-radius:3px;background:rgba(200,16,16,.7);display:flex;align-items:center;justify-content:center;font-size:clamp(.6rem,1.1vw,.8rem);color:#fff;'>✕</div>
+                  </div>
+                </div>
+                <div style='flex:1;background:#0c0a05;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:clamp(8px,1.5vw,14px);padding:clamp(10px,2vw,18px);'>
+                  <div style='width:clamp(48px,8.5vw,68px);height:clamp(48px,8.5vw,68px);border-radius:clamp(12px,2.2vw,17px);background:linear-gradient(135deg,#d97706,#92400e);display:flex;align-items:center;justify-content:center;font-size:clamp(1.4rem,2.6vw,2rem);box-shadow:0 0 35px rgba(217,119,6,.45);'>🤖</div>
+                  <div style='text-align:center;'>
+                    <div style='font-size:clamp(.82rem,1.52vw,1rem);font-weight:800;color:#fff;'>Claude Desktop</div>
+                    <div style='font-size:clamp(.56rem,1.02vw,.7rem);color:rgba(255,255,255,.4);margin-top:3px;'>Tu IA instalada en tu computadora</div>
+                  </div>
+                  <div style='background:linear-gradient(135deg,#d97706,#92400e);color:#fff;border:none;border-radius:8px;padding:clamp(8px,1.5vw,12px) clamp(18px,3.5vw,28px);font-size:clamp(.7rem,1.3vw,.86rem);font-weight:700;box-shadow:0 4px 18px rgba(217,119,6,.45);display:flex;align-items:center;gap:8px;'>⬇ Download for Windows</div>
+                  <div style='font-size:clamp(.5rem,.9vw,.62rem);color:rgba(255,255,255,.28);'>Windows 10 / 11 &nbsp;·&nbsp; 64-bit &nbsp;·&nbsp; 89 MB</div>
+                </div>
+              </div>
+
+              <!-- Win 2: Chrome download bar -->
+              <div id='c7is-win-2' style='position:absolute;inset:0;display:none;flex-direction:column;background:#202020;font-family:Segoe UI,sans-serif;'>
+                <div style='background:#323232;padding:clamp(5px,.9vw,7px) 10px;display:flex;align-items:center;gap:7px;flex-shrink:0;border-bottom:1px solid rgba(0,0,0,.3);'>
+                  <div style='display:flex;gap:4px;'><div style='width:10px;height:10px;border-radius:50%;background:#4a4a4a;'></div><div style='width:10px;height:10px;border-radius:50%;background:#4a4a4a;'></div><div style='width:10px;height:10px;border-radius:50%;background:#4a4a4a;'></div></div>
+                  <div style='background:#292929;border-radius:5px 5px 0 0;padding:3px 12px;font-size:clamp(.46rem,.85vw,.58rem);color:rgba(255,255,255,.6);display:flex;align-items:center;gap:4px;flex-shrink:0;'>
+                    <div style='width:12px;height:12px;border-radius:2px;background:linear-gradient(135deg,#d97706,#92400e);display:flex;align-items:center;justify-content:center;font-size:8px;'>🤖</div>
+                    Claude — Download
+                  </div>
+                  <div style='flex:1;background:rgba(255,255,255,.07);border-radius:18px;padding:3px 10px;font-size:clamp(.46rem,.85vw,.58rem);color:rgba(255,255,255,.45);display:flex;align-items:center;gap:4px;'><span style='color:#34d399;'>🔒</span> claude.ai/download</div>
+                </div>
+                <div style='flex:1;background:#0c0a05;display:flex;align-items:center;justify-content:center;padding:20px;'>
+                  <div style='font-size:clamp(.6rem,1.1vw,.74rem);color:rgba(255,255,255,.25);'>Descargando ClaudeSetup.exe...</div>
+                </div>
+                <!-- Chrome download shelf -->
+                <div style='background:#2a2a2a;border-top:1px solid rgba(255,255,255,.07);padding:clamp(6px,1.1vw,10px) 12px;display:flex;align-items:center;gap:10px;flex-shrink:0;'>
+                  <div style='width:clamp(30px,5.5vw,42px);height:clamp(30px,5.5vw,42px);border-radius:7px;background:rgba(217,119,6,.12);border:1px solid rgba(217,119,6,.25);display:flex;align-items:center;justify-content:center;font-size:clamp(.9rem,1.7vw,1.3rem);flex-shrink:0;'>📄</div>
+                  <div style='flex:1;min-width:0;'>
+                    <div style='display:flex;justify-content:space-between;margin-bottom:4px;'>
+                      <span style='font-size:clamp(.58rem,1.06vw,.72rem);color:#fff;font-weight:600;'>ClaudeSetup.exe</span>
+                      <span style='font-size:clamp(.5rem,.9vw,.62rem);color:rgba(255,255,255,.35);'>76.4 / 89 MB</span>
+                    </div>
+                    <div style='height:clamp(5px,.9vw,8px);background:rgba(255,255,255,.1);border-radius:4px;overflow:hidden;'>
+                      <div class='c7dl-bar' style='height:100%;background:linear-gradient(90deg,#0078d4,#00b4d8);border-radius:4px;'></div>
+                    </div>
+                  </div>
+                  <div style='font-size:clamp(.48rem,.86vw,.6rem);color:rgba(255,255,255,.3);flex-shrink:0;padding:0 4px;'>⋮</div>
+                </div>
+              </div>
+
+              <!-- Win 3: UAC dialog -->
+              <div id='c7is-win-3' style='position:absolute;inset:0;display:none;flex-direction:column;background:#141414;font-family:Segoe UI,sans-serif;'>
+                <!-- Fake blurred desktop behind -->
+                <div style='position:absolute;inset:0;background:linear-gradient(160deg,#1a2a3a,#0a1520);opacity:.7;'></div>
+                <!-- Fake taskbar -->
+                <div style='position:absolute;bottom:0;left:0;right:0;height:clamp(32px,5.8vw,46px);background:#1c1c1c;border-top:1px solid rgba(255,255,255,.05);display:flex;align-items:center;padding:0 10px;gap:8px;z-index:1;'>
+                  <div style='font-size:clamp(.9rem,1.7vw,1.3rem);'>🪟</div>
+                  <div style='width:1px;height:55%;background:rgba(255,255,255,.1);'></div>
+                  <div style='font-size:clamp(.48rem,.88vw,.6rem);color:rgba(255,255,255,.4);background:rgba(255,255,255,.05);border-radius:3px;padding:2px 7px;'>🔍 Buscar</div>
+                  <div style='margin-left:auto;font-size:clamp(.44rem,.8vw,.56rem);color:rgba(255,255,255,.35);'>14:32 &nbsp; 11/06/26</div>
+                </div>
+                <!-- Dim overlay + UAC -->
+                <div style='position:absolute;inset:0;background:rgba(0,0,0,.68);display:flex;align-items:center;justify-content:center;z-index:2;'>
+                  <div style='background:#fff;border-radius:3px;overflow:hidden;width:clamp(220px,40vw,310px);box-shadow:0 10px 50px rgba(0,0,0,.7);'>
+                    <!-- UAC blue header -->
+                    <div style='background:#005a9e;padding:clamp(10px,1.8vw,15px) clamp(14px,2.5vw,20px);display:flex;align-items:flex-start;gap:12px;'>
+                      <div style='font-size:clamp(1.3rem,2.4vw,1.8rem);flex-shrink:0;'>🛡️</div>
+                      <div>
+                        <div style='font-size:clamp(.62rem,1.15vw,.78rem);font-weight:600;color:#fff;line-height:1.35;'>¿Deseas permitir que esta app haga cambios en tu dispositivo?</div>
+                        <div style='font-size:clamp(.48rem,.88vw,.6rem);color:rgba(255,255,255,.65);margin-top:3px;'>Control de cuentas de usuario</div>
+                      </div>
+                    </div>
+                    <!-- Body -->
+                    <div style='padding:clamp(10px,1.8vw,15px) clamp(14px,2.5vw,20px);background:#f0f0f0;'>
+                      <div style='display:flex;gap:10px;align-items:center;margin-bottom:12px;background:#fff;border:1px solid #ddd;border-radius:3px;padding:8px 10px;'>
+                        <div style='width:clamp(26px,4.8vw,36px);height:clamp(26px,4.8vw,36px);border-radius:6px;background:linear-gradient(135deg,#d97706,#92400e);display:flex;align-items:center;justify-content:center;font-size:clamp(.85rem,1.6vw,1.2rem);flex-shrink:0;'>🤖</div>
+                        <div>
+                          <div style='font-size:clamp(.6rem,1.1vw,.72rem);font-weight:700;color:#000;'>Claude Setup</div>
+                          <div style='font-size:clamp(.48rem,.88vw,.58rem);color:#555;'>Anthropic PBC &nbsp;·&nbsp; ✓ Verificado</div>
+                        </div>
+                      </div>
+                      <div style='display:flex;gap:8px;justify-content:flex-end;'>
+                        <button style='background:#e0e0e0;border:1px solid #bbb;border-radius:2px;padding:clamp(4px,.7vw,6px) clamp(12px,2.2vw,18px);font-size:clamp(.58rem,1.06vw,.7rem);cursor:pointer;color:#333;font-family:Segoe UI,sans-serif;'>No</button>
+                        <button style='background:#0078d4;border:none;border-radius:2px;padding:clamp(4px,.7vw,6px) clamp(12px,2.2vw,18px);font-size:clamp(.58rem,1.06vw,.7rem);cursor:pointer;color:#fff;font-weight:600;font-family:Segoe UI,sans-serif;'>Sí</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Win 4: Installer wizard -->
+              <div id='c7is-win-4' style='position:absolute;inset:0;display:none;flex-direction:column;background:#1a1a1a;font-family:Segoe UI,sans-serif;align-items:center;justify-content:center;'>
+                <div style='background:#fff;border-radius:3px;overflow:hidden;width:clamp(240px,45vw,360px);box-shadow:0 10px 50px rgba(0,0,0,.65);'>
+                  <!-- Title bar -->
+                  <div style='background:#1f1f1f;padding:6px 10px;display:flex;align-items:center;justify-content:space-between;'>
+                    <div style='font-size:clamp(.5rem,.92vw,.62rem);color:rgba(255,255,255,.65);display:flex;align-items:center;gap:5px;'><span>🤖</span> Instalación de Claude Desktop</div>
+                    <div style='display:flex;gap:5px;'>
+                      <div style='font-size:clamp(.5rem,.92vw,.62rem);color:rgba(255,255,255,.4);padding:0 5px;'>—</div>
+                      <div style='font-size:clamp(.5rem,.92vw,.62rem);color:#fff;padding:0 5px;background:rgba(196,16,16,.75);border-radius:2px;'>✕</div>
+                    </div>
+                  </div>
+                  <!-- Sidebar + Content -->
+                  <div style='display:flex;min-height:clamp(130px,22vw,185px);'>
+                    <div style='width:clamp(60px,10vw,82px);background:linear-gradient(180deg,#004a9a,#002d60);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;flex-shrink:0;'>
+                      <div style='font-size:clamp(1.5rem,2.8vw,2.2rem);'>🤖</div>
+                      <div style='font-size:clamp(.38rem,.68vw,.48rem);color:rgba(255,255,255,.55);text-align:center;line-height:1.4;'>Claude<br>Desktop</div>
+                    </div>
+                    <div style='flex:1;padding:clamp(12px,2.2vw,18px);display:flex;flex-direction:column;justify-content:space-between;'>
+                      <div>
+                        <div style='font-size:clamp(.68rem,1.25vw,.84rem);font-weight:700;color:#000;margin-bottom:5px;'>Instalando Claude Desktop...</div>
+                        <div style='font-size:clamp(.52rem,.94vw,.64rem);color:#555;margin-bottom:12px;line-height:1.4;'>Por favor espera mientras se completa la instalación en tu computadora.</div>
+                        <div style='height:clamp(14px,2.5vw,20px);background:#e0e0e0;border-radius:2px;overflow:hidden;'>
+                          <div class='c7ibar' style='height:100%;background:linear-gradient(90deg,#0055b3,#0078d4);'></div>
+                        </div>
+                        <div style='font-size:clamp(.46rem,.84vw,.56rem);color:#888;margin-top:4px;'>Copiando archivos del sistema...</div>
+                      </div>
+                      <div style='display:flex;justify-content:flex-end;'>
+                        <button style='background:#e8e8e8;border:1px solid #bbb;border-radius:2px;padding:clamp(4px,.7vw,6px) clamp(14px,2.5vw,22px);font-size:clamp(.56rem,1.02vw,.68rem);cursor:not-allowed;color:#999;font-family:Segoe UI,sans-serif;'>Cancelar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Win 5: Done! Desktop + taskbar + toast -->
+              <div id='c7is-win-5' style='position:absolute;inset:0;display:none;flex-direction:column;background:#1a1a1a;font-family:Segoe UI,sans-serif;'>
+                <div style='flex:1;background:linear-gradient(160deg,#001535,#002555);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;'>
+                  <!-- Desktop icon -->
+                  <div style='display:flex;flex-direction:column;align-items:center;gap:5px;'>
+                    <div style='font-size:clamp(2rem,3.8vw,3rem);filter:drop-shadow(0 0 20px rgba(217,119,6,.75));'>🤖</div>
+                    <div style='font-size:clamp(.56rem,1.02vw,.68rem);color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.9);padding:2px 8px;background:rgba(0,0,0,.35);border-radius:3px;'>Claude Desktop</div>
+                  </div>
+                  <!-- Toast notification -->
+                  <div class='c7itoast' style='position:absolute;bottom:clamp(46px,8.5vw,66px);right:clamp(8px,1.5vw,14px);background:#2c2c2c;border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:clamp(8px,1.5vw,12px);width:clamp(165px,30vw,215px);box-shadow:0 4px 24px rgba(0,0,0,.5);'>
+                    <div style='display:flex;gap:8px;align-items:flex-start;'>
+                      <div style='font-size:clamp(.9rem,1.7vw,1.3rem);flex-shrink:0;'>🤖</div>
+                      <div>
+                        <div style='font-size:clamp(.6rem,1.1vw,.74rem);font-weight:700;color:#fff;'>Claude Desktop</div>
+                        <div style='font-size:clamp(.5rem,.92vw,.62rem);color:rgba(255,255,255,.55);margin-top:2px;line-height:1.4;'>¡Instalación completada! Haz clic para abrir.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Taskbar -->
+                <div style='height:clamp(36px,6.5vw,52px);background:#1c1c1c;border-top:1px solid rgba(255,255,255,.06);display:flex;align-items:center;padding:0 10px;gap:9px;flex-shrink:0;'>
+                  <div style='font-size:clamp(.9rem,1.7vw,1.3rem);'>🪟</div>
+                  <div style='width:1px;height:55%;background:rgba(255,255,255,.1);'></div>
+                  <div style='font-size:clamp(.48rem,.88vw,.6rem);color:rgba(255,255,255,.35);background:rgba(255,255,255,.05);border-radius:3px;padding:2px 7px;'>🔍</div>
+                  <div style='display:flex;flex-direction:column;align-items:center;gap:2px;'>
+                    <div style='font-size:clamp(.9rem,1.7vw,1.3rem);filter:drop-shadow(0 0 8px rgba(217,119,6,.8));'>🤖</div>
+                    <div style='width:clamp(14px,2.5vw,20px);height:2px;background:#d97706;border-radius:1px;'></div>
+                  </div>
+                  <div style='margin-left:auto;font-size:clamp(.44rem,.8vw,.56rem);color:rgba(255,255,255,.4);'>14:35</div>
+                </div>
+              </div>
+
+            </div>
+            <!-- Nav -->
+            <div style='display:flex;align-items:center;justify-content:space-between;flex-shrink:0;'>
+              <button id='c7in-win-prev' class='c7inav' onclick='c7instNav("win",-1)' style='opacity:.25;'>← Anterior</button>
+              <div id='c7inl-win' style='font-size:clamp(.6rem,1.1vw,.74rem);color:rgba(255,255,255,.35);'>Paso 1 de 5 — Visita claude.ai</div>
+              <button id='c7in-win-next' class='c7inav c7inav-next' onclick='c7instNav("win",1)'>Siguiente →</button>
+            </div>
+          </div>
+
+          <!-- ══ MAC ══ -->
+          <div id='c7ic-mac' style='display:none;flex:1;flex-direction:column;gap:clamp(6px,1.1vw,9px);min-height:0;' data-step='1'>
+            <!-- Dots progress -->
+            <div style='display:flex;align-items:center;gap:6px;flex-shrink:0;'>
+              <div id='c7id-mac-1' class='c7idot active' onclick='c7install("mac",1)'>1</div>
+              <div style='flex:1;height:2px;background:rgba(255,255,255,.08);border-radius:1px;'><div id='c7ip-mac-12' style='height:100%;width:0%;background:#d97706;border-radius:1px;transition:width .4s;'></div></div>
+              <div id='c7id-mac-2' class='c7idot pending' onclick='c7install("mac",2)'>2</div>
+              <div style='flex:1;height:2px;background:rgba(255,255,255,.08);border-radius:1px;'><div id='c7ip-mac-23' style='height:100%;width:0%;background:#d97706;border-radius:1px;transition:width .4s;'></div></div>
+              <div id='c7id-mac-3' class='c7idot pending' onclick='c7install("mac",3)'>3</div>
+              <div style='flex:1;height:2px;background:rgba(255,255,255,.08);border-radius:1px;'><div id='c7ip-mac-34' style='height:100%;width:0%;background:#d97706;border-radius:1px;transition:width .4s;'></div></div>
+              <div id='c7id-mac-4' class='c7idot pending' onclick='c7install("mac",4)'>4</div>
+              <div style='flex:1;height:2px;background:rgba(255,255,255,.08);border-radius:1px;'><div id='c7ip-mac-45' style='height:100%;width:0%;background:#d97706;border-radius:1px;transition:width .4s;'></div></div>
+              <div id='c7id-mac-5' class='c7idot pending' onclick='c7install("mac",5)'>✓</div>
+            </div>
+            <!-- Screen -->
+            <div style='flex:1;position:relative;min-height:0;border-radius:10px;overflow:hidden;box-shadow:0 4px 30px rgba(0,0,0,.5);'>
+
+              <!-- Mac 1: Safari → claude.ai/download -->
+              <div id='c7is-mac-1' class='c7iappear' style='position:absolute;inset:0;display:flex;flex-direction:column;background:#1e1e1e;font-family:-apple-system,BlinkMacSystemFont,sans-serif;'>
+                <div style='background:rgba(48,48,48,.98);padding:clamp(5px,.9vw,8px) 10px;display:flex;align-items:center;gap:8px;flex-shrink:0;border-bottom:1px solid rgba(0,0,0,.3);'>
+                  <div style='display:flex;gap:5px;flex-shrink:0;'>
+                    <div style='width:11px;height:11px;border-radius:50%;background:#ff5f57;'></div>
+                    <div style='width:11px;height:11px;border-radius:50%;background:#febc2e;'></div>
+                    <div style='width:11px;height:11px;border-radius:50%;background:#28c840;'></div>
+                  </div>
+                  <div style='flex:1;display:flex;justify-content:center;'>
+                    <div style='background:#2d2d2d;border-radius:8px;padding:4px 14px;font-size:clamp(.46rem,.85vw,.58rem);color:rgba(255,255,255,.6);display:flex;align-items:center;gap:5px;max-width:240px;width:100%;'>
+                      <div style='width:12px;height:12px;border-radius:2px;background:linear-gradient(135deg,#d97706,#92400e);display:flex;align-items:center;justify-content:center;font-size:8px;flex-shrink:0;'>🤖</div>
+                      <span style='overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;'>claude.ai/download</span>
+                      <span style='color:rgba(255,255,255,.2);flex-shrink:0;font-size:9px;'>✕</span>
+                    </div>
+                  </div>
+                </div>
+                <div style='flex:1;background:#0c0a05;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:clamp(8px,1.5vw,14px);padding:clamp(10px,2vw,18px);'>
+                  <div style='width:clamp(48px,8.5vw,68px);height:clamp(48px,8.5vw,68px);border-radius:clamp(12px,2.2vw,17px);background:linear-gradient(135deg,#d97706,#92400e);display:flex;align-items:center;justify-content:center;font-size:clamp(1.4rem,2.6vw,2rem);box-shadow:0 0 35px rgba(217,119,6,.45);'>🤖</div>
+                  <div style='text-align:center;'>
+                    <div style='font-size:clamp(.82rem,1.52vw,1rem);font-weight:800;color:#fff;'>Claude Desktop para Mac</div>
+                    <div style='font-size:clamp(.54rem,.98vw,.68rem);color:rgba(255,255,255,.38);margin-top:3px;'>macOS 12 Monterey o superior &nbsp;·&nbsp; Apple Silicon + Intel</div>
+                  </div>
+                  <div style='background:linear-gradient(135deg,#d97706,#92400e);color:#fff;border-radius:8px;padding:clamp(8px,1.5vw,12px) clamp(18px,3.5vw,28px);font-size:clamp(.7rem,1.3vw,.86rem);font-weight:700;box-shadow:0 4px 18px rgba(217,119,6,.45);display:flex;align-items:center;gap:8px;'>⬇ Download for Mac</div>
+                </div>
+              </div>
+
+              <!-- Mac 2: Safari download HUD -->
+              <div id='c7is-mac-2' style='position:absolute;inset:0;display:none;flex-direction:column;background:#1e1e1e;font-family:-apple-system,BlinkMacSystemFont,sans-serif;'>
+                <div style='background:rgba(48,48,48,.98);padding:clamp(5px,.9vw,8px) 10px;display:flex;align-items:center;gap:8px;flex-shrink:0;border-bottom:1px solid rgba(0,0,0,.3);'>
+                  <div style='display:flex;gap:5px;flex-shrink:0;'>
+                    <div style='width:11px;height:11px;border-radius:50%;background:#ff5f57;'></div>
+                    <div style='width:11px;height:11px;border-radius:50%;background:#febc2e;'></div>
+                    <div style='width:11px;height:11px;border-radius:50%;background:#28c840;'></div>
+                  </div>
+                  <div style='flex:1;display:flex;justify-content:center;align-items:center;gap:8px;'>
+                    <div style='background:#2d2d2d;border-radius:8px;padding:4px 14px;font-size:clamp(.46rem,.85vw,.58rem);color:rgba(255,255,255,.5);display:flex;align-items:center;gap:5px;max-width:200px;width:100%;'><span>🔒</span> claude.ai/download</div>
+                    <!-- Downloads button active -->
+                    <div style='position:relative;width:clamp(22px,4vw,30px);height:clamp(22px,4vw,30px);background:rgba(0,132,255,.18);border:1px solid rgba(0,132,255,.4);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:clamp(.7rem,1.3vw,.9rem);flex-shrink:0;'>
+                      ⬇️
+                      <div style='position:absolute;top:-3px;right:-3px;width:8px;height:8px;border-radius:50%;background:#0a84ff;border:1.5px solid #1e1e1e;'></div>
+                    </div>
+                  </div>
+                </div>
+                <div style='flex:1;background:#0c0a05;display:flex;align-items:flex-start;justify-content:flex-end;padding:clamp(8px,1.5vw,12px);'>
+                  <!-- macOS Downloads popover -->
+                  <div style='background:rgba(28,28,30,.96);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:clamp(10px,1.8vw,14px);width:clamp(185px,33vw,245px);box-shadow:0 8px 32px rgba(0,0,0,.6);'>
+                    <div style='font-size:clamp(.62rem,1.15vw,.78rem);font-weight:600;color:#fff;margin-bottom:10px;'>Descargas</div>
+                    <div style='display:flex;align-items:center;gap:10px;'>
+                      <div style='font-size:clamp(1.2rem,2.2vw,1.7rem);flex-shrink:0;'>💿</div>
+                      <div style='flex:1;min-width:0;'>
+                        <div style='font-size:clamp(.58rem,1.06vw,.72rem);color:#fff;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;'>Claude.dmg</div>
+                        <div style='height:clamp(4px,.72vw,6px);background:rgba(255,255,255,.1);border-radius:3px;overflow:hidden;margin-top:4px;'>
+                          <div class='c7dlm-bar' style='height:100%;background:#0a84ff;border-radius:3px;'></div>
+                        </div>
+                        <div style='font-size:clamp(.44rem,.8vw,.56rem);color:rgba(255,255,255,.38);margin-top:3px;'>87.4 MB / 91 MB</div>
+                      </div>
+                    </div>
+                    <div style='height:1px;background:rgba(255,255,255,.07);margin:10px 0;'></div>
+                    <div style='font-size:clamp(.54rem,.98vw,.66rem);color:#0a84ff;text-align:center;cursor:pointer;'>Abrir carpeta de Descargas</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mac 3: Finder DMG drag animation -->
+              <div id='c7is-mac-3' style='position:absolute;inset:0;display:none;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,sans-serif;'>
+                <!-- Finder title bar -->
+                <div style='background:rgba(58,58,58,.98);padding:clamp(5px,.9vw,8px) 10px;display:flex;align-items:center;flex-shrink:0;border-bottom:1px solid rgba(0,0,0,.3);'>
+                  <div style='display:flex;gap:5px;flex-shrink:0;margin-right:12px;'>
+                    <div style='width:11px;height:11px;border-radius:50%;background:#ff5f57;'></div>
+                    <div style='width:11px;height:11px;border-radius:50%;background:#febc2e;'></div>
+                    <div style='width:11px;height:11px;border-radius:50%;background:#28c840;'></div>
+                  </div>
+                  <div style='flex:1;text-align:center;font-size:clamp(.54rem,.98vw,.68rem);color:rgba(255,255,255,.5);'>Claude 1.0 — Imagen de disco</div>
+                </div>
+                <!-- DMG content -->
+                <div style='flex:1;background:rgba(235,235,240,.96);display:flex;align-items:center;justify-content:center;gap:clamp(18px,3.5vw,36px);padding:clamp(12px,2.2vw,20px);position:relative;'>
+                  <!-- Watermark arrow -->
+                  <div style='position:absolute;font-size:clamp(3rem,5.5vw,4.5rem);color:rgba(0,0,0,.05);pointer-events:none;'>→</div>
+                  <!-- Claude app icon (animated drag) -->
+                  <div class='c7idrag' style='display:flex;flex-direction:column;align-items:center;gap:6px;cursor:grabbing;z-index:1;'>
+                    <div style='width:clamp(55px,10vw,80px);height:clamp(55px,10vw,80px);border-radius:clamp(13px,2.4vw,18px);background:linear-gradient(135deg,#d97706,#92400e);display:flex;align-items:center;justify-content:center;font-size:clamp(1.6rem,3vw,2.3rem);box-shadow:0 6px 20px rgba(217,119,6,.4);'>🤖</div>
+                    <div style='font-size:clamp(.58rem,1.06vw,.72rem);color:#000;font-weight:500;'>Claude</div>
+                  </div>
+                  <!-- Arrow -->
+                  <div style='font-size:clamp(1.6rem,3.2vw,2.5rem);color:#aaa;flex-shrink:0;z-index:1;'>→</div>
+                  <!-- Applications folder -->
+                  <div style='display:flex;flex-direction:column;align-items:center;gap:6px;z-index:1;'>
+                    <div style='width:clamp(55px,10vw,80px);height:clamp(55px,10vw,80px);border-radius:clamp(13px,2.4vw,18px);background:linear-gradient(135deg,#5b9ede,#3a7bc8);display:flex;align-items:center;justify-content:center;font-size:clamp(1.6rem,3vw,2.3rem);box-shadow:0 4px 14px rgba(74,144,226,.3);'>📁</div>
+                    <div style='font-size:clamp(.58rem,1.06vw,.72rem);color:#000;font-weight:500;'>Applications</div>
+                  </div>
+                  <!-- Tip label -->
+                  <div style='position:absolute;bottom:clamp(7px,1.3vw,11px);left:50%;transform:translateX(-50%);font-size:clamp(.54rem,.98vw,.66rem);color:rgba(0,0,0,.4);background:rgba(0,0,0,.07);border-radius:20px;padding:3px 12px;white-space:nowrap;'>Arrastra Claude hacia la carpeta Applications</div>
+                </div>
+              </div>
+
+              <!-- Mac 4: Applications folder (Claude highlighted) -->
+              <div id='c7is-mac-4' style='position:absolute;inset:0;display:none;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,sans-serif;'>
+                <div style='background:rgba(48,48,48,.98);padding:clamp(5px,.9vw,8px) 10px;display:flex;align-items:center;flex-shrink:0;border-bottom:1px solid rgba(0,0,0,.3);'>
+                  <div style='display:flex;gap:5px;flex-shrink:0;margin-right:12px;'><div style='width:11px;height:11px;border-radius:50%;background:#ff5f57;'></div><div style='width:11px;height:11px;border-radius:50%;background:#febc2e;'></div><div style='width:11px;height:11px;border-radius:50%;background:#28c840;'></div></div>
+                  <div style='flex:1;text-align:center;font-size:clamp(.54rem,.98vw,.68rem);color:rgba(255,255,255,.5);'>Applications</div>
+                </div>
+                <div style='flex:1;background:#f0f0f5;display:flex;flex-wrap:wrap;gap:clamp(10px,1.8vw,16px);padding:clamp(12px,2.2vw,18px);align-content:flex-start;'>
+                  <div style='display:flex;flex-direction:column;align-items:center;gap:4px;opacity:.4;'><div style='width:clamp(40px,7.3vw,58px);height:clamp(40px,7.3vw,58px);border-radius:clamp(10px,1.8vw,14px);background:linear-gradient(135deg,#5b9ede,#3a7bc8);display:flex;align-items:center;justify-content:center;font-size:clamp(1.1rem,2vw,1.6rem);'>🌐</div><div style='font-size:clamp(.44rem,.8vw,.56rem);color:#333;'>Safari</div></div>
+                  <div style='display:flex;flex-direction:column;align-items:center;gap:4px;opacity:.4;'><div style='width:clamp(40px,7.3vw,58px);height:clamp(40px,7.3vw,58px);border-radius:clamp(10px,1.8vw,14px);background:linear-gradient(135deg,#34d399,#059669);display:flex;align-items:center;justify-content:center;font-size:clamp(1.1rem,2vw,1.6rem);'>📝</div><div style='font-size:clamp(.44rem,.8vw,.56rem);color:#333;'>Notes</div></div>
+                  <div style='display:flex;flex-direction:column;align-items:center;gap:4px;opacity:.4;'><div style='width:clamp(40px,7.3vw,58px);height:clamp(40px,7.3vw,58px);border-radius:clamp(10px,1.8vw,14px);background:linear-gradient(135deg,#f59e0b,#d97706);display:flex;align-items:center;justify-content:center;font-size:clamp(1.1rem,2vw,1.6rem);'>🎵</div><div style='font-size:clamp(.44rem,.8vw,.56rem);color:#333;'>Music</div></div>
+                  <!-- Claude highlighted -->
+                  <div style='display:flex;flex-direction:column;align-items:center;gap:4px;'>
+                    <div style='width:clamp(40px,7.3vw,58px);height:clamp(40px,7.3vw,58px);border-radius:clamp(10px,1.8vw,14px);background:linear-gradient(135deg,#d97706,#92400e);display:flex;align-items:center;justify-content:center;font-size:clamp(1.1rem,2vw,1.6rem);box-shadow:0 0 0 3px rgba(217,119,6,.35),0 4px 16px rgba(217,119,6,.4);filter:drop-shadow(0 0 8px rgba(217,119,6,.55));'>🤖</div>
+                    <div style='font-size:clamp(.44rem,.8vw,.56rem);color:#000;font-weight:700;'>Claude</div>
+                    <div style='font-size:clamp(.38rem,.68vw,.48rem);color:#0a84ff;font-weight:600;'>¡Nueva!</div>
+                  </div>
+                  <div style='display:flex;flex-direction:column;align-items:center;gap:4px;opacity:.4;'><div style='width:clamp(40px,7.3vw,58px);height:clamp(40px,7.3vw,58px);border-radius:clamp(10px,1.8vw,14px);background:linear-gradient(135deg,#6366f1,#4f46e5);display:flex;align-items:center;justify-content:center;font-size:clamp(1.1rem,2vw,1.6rem);'>📧</div><div style='font-size:clamp(.44rem,.8vw,.56rem);color:#333;'>Mail</div></div>
+                  <div style='display:flex;flex-direction:column;align-items:center;gap:4px;opacity:.4;'><div style='width:clamp(40px,7.3vw,58px);height:clamp(40px,7.3vw,58px);border-radius:clamp(10px,1.8vw,14px);background:linear-gradient(135deg,#94a3b8,#64748b);display:flex;align-items:center;justify-content:center;font-size:clamp(1.1rem,2vw,1.6rem);'>⚙️</div><div style='font-size:clamp(.44rem,.8vw,.56rem);color:#333;'>System</div></div>
+                </div>
+              </div>
+
+              <!-- Mac 5: Done! Launchpad + Dock -->
+              <div id='c7is-mac-5' style='position:absolute;inset:0;display:none;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,sans-serif;'>
+                <div style='flex:1;background:linear-gradient(160deg,#001830,#00325a);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;'>
+                  <!-- Launchpad blur overlay -->
+                  <div style='position:absolute;inset:0;background:rgba(0,0,0,.52);display:flex;flex-wrap:wrap;align-content:center;justify-content:center;gap:clamp(10px,2vw,18px);padding:clamp(8px,1.5vw,14px);'>
+                    <div style='display:flex;flex-direction:column;align-items:center;gap:3px;opacity:.45;'><div style='width:clamp(34px,6.2vw,50px);height:clamp(34px,6.2vw,50px);border-radius:clamp(9px,1.6vw,13px);background:linear-gradient(135deg,#5b9ede,#3a7bc8);display:flex;align-items:center;justify-content:center;font-size:clamp(.9rem,1.7vw,1.3rem);'>🌐</div><div style='font-size:clamp(.38rem,.68vw,.48rem);color:#fff;'>Safari</div></div>
+                    <div style='display:flex;flex-direction:column;align-items:center;gap:3px;opacity:.45;'><div style='width:clamp(34px,6.2vw,50px);height:clamp(34px,6.2vw,50px);border-radius:clamp(9px,1.6vw,13px);background:linear-gradient(135deg,#34d399,#059669);display:flex;align-items:center;justify-content:center;font-size:clamp(.9rem,1.7vw,1.3rem);'>📝</div><div style='font-size:clamp(.38rem,.68vw,.48rem);color:#fff;'>Notes</div></div>
+                    <!-- Claude highlighted in launchpad -->
+                    <div style='display:flex;flex-direction:column;align-items:center;gap:3px;transform:scale(1.2);'>
+                      <div style='width:clamp(34px,6.2vw,50px);height:clamp(34px,6.2vw,50px);border-radius:clamp(9px,1.6vw,13px);background:linear-gradient(135deg,#d97706,#92400e);display:flex;align-items:center;justify-content:center;font-size:clamp(.9rem,1.7vw,1.3rem);box-shadow:0 0 22px rgba(217,119,6,.75);'>🤖</div>
+                      <div style='font-size:clamp(.38rem,.68vw,.48rem);color:#fff;font-weight:700;'>Claude</div>
+                    </div>
+                    <div style='display:flex;flex-direction:column;align-items:center;gap:3px;opacity:.45;'><div style='width:clamp(34px,6.2vw,50px);height:clamp(34px,6.2vw,50px);border-radius:clamp(9px,1.6vw,13px);background:linear-gradient(135deg,#f59e0b,#d97706);display:flex;align-items:center;justify-content:center;font-size:clamp(.9rem,1.7vw,1.3rem);'>🎵</div><div style='font-size:clamp(.38rem,.68vw,.48rem);color:#fff;'>Music</div></div>
+                    <div style='display:flex;flex-direction:column;align-items:center;gap:3px;opacity:.45;'><div style='width:clamp(34px,6.2vw,50px);height:clamp(34px,6.2vw,50px);border-radius:clamp(9px,1.6vw,13px);background:linear-gradient(135deg,#ec4899,#be185d);display:flex;align-items:center;justify-content:center;font-size:clamp(.9rem,1.7vw,1.3rem);'>📷</div><div style='font-size:clamp(.38rem,.68vw,.48rem);color:#fff;'>Photos</div></div>
+                    <div style='display:flex;flex-direction:column;align-items:center;gap:3px;opacity:.45;'><div style='width:clamp(34px,6.2vw,50px);height:clamp(34px,6.2vw,50px);border-radius:clamp(9px,1.6vw,13px);background:linear-gradient(135deg,#6366f1,#4f46e5);display:flex;align-items:center;justify-content:center;font-size:clamp(.9rem,1.7vw,1.3rem);'>📧</div><div style='font-size:clamp(.38rem,.68vw,.48rem);color:#fff;'>Mail</div></div>
+                  </div>
+                  <!-- macOS toast -->
+                  <div class='c7itoast' style='position:absolute;top:clamp(8px,1.5vw,12px);right:clamp(8px,1.5vw,12px);background:rgba(28,28,30,.94);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:clamp(8px,1.5vw,12px);width:clamp(165px,30vw,215px);box-shadow:0 4px 22px rgba(0,0,0,.5);'>
+                    <div style='display:flex;gap:8px;align-items:flex-start;'>
+                      <div style='font-size:clamp(.9rem,1.7vw,1.3rem);flex-shrink:0;'>🤖</div>
+                      <div>
+                        <div style='font-size:clamp(.6rem,1.1vw,.74rem);font-weight:700;color:#fff;'>Claude Desktop</div>
+                        <div style='font-size:clamp(.5rem,.92vw,.62rem);color:rgba(255,255,255,.55);margin-top:2px;line-height:1.4;'>¡Bienvenido! Claude está listo para ayudarte.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- macOS Dock -->
+                <div style='height:clamp(50px,9vw,72px);background:rgba(18,18,20,.9);border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;gap:clamp(8px,1.5vw,13px);flex-shrink:0;padding:0 18px;'>
+                  <div style='font-size:clamp(1.2rem,2.2vw,1.7rem);opacity:.45;'>🌐</div>
+                  <div style='font-size:clamp(1.2rem,2.2vw,1.7rem);opacity:.45;'>📁</div>
+                  <div style='font-size:clamp(1.2rem,2.2vw,1.7rem);opacity:.45;'>📧</div>
+                  <div style='width:1px;height:60%;background:rgba(255,255,255,.14);'></div>
+                  <div style='display:flex;flex-direction:column;align-items:center;gap:3px;'>
+                    <div style='font-size:clamp(1.4rem,2.6vw,2rem);filter:drop-shadow(0 0 10px rgba(217,119,6,.8));'>🤖</div>
+                    <div style='width:4px;height:4px;border-radius:50%;background:#d97706;'></div>
+                  </div>
+                  <div style='width:1px;height:60%;background:rgba(255,255,255,.14);'></div>
+                  <div style='font-size:clamp(1.2rem,2.2vw,1.7rem);opacity:.45;'>🎵</div>
+                  <div style='font-size:clamp(1.2rem,2.2vw,1.7rem);opacity:.45;'>⚙️</div>
+                  <div style='font-size:clamp(1.2rem,2.2vw,1.7rem);opacity:.45;'>🗑️</div>
+                </div>
+              </div>
+
+            </div>
+            <!-- Nav -->
+            <div style='display:flex;align-items:center;justify-content:space-between;flex-shrink:0;'>
+              <button id='c7in-mac-prev' class='c7inav' onclick='c7instNav("mac",-1)' style='opacity:.25;'>← Anterior</button>
+              <div id='c7inl-mac' style='font-size:clamp(.6rem,1.1vw,.74rem);color:rgba(255,255,255,.35);'>Paso 1 de 5 — Visita claude.ai</div>
+              <button id='c7in-mac-next' class='c7inav c7inav-next' onclick='c7instNav("mac",1)'>Siguiente →</button>
+            </div>
+          </div>
+
         </div>
       `}},
 
@@ -3987,6 +4313,46 @@ function ig3phase(n) {
 }
 
 // ═══════════════════════════════════════════════════════
+
+
+  function c7install(os, step) {
+    ['win','mac'].forEach(k => {
+      const c = document.getElementById('c7ic-' + k);
+      if (c) c.style.display = k === os ? 'flex' : 'none';
+      const b = document.getElementById('c7ib-' + k);
+      if (b) b.classList.toggle('c7iact', k === os);
+    });
+    const def = document.getElementById('c7idef');
+    if (def) def.style.display = 'none';
+    const N = 5;
+    const labels = {
+      win: ['','Visita claude.ai','Descargando archivo','Confirmación UAC','Instalando','¡Listo en Windows!'],
+      mac: ['','Visita claude.ai','Descargando .dmg','Abre el .dmg','Arrastra a Apps','¡Listo en macOS!']
+    };
+    for (let i = 1; i <= N; i++) {
+      const s = document.getElementById('c7is-' + os + '-' + i);
+      if (s) { s.style.display = i === step ? 'flex' : 'none'; }
+      const d = document.getElementById('c7id-' + os + '-' + i);
+      if (d) { d.className = 'c7idot ' + (i < step ? 'done' : i === step ? 'active' : 'pending'); }
+    }
+    for (let i = 1; i < N; i++) {
+      const bar = document.getElementById('c7ip-' + os + '-' + i + '' + (i + 1));
+      if (bar) bar.style.width = step > i ? '100%' : '0%';
+    }
+    const lbl = document.getElementById('c7inl-' + os);
+    if (lbl) lbl.textContent = 'Paso ' + step + ' de ' + N + ' — ' + (labels[os][step] || '');
+    const prev = document.getElementById('c7in-' + os + '-prev');
+    const next = document.getElementById('c7in-' + os + '-next');
+    if (prev) prev.style.opacity = step <= 1 ? '0.25' : '1';
+    if (next) next.textContent = step >= N ? '✓ ¡Instalado!' : 'Siguiente →';
+    const cont = document.getElementById('c7ic-' + os);
+    if (cont) cont.dataset.step = step;
+  }
+  function c7instNav(os, dir) {
+    const cont = document.getElementById('c7ic-' + os);
+    const cur = +(cont?.dataset.step || 1);
+    c7install(os, Math.max(1, Math.min(5, cur + dir)));
+  }
 
   function c7os(os) {
     document.getElementById('c7os-default').style.display = 'none';
