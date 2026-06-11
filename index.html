@@ -3190,6 +3190,446 @@ Plataforma: TikTok / Reels</pre>
     ]
   }
 
+
+  ,{
+    id: 7,
+    title: "Claude Desktop — Tu IA en tu Computadora",
+    description: "Qué es, instalación, planes y cómo usar Chat, Projects y Code",
+    emoji: "🤖",
+    bg: "linear-gradient(135deg,#0c0805,#1a1005,#08091a)",
+    slides: [
+
+      // 1 — Cover
+      { type: "rawhtml", data: { html: `
+        <div style='display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;background:linear-gradient(135deg,#0c0805 0%,#1a1005 50%,#08091a 100%);text-align:center;padding:clamp(20px,4vw,50px);gap:clamp(10px,2vw,18px);'>
+          <div style='width:clamp(60px,10vw,88px);height:clamp(60px,10vw,88px);border-radius:clamp(16px,3vw,22px);background:linear-gradient(135deg,#d97706,#92400e);display:flex;align-items:center;justify-content:center;box-shadow:0 0 50px rgba(217,119,6,.35);font-size:clamp(1.8rem,3.5vw,2.8rem);'>🤖</div>
+          <span style='font-size:clamp(.58rem,1.06vw,.72rem);font-weight:700;letter-spacing:3px;color:#d97706;text-transform:uppercase;'>Módulo 7 · Herramienta</span>
+          <h1 style='font-size:clamp(1.6rem,3.5vw,2.8rem);font-weight:900;color:#fff;line-height:1.1;'>Claude Desktop</h1>
+          <p style='font-size:clamp(.64rem,1.18vw,.8rem);color:rgba(255,255,255,.5);max-width:460px;line-height:1.6;'>Tu asistente de inteligencia artificial instalado directamente en tu computadora — sin abrir el navegador</p>
+          <div style='width:clamp(40px,7vw,60px);height:2px;background:linear-gradient(90deg,transparent,#d97706,transparent);'></div>
+          <div style='display:flex;gap:clamp(7px,1.3vw,12px);flex-wrap:wrap;justify-content:center;'>
+            <div style='background:rgba(217,119,6,.1);border:1px solid rgba(217,119,6,.3);border-radius:20px;padding:clamp(5px,1vw,9px) clamp(10px,1.8vw,16px);font-size:clamp(.54rem,.98vw,.66rem);color:rgba(255,255,255,.7);'>🪟 Windows</div>
+            <div style='background:rgba(217,119,6,.1);border:1px solid rgba(217,119,6,.3);border-radius:20px;padding:clamp(5px,1vw,9px) clamp(10px,1.8vw,16px);font-size:clamp(.54rem,.98vw,.66rem);color:rgba(255,255,255,.7);'>🍎 Mac</div>
+            <div style='background:rgba(217,119,6,.1);border:1px solid rgba(217,119,6,.3);border-radius:20px;padding:clamp(5px,1vw,9px) clamp(10px,1.8vw,16px);font-size:clamp(.54rem,.98vw,.66rem);color:rgba(255,255,255,.7);'>💬 Chat · 📁 Projects · 💻 Code</div>
+          </div>
+        </div>
+      `}},
+
+      // 2 — ¿Qué es Claude Desktop?
+      { type: "rawhtml", data: { html: `
+        <div style='display:flex;height:100%;background:linear-gradient(135deg,#0c0805,#080a14);padding:clamp(14px,2.5vw,26px);gap:clamp(14px,2.5vw,24px);'>
+          <!-- Left: key points -->
+          <div style='flex:1;display:flex;flex-direction:column;justify-content:center;gap:clamp(10px,1.8vw,16px);min-width:0;'>
+            <div>
+              <span style='font-size:clamp(.58rem,1.06vw,.72rem);font-weight:700;letter-spacing:2px;color:#d97706;text-transform:uppercase;'>¿Qué es?</span>
+              <h2 style='font-size:clamp(.9rem,2vw,1.5rem);font-weight:900;color:#fff;margin-top:4px;line-height:1.2;'>Una app nativa para hablar con Claude — sin necesidad de abrir el navegador</h2>
+            </div>
+            <div style='display:flex;flex-direction:column;gap:clamp(7px,1.3vw,11px);'>
+              <div style='display:flex;gap:10px;align-items:flex-start;background:rgba(217,119,6,.07);border:1px solid rgba(217,119,6,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);'>
+                <span style='font-size:clamp(.9rem,1.6vw,1.2rem);flex-shrink:0;'>⚡</span>
+                <div><div style='font-size:clamp(.6rem,1.1vw,.74rem);font-weight:700;color:#fcd34d;margin-bottom:2px;'>Acceso instantáneo</div><div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.5);line-height:1.45;'>Lanza Claude con un atajo de teclado desde cualquier lugar de tu computadora</div></div>
+              </div>
+              <div style='display:flex;gap:10px;align-items:flex-start;background:rgba(217,119,6,.07);border:1px solid rgba(217,119,6,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);'>
+                <span style='font-size:clamp(.9rem,1.6vw,1.2rem);flex-shrink:0;'>📁</span>
+                <div><div style='font-size:clamp(.6rem,1.1vw,.74rem);font-weight:700;color:#fcd34d;margin-bottom:2px;'>Proyectos con memoria</div><div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.5);line-height:1.45;'>Claude recuerda el contexto de cada proyecto — no tienes que repetirle lo mismo cada vez</div></div>
+              </div>
+              <div style='display:flex;gap:10px;align-items:flex-start;background:rgba(217,119,6,.07);border:1px solid rgba(217,119,6,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);'>
+                <span style='font-size:clamp(.9rem,1.6vw,1.2rem);flex-shrink:0;'>🔗</span>
+                <div><div style='font-size:clamp(.6rem,1.1vw,.74rem);font-weight:700;color:#fcd34d;margin-bottom:2px;'>Integración con tu flujo</div><div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.5);line-height:1.45;'>Analiza archivos, imágenes y documentos directamente desde tu escritorio</div></div>
+              </div>
+              <div style='display:flex;gap:10px;align-items:flex-start;background:rgba(217,119,6,.07);border:1px solid rgba(217,119,6,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);'>
+                <span style='font-size:clamp(.9rem,1.6vw,1.2rem);flex-shrink:0;'>🤖</span>
+                <div><div style='font-size:clamp(.6rem,1.1vw,.74rem);font-weight:700;color:#fcd34d;margin-bottom:2px;'>Los mejores modelos de Claude</div><div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.5);line-height:1.45;'>Accede a Opus, Sonnet y Haiku — los modelos más avanzados de Anthropic</div></div>
+              </div>
+            </div>
+          </div>
+          <!-- Right: fake app window -->
+          <div style='flex:1;display:flex;align-items:center;justify-content:center;min-width:0;'>
+            <div style='background:#1c1c1e;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.1);width:100%;max-width:360px;box-shadow:0 20px 60px rgba(0,0,0,.5);'>
+              <!-- macOS title bar -->
+              <div style='background:#2c2c2e;padding:clamp(6px,1.1vw,9px) 12px;display:flex;align-items:center;gap:6px;'>
+                <div style='width:10px;height:10px;border-radius:50%;background:#ff5f57;flex-shrink:0;'></div>
+                <div style='width:10px;height:10px;border-radius:50%;background:#febc2e;flex-shrink:0;'></div>
+                <div style='width:10px;height:10px;border-radius:50%;background:#28c840;flex-shrink:0;'></div>
+                <div style='flex:1;text-align:center;font-size:clamp(.44rem,.8vw,.56rem);color:rgba(255,255,255,.35);'>Claude</div>
+              </div>
+              <!-- Sidebar + Chat -->
+              <div style='display:flex;height:clamp(160px,28vw,230px);'>
+                <!-- Sidebar -->
+                <div style='width:clamp(60px,11vw,90px);background:#111;border-right:1px solid rgba(255,255,255,.06);padding:8px 6px;display:flex;flex-direction:column;gap:5px;'>
+                  <div style='background:rgba(217,119,6,.15);border-radius:6px;padding:5px 6px;font-size:clamp(.38rem,.68vw,.48rem);color:#d97706;font-weight:600;'>💬 Chat</div>
+                  <div style='border-radius:6px;padding:5px 6px;font-size:clamp(.38rem,.68vw,.48rem);color:rgba(255,255,255,.35);'>📁 Projects</div>
+                  <div style='border-radius:6px;padding:5px 6px;font-size:clamp(.38rem,.68vw,.48rem);color:rgba(255,255,255,.35);'>💻 Code</div>
+                </div>
+                <!-- Chat area -->
+                <div style='flex:1;padding:clamp(6px,1.1vw,10px);display:flex;flex-direction:column;gap:6px;overflow:hidden;'>
+                  <div style='align-self:flex-end;background:rgba(217,119,6,.2);border-radius:8px 8px 2px 8px;padding:5px 8px;font-size:clamp(.38rem,.68vw,.48rem);color:rgba(255,255,255,.75);max-width:80%;'>¿Cómo mejoro mi alcance en Instagram?</div>
+                  <div style='align-self:flex-start;background:rgba(255,255,255,.07);border-radius:2px 8px 8px 8px;padding:5px 8px;font-size:clamp(.38rem,.68vw,.48rem);color:rgba(255,255,255,.6);max-width:88%;line-height:1.5;'>Para mejorar tu alcance, enfócate en publicar Reels con hooks potentes en los primeros 3 segundos...</div>
+                  <div style='align-self:flex-end;background:rgba(217,119,6,.2);border-radius:8px 8px 2px 8px;padding:5px 8px;font-size:clamp(.38rem,.68vw,.48rem);color:rgba(255,255,255,.75);max-width:80%;'>Dame 5 ejemplos de hooks</div>
+                  <div style='margin-top:auto;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:4px 8px;font-size:clamp(.36rem,.65vw,.46rem);color:rgba(255,255,255,.2);'>Escribe un mensaje...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `}},
+
+      // 3 — Lo que puedes hacer
+      { type: "rawhtml", data: { html: `
+        <div style='display:flex;flex-direction:column;height:100%;background:linear-gradient(135deg,#0c0805,#080a14);padding:clamp(14px,2.5vw,26px);gap:clamp(10px,1.8vw,16px);'>
+          <div>
+            <span style='font-size:clamp(.58rem,1.06vw,.72rem);font-weight:700;letter-spacing:2px;color:#d97706;text-transform:uppercase;'>Funciones</span>
+            <h2 style='font-size:clamp(.9rem,2vw,1.5rem);font-weight:900;color:#fff;margin-top:4px;'>Claude te ayuda con todo esto — y más</h2>
+          </div>
+          <div style='display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1.5vw,14px);flex:1;'>
+            <div style='background:rgba(217,119,6,.07);border:1px solid rgba(217,119,6,.2);border-radius:14px;padding:clamp(10px,1.8vw,16px);display:flex;flex-direction:column;gap:8px;'>
+              <div style='font-size:clamp(1.2rem,2.2vw,1.8rem);'>✍️</div>
+              <div style='font-size:clamp(.64rem,1.18vw,.8rem);font-weight:800;color:#fcd34d;'>Redacción y escritura</div>
+              <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.5);line-height:1.5;'>Guiones, captions, emails, artículos, scripts de video, copies publicitarios</div>
+            </div>
+            <div style='background:rgba(52,211,153,.06);border:1px solid rgba(52,211,153,.18);border-radius:14px;padding:clamp(10px,1.8vw,16px);display:flex;flex-direction:column;gap:8px;'>
+              <div style='font-size:clamp(1.2rem,2.2vw,1.8rem);'>🔍</div>
+              <div style='font-size:clamp(.64rem,1.18vw,.8rem);font-weight:800;color:#6ee7b7;'>Investigación y análisis</div>
+              <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.5);line-height:1.5;'>Resumir documentos, analizar datos, investigar temas, comparar opciones</div>
+            </div>
+            <div style='background:rgba(124,58,237,.07);border:1px solid rgba(124,58,237,.22);border-radius:14px;padding:clamp(10px,1.8vw,16px);display:flex;flex-direction:column;gap:8px;'>
+              <div style='font-size:clamp(1.2rem,2.2vw,1.8rem);'>💻</div>
+              <div style='font-size:clamp(.64rem,1.18vw,.8rem);font-weight:800;color:#c4b5fd;'>Código y programación</div>
+              <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.5);line-height:1.5;'>Escribir, revisar y explicar código en cualquier lenguaje. Automatizaciones y scripts</div>
+            </div>
+            <div style='background:rgba(96,165,250,.07);border:1px solid rgba(96,165,250,.2);border-radius:14px;padding:clamp(10px,1.8vw,16px);display:flex;flex-direction:column;gap:8px;'>
+              <div style='font-size:clamp(1.2rem,2.2vw,1.8rem);'>🌍</div>
+              <div style='font-size:clamp(.64rem,1.18vw,.8rem);font-weight:800;color:#93c5fd;'>Traducción e idiomas</div>
+              <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.5);line-height:1.5;'>Traduce contenido, adapta el tono, aprende vocabulario o explica gramática</div>
+            </div>
+            <div style='background:rgba(244,114,182,.07);border:1px solid rgba(244,114,182,.2);border-radius:14px;padding:clamp(10px,1.8vw,16px);display:flex;flex-direction:column;gap:8px;'>
+              <div style='font-size:clamp(1.2rem,2.2vw,1.8rem);'>🎨</div>
+              <div style='font-size:clamp(.64rem,1.18vw,.8rem);font-weight:800;color:#f9a8d4;'>Creatividad e ideas</div>
+              <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.5);line-height:1.5;'>Brainstorming, nombres de marca, conceptos de contenido, storytelling, ideas de negocio</div>
+            </div>
+            <div style='background:rgba(248,113,113,.07);border:1px solid rgba(248,113,113,.2);border-radius:14px;padding:clamp(10px,1.8vw,16px);display:flex;flex-direction:column;gap:8px;'>
+              <div style='font-size:clamp(1.2rem,2.2vw,1.8rem);'>📊</div>
+              <div style='font-size:clamp(.64rem,1.18vw,.8rem);font-weight:800;color:#fca5a5;'>Estrategia y negocio</div>
+              <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.5);line-height:1.5;'>Planes de negocio, estrategias de marketing, análisis de competencia, precios</div>
+            </div>
+          </div>
+        </div>
+      `}},
+
+      // 4 — INTERACTIVE: Instalación Windows / Mac
+      { type: "rawhtml", data: { html: `
+        <div style='display:flex;flex-direction:column;height:100%;background:linear-gradient(135deg,#0c0805,#080a14);padding:clamp(14px,2.5vw,26px);gap:clamp(10px,1.8vw,16px);'>
+          <div>
+            <span style='font-size:clamp(.58rem,1.06vw,.72rem);font-weight:700;letter-spacing:2px;color:#d97706;text-transform:uppercase;'>Instalación paso a paso</span>
+            <h2 style='font-size:clamp(.9rem,2vw,1.5rem);font-weight:900;color:#fff;margin-top:4px;'>Elige tu sistema operativo</h2>
+          </div>
+          <!-- OS selector -->
+          <div style='display:flex;gap:10px;'>
+            <button id='c7os-btn-windows' onclick='c7os("windows")' style='flex:1;padding:clamp(8px,1.5vw,13px);border-radius:12px;border:1.5px solid rgba(96,165,250,.3);background:rgba(96,165,250,.07);color:#93c5fd;font-size:clamp(.62rem,1.15vw,.78rem);font-weight:700;cursor:pointer;transition:all .22s;display:flex;align-items:center;justify-content:center;gap:8px;'>🪟 Windows</button>
+            <button id='c7os-btn-mac' onclick='c7os("mac")' style='flex:1;padding:clamp(8px,1.5vw,13px);border-radius:12px;border:1.5px solid rgba(96,165,250,.3);background:rgba(96,165,250,.07);color:#93c5fd;font-size:clamp(.62rem,1.15vw,.78rem);font-weight:700;cursor:pointer;transition:all .22s;display:flex;align-items:center;justify-content:center;gap:8px;'>🍎 Mac</button>
+          </div>
+          <!-- Default prompt -->
+          <div id='c7os-default' style='flex:1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;opacity:.35;'>
+            <div style='font-size:clamp(1.8rem,3.5vw,2.6rem);'>👆</div>
+            <div style='font-size:clamp(.68rem,1.25vw,.84rem);color:rgba(255,255,255,.6);'>Selecciona tu sistema operativo</div>
+          </div>
+          <!-- Windows panel -->
+          <div id='c7os-panel-windows' style='display:none;flex:1;flex-direction:column;gap:clamp(7px,1.3vw,11px);'>
+            <div style='display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(6px,1.1vw,10px);flex:1;'>
+              <div style='background:rgba(96,165,250,.07);border:1px solid rgba(96,165,250,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
+                <div style='width:clamp(28px,5vw,40px);height:clamp(28px,5vw,40px);border-radius:50%;background:rgba(96,165,250,.15);display:flex;align-items:center;justify-content:center;font-size:clamp(.8rem,1.5vw,1.1rem);font-weight:900;color:#60a5fa;flex-shrink:0;'>1</div>
+                <div style='font-size:clamp(.7rem,1.3vw,.88rem);'>🌐</div>
+                <div style='font-size:clamp(.58rem,1.06vw,.7rem);font-weight:700;color:#93c5fd;'>Abre el navegador</div>
+                <div style='font-size:clamp(.48rem,.86vw,.6rem);color:rgba(255,255,255,.45);line-height:1.4;'>Ve a<br><strong style='color:#60a5fa;'>claude.ai/download</strong></div>
+              </div>
+              <div style='background:rgba(96,165,250,.07);border:1px solid rgba(96,165,250,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
+                <div style='width:clamp(28px,5vw,40px);height:clamp(28px,5vw,40px);border-radius:50%;background:rgba(96,165,250,.15);display:flex;align-items:center;justify-content:center;font-size:clamp(.8rem,1.5vw,1.1rem);font-weight:900;color:#60a5fa;flex-shrink:0;'>2</div>
+                <div style='font-size:clamp(.7rem,1.3vw,.88rem);'>💾</div>
+                <div style='font-size:clamp(.58rem,1.06vw,.7rem);font-weight:700;color:#93c5fd;'>Descarga</div>
+                <div style='font-size:clamp(.48rem,.86vw,.6rem);color:rgba(255,255,255,.45);line-height:1.4;'>Clic en<br><strong style='color:#60a5fa;'>"Download for Windows"</strong></div>
+              </div>
+              <div style='background:rgba(96,165,250,.07);border:1px solid rgba(96,165,250,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
+                <div style='width:clamp(28px,5vw,40px);height:clamp(28px,5vw,40px);border-radius:50%;background:rgba(96,165,250,.15);display:flex;align-items:center;justify-content:center;font-size:clamp(.8rem,1.5vw,1.1rem);font-weight:900;color:#60a5fa;flex-shrink:0;'>3</div>
+                <div style='font-size:clamp(.7rem,1.3vw,.88rem);'>▶️</div>
+                <div style='font-size:clamp(.58rem,1.06vw,.7rem);font-weight:700;color:#93c5fd;'>Ejecuta el instalador</div>
+                <div style='font-size:clamp(.48rem,.86vw,.6rem);color:rgba(255,255,255,.45);line-height:1.4;'>Abre el archivo<br><strong style='color:#60a5fa;'>ClaudeSetup.exe</strong></div>
+              </div>
+              <div style='background:rgba(96,165,250,.07);border:1px solid rgba(96,165,250,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
+                <div style='width:clamp(28px,5vw,40px);height:clamp(28px,5vw,40px);border-radius:50%;background:rgba(96,165,250,.15);display:flex;align-items:center;justify-content:center;font-size:clamp(.8rem,1.5vw,1.1rem);font-weight:900;color:#60a5fa;flex-shrink:0;'>4</div>
+                <div style='font-size:clamp(.7rem,1.3vw,.88rem);'>⚙️</div>
+                <div style='font-size:clamp(.58rem,1.06vw,.7rem);font-weight:700;color:#93c5fd;'>Instala</div>
+                <div style='font-size:clamp(.48rem,.86vw,.6rem);color:rgba(255,255,255,.45);line-height:1.4;'>Sigue el asistente:<br><strong style='color:#60a5fa;'>Next → Install</strong></div>
+              </div>
+              <div style='background:rgba(52,211,153,.07);border:1px solid rgba(52,211,153,.25);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
+                <div style='width:clamp(28px,5vw,40px);height:clamp(28px,5vw,40px);border-radius:50%;background:rgba(52,211,153,.15);display:flex;align-items:center;justify-content:center;font-size:clamp(.8rem,1.5vw,1.1rem);font-weight:900;color:#34d399;flex-shrink:0;'>5</div>
+                <div style='font-size:clamp(.7rem,1.3vw,.88rem);'>✅</div>
+                <div style='font-size:clamp(.58rem,1.06vw,.7rem);font-weight:700;color:#6ee7b7;'>Inicia sesión</div>
+                <div style='font-size:clamp(.48rem,.86vw,.6rem);color:rgba(255,255,255,.45);line-height:1.4;'>Abre Claude e ingresa con tu cuenta de<br><strong style='color:#34d399;'>claude.ai</strong></div>
+              </div>
+            </div>
+            <div style='background:rgba(96,165,250,.06);border:1px solid rgba(96,165,250,.15);border-radius:10px;padding:8px 14px;font-size:clamp(.54rem,.98vw,.66rem);color:rgba(255,255,255,.5);'>💡 <strong style='color:#93c5fd;'>Tip:</strong> Claude se añade automáticamente a la barra de tareas. Usa <strong style='color:#fff;'>Ctrl + Space</strong> o busca "Claude" en el menú inicio para abrirlo rápido.</div>
+          </div>
+          <!-- Mac panel -->
+          <div id='c7os-panel-mac' style='display:none;flex:1;flex-direction:column;gap:clamp(7px,1.3vw,11px);'>
+            <div style='display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(6px,1.1vw,10px);flex:1;'>
+              <div style='background:rgba(244,114,182,.07);border:1px solid rgba(244,114,182,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
+                <div style='width:clamp(28px,5vw,40px);height:clamp(28px,5vw,40px);border-radius:50%;background:rgba(244,114,182,.15);display:flex;align-items:center;justify-content:center;font-size:clamp(.8rem,1.5vw,1.1rem);font-weight:900;color:#f472b6;flex-shrink:0;'>1</div>
+                <div style='font-size:clamp(.7rem,1.3vw,.88rem);'>🌐</div>
+                <div style='font-size:clamp(.58rem,1.06vw,.7rem);font-weight:700;color:#f9a8d4;'>Abre Safari</div>
+                <div style='font-size:clamp(.48rem,.86vw,.6rem);color:rgba(255,255,255,.45);line-height:1.4;'>Ve a<br><strong style='color:#f472b6;'>claude.ai/download</strong></div>
+              </div>
+              <div style='background:rgba(244,114,182,.07);border:1px solid rgba(244,114,182,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
+                <div style='width:clamp(28px,5vw,40px);height:clamp(28px,5vw,40px);border-radius:50%;background:rgba(244,114,182,.15);display:flex;align-items:center;justify-content:center;font-size:clamp(.8rem,1.5vw,1.1rem);font-weight:900;color:#f472b6;flex-shrink:0;'>2</div>
+                <div style='font-size:clamp(.7rem,1.3vw,.88rem);'>💾</div>
+                <div style='font-size:clamp(.58rem,1.06vw,.7rem);font-weight:700;color:#f9a8d4;'>Descarga</div>
+                <div style='font-size:clamp(.48rem,.86vw,.6rem);color:rgba(255,255,255,.45);line-height:1.4;'>Clic en<br><strong style='color:#f472b6;'>"Download for Mac"</strong></div>
+              </div>
+              <div style='background:rgba(244,114,182,.07);border:1px solid rgba(244,114,182,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
+                <div style='width:clamp(28px,5vw,40px);height:clamp(28px,5vw,40px);border-radius:50%;background:rgba(244,114,182,.15);display:flex;align-items:center;justify-content:center;font-size:clamp(.8rem,1.5vw,1.1rem);font-weight:900;color:#f472b6;flex-shrink:0;'>3</div>
+                <div style='font-size:clamp(.7rem,1.3vw,.88rem);'>📦</div>
+                <div style='font-size:clamp(.58rem,1.06vw,.7rem);font-weight:700;color:#f9a8d4;'>Abre el .dmg</div>
+                <div style='font-size:clamp(.48rem,.86vw,.6rem);color:rgba(255,255,255,.45);line-height:1.4;'>Doble clic en<br><strong style='color:#f472b6;'>Claude.dmg</strong></div>
+              </div>
+              <div style='background:rgba(244,114,182,.07);border:1px solid rgba(244,114,182,.2);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
+                <div style='width:clamp(28px,5vw,40px);height:clamp(28px,5vw,40px);border-radius:50%;background:rgba(244,114,182,.15);display:flex;align-items:center;justify-content:center;font-size:clamp(.8rem,1.5vw,1.1rem);font-weight:900;color:#f472b6;flex-shrink:0;'>4</div>
+                <div style='font-size:clamp(.7rem,1.3vw,.88rem);'>📁</div>
+                <div style='font-size:clamp(.58rem,1.06vw,.7rem);font-weight:700;color:#f9a8d4;'>Arrastra a Apps</div>
+                <div style='font-size:clamp(.48rem,.86vw,.6rem);color:rgba(255,255,255,.45);line-height:1.4;'>Mueve Claude a la carpeta<br><strong style='color:#f472b6;'>Applications</strong> 📂</div>
+              </div>
+              <div style='background:rgba(52,211,153,.07);border:1px solid rgba(52,211,153,.25);border-radius:12px;padding:clamp(8px,1.4vw,13px);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;'>
+                <div style='width:clamp(28px,5vw,40px);height:clamp(28px,5vw,40px);border-radius:50%;background:rgba(52,211,153,.15);display:flex;align-items:center;justify-content:center;font-size:clamp(.8rem,1.5vw,1.1rem);font-weight:900;color:#34d399;flex-shrink:0;'>5</div>
+                <div style='font-size:clamp(.7rem,1.3vw,.88rem);'>✅</div>
+                <div style='font-size:clamp(.58rem,1.06vw,.7rem);font-weight:700;color:#6ee7b7;'>Inicia sesión</div>
+                <div style='font-size:clamp(.48rem,.86vw,.6rem);color:rgba(255,255,255,.45);line-height:1.4;'>Abre Claude desde<br><strong style='color:#34d399;'>Launchpad</strong> e ingresa</div>
+              </div>
+            </div>
+            <div style='background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.15);border-radius:10px;padding:8px 14px;font-size:clamp(.54rem,.98vw,.66rem);color:rgba(255,255,255,.5);'>💡 <strong style='color:#f9a8d4;'>Tip:</strong> Fija Claude en el Dock para acceder más rápido. Haz clic derecho → <strong style='color:#fff;'>Opciones → Mantener en el Dock</strong>.</div>
+          </div>
+          <style>
+            .c7os-active { background:rgba(217,119,6,.22)!important; border-color:rgba(217,119,6,.55)!important; color:#fcd34d!important; }
+          </style>
+          <script>document.getElementById('c7os-default').style.display='flex';<\/script>
+        </div>
+      `}},
+
+      // 5 — Planes y precios
+      { type: "rawhtml", data: { html: `
+        <div style='display:flex;flex-direction:column;height:100%;background:linear-gradient(135deg,#0c0805,#080a14);padding:clamp(14px,2.5vw,26px);gap:clamp(10px,1.8vw,16px);'>
+          <div>
+            <span style='font-size:clamp(.58rem,1.06vw,.72rem);font-weight:700;letter-spacing:2px;color:#d97706;text-transform:uppercase;'>Planes y precios</span>
+            <h2 style='font-size:clamp(.9rem,2vw,1.5rem);font-weight:900;color:#fff;margin-top:4px;'>Elige el plan que mejor se adapte a ti</h2>
+          </div>
+          <div style='display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,1.5vw,14px);flex:1;'>
+
+            <!-- Free -->
+            <div style='background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:clamp(10px,1.8vw,18px);display:flex;flex-direction:column;gap:8px;'>
+              <div style='font-size:clamp(.6rem,1.1vw,.74rem);font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:1px;'>Free</div>
+              <div>
+                <div style='font-size:clamp(1.4rem,2.8vw,2.2rem);font-weight:900;color:#fff;line-height:1;'>$0</div>
+                <div style='font-size:clamp(.48rem,.86vw,.58rem);color:rgba(255,255,255,.35);'>USD · para siempre</div>
+              </div>
+              <div style='height:1px;background:rgba(255,255,255,.08);'></div>
+              <div style='display:flex;flex-direction:column;gap:5px;flex:1;'>
+                <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.55);display:flex;gap:5px;align-items:flex-start;'><span style='color:#34d399;flex-shrink:0;'>✓</span> Acceso a Claude Sonnet</div>
+                <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.55);display:flex;gap:5px;align-items:flex-start;'><span style='color:#34d399;flex-shrink:0;'>✓</span> Chat básico</div>
+                <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.55);display:flex;gap:5px;align-items:flex-start;'><span style='color:#34d399;flex-shrink:0;'>✓</span> Límite de mensajes diarios</div>
+                <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.3);display:flex;gap:5px;align-items:flex-start;'><span style='color:rgba(255,255,255,.2);flex-shrink:0;'>✗</span> Sin acceso a Opus</div>
+              </div>
+              <div style='background:rgba(255,255,255,.06);border-radius:8px;padding:6px 10px;text-align:center;font-size:clamp(.5rem,.9vw,.62rem);color:rgba(255,255,255,.4);font-weight:600;'>Ideal para comenzar</div>
+            </div>
+
+            <!-- Pro (highlighted) -->
+            <div style='background:linear-gradient(160deg,rgba(217,119,6,.12),rgba(217,119,6,.06));border:1.5px solid rgba(217,119,6,.4);border-radius:16px;padding:clamp(10px,1.8vw,18px);display:flex;flex-direction:column;gap:8px;position:relative;overflow:hidden;'>
+              <div style='position:absolute;top:0;right:0;background:linear-gradient(135deg,#d97706,#92400e);padding:4px 10px;font-size:clamp(.42rem,.76vw,.54rem);font-weight:800;color:#fff;border-radius:0 16px 0 8px;'>⭐ POPULAR</div>
+              <div style='font-size:clamp(.6rem,1.1vw,.74rem);font-weight:700;color:#d97706;text-transform:uppercase;letter-spacing:1px;'>Pro</div>
+              <div>
+                <div style='font-size:clamp(1.4rem,2.8vw,2.2rem);font-weight:900;color:#fff;line-height:1;'>$20 <span style='font-size:clamp(.7rem,1.3vw,.9rem);color:rgba(255,255,255,.5);font-weight:400;'>USD</span></div>
+                <div style='font-size:clamp(.46rem,.84vw,.56rem);color:rgba(255,255,255,.45);'>~$350 MXN · por mes</div>
+              </div>
+              <div style='height:1px;background:rgba(217,119,6,.25);'></div>
+              <div style='display:flex;flex-direction:column;gap:5px;flex:1;'>
+                <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.7);display:flex;gap:5px;align-items:flex-start;'><span style='color:#d97706;flex-shrink:0;'>✓</span> 5× más mensajes que Free</div>
+                <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.7);display:flex;gap:5px;align-items:flex-start;'><span style='color:#d97706;flex-shrink:0;'>✓</span> Todos los modelos (Opus, Sonnet, Haiku)</div>
+                <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.7);display:flex;gap:5px;align-items:flex-start;'><span style='color:#d97706;flex-shrink:0;'>✓</span> Projects con memoria persistente</div>
+                <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.7);display:flex;gap:5px;align-items:flex-start;'><span style='color:#d97706;flex-shrink:0;'>✓</span> Análisis de archivos e imágenes</div>
+                <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.7);display:flex;gap:5px;align-items:flex-start;'><span style='color:#d97706;flex-shrink:0;'>✓</span> Extended thinking</div>
+              </div>
+              <div style='background:rgba(217,119,6,.2);border-radius:8px;padding:6px 10px;text-align:center;font-size:clamp(.5rem,.9vw,.62rem);color:#fcd34d;font-weight:700;'>Recomendado para creadores</div>
+            </div>
+
+            <!-- Team -->
+            <div style='background:rgba(52,211,153,.05);border:1px solid rgba(52,211,153,.2);border-radius:16px;padding:clamp(10px,1.8vw,18px);display:flex;flex-direction:column;gap:8px;'>
+              <div style='font-size:clamp(.6rem,1.1vw,.74rem);font-weight:700;color:#34d399;text-transform:uppercase;letter-spacing:1px;'>Team</div>
+              <div>
+                <div style='font-size:clamp(1.4rem,2.8vw,2.2rem);font-weight:900;color:#fff;line-height:1;'>$25 <span style='font-size:clamp(.7rem,1.3vw,.9rem);color:rgba(255,255,255,.5);font-weight:400;'>USD</span></div>
+                <div style='font-size:clamp(.46rem,.84vw,.56rem);color:rgba(255,255,255,.35);'>~$437 MXN · usuario/mes</div>
+              </div>
+              <div style='height:1px;background:rgba(52,211,153,.15);'></div>
+              <div style='display:flex;flex-direction:column;gap:5px;flex:1;'>
+                <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.6);display:flex;gap:5px;align-items:flex-start;'><span style='color:#34d399;flex-shrink:0;'>✓</span> Todo lo del plan Pro</div>
+                <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.6);display:flex;gap:5px;align-items:flex-start;'><span style='color:#34d399;flex-shrink:0;'>✓</span> Gestión de equipo</div>
+                <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.6);display:flex;gap:5px;align-items:flex-start;'><span style='color:#34d399;flex-shrink:0;'>✓</span> Panel de administración</div>
+                <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.6);display:flex;gap:5px;align-items:flex-start;'><span style='color:#34d399;flex-shrink:0;'>✓</span> Facturación unificada</div>
+              </div>
+              <div style='background:rgba(52,211,153,.1);border-radius:8px;padding:6px 10px;text-align:center;font-size:clamp(.5rem,.9vw,.62rem);color:#6ee7b7;font-weight:600;'>Para agencias y equipos</div>
+            </div>
+
+            <!-- Enterprise -->
+            <div style='background:rgba(124,58,237,.05);border:1px solid rgba(124,58,237,.2);border-radius:16px;padding:clamp(10px,1.8vw,18px);display:flex;flex-direction:column;gap:8px;'>
+              <div style='font-size:clamp(.6rem,1.1vw,.74rem);font-weight:700;color:#a78bfa;text-transform:uppercase;letter-spacing:1px;'>Enterprise</div>
+              <div>
+                <div style='font-size:clamp(1.1rem,2.2vw,1.7rem);font-weight:900;color:#fff;line-height:1.1;'>Personalizado</div>
+                <div style='font-size:clamp(.46rem,.84vw,.56rem);color:rgba(255,255,255,.35);'>Precio a la medida</div>
+              </div>
+              <div style='height:1px;background:rgba(124,58,237,.15);'></div>
+              <div style='display:flex;flex-direction:column;gap:5px;flex:1;'>
+                <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.6);display:flex;gap:5px;align-items:flex-start;'><span style='color:#a78bfa;flex-shrink:0;'>✓</span> Todo lo del plan Team</div>
+                <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.6);display:flex;gap:5px;align-items:flex-start;'><span style='color:#a78bfa;flex-shrink:0;'>✓</span> Seguridad avanzada y SSO</div>
+                <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.6);display:flex;gap:5px;align-items:flex-start;'><span style='color:#a78bfa;flex-shrink:0;'>✓</span> Integraciones empresariales</div>
+                <div style='font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.6);display:flex;gap:5px;align-items:flex-start;'><span style='color:#a78bfa;flex-shrink:0;'>✓</span> Soporte dedicado 24/7</div>
+              </div>
+              <div style='background:rgba(124,58,237,.12);border-radius:8px;padding:6px 10px;text-align:center;font-size:clamp(.5rem,.9vw,.62rem);color:#c4b5fd;font-weight:600;'>Para grandes empresas</div>
+            </div>
+
+          </div>
+          <div style='background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:7px 14px;font-size:clamp(.52rem,.94vw,.64rem);color:rgba(255,255,255,.4);text-align:center;'>💱 Precios en MXN aproximados — 1 USD ≈ $17.50 MXN. Pago en USD via tarjeta o PayPal.</div>
+        </div>
+      `}},
+
+      // 6 — INTERACTIVE: Chat, Projects, Code
+      { type: "rawhtml", data: { html: `
+        <div style='display:flex;flex-direction:column;height:100%;background:linear-gradient(135deg,#0c0805,#080a14);padding:clamp(14px,2.5vw,26px);gap:clamp(10px,1.8vw,16px);'>
+          <div>
+            <span style='font-size:clamp(.58rem,1.06vw,.72rem);font-weight:700;letter-spacing:2px;color:#d97706;text-transform:uppercase;'>Cómo usar Claude Desktop</span>
+            <h2 style='font-size:clamp(.9rem,2vw,1.5rem);font-weight:900;color:#fff;margin-top:4px;'>Selecciona una sección para aprender</h2>
+          </div>
+          <!-- Tab buttons -->
+          <div style='display:flex;gap:10px;'>
+            <button id='c7tab-btn-chat' onclick='c7tab("chat")' style='flex:1;padding:clamp(8px,1.5vw,13px);border-radius:12px;border:1.5px solid rgba(217,119,6,.3);background:rgba(217,119,6,.07);color:#fcd34d;font-size:clamp(.62rem,1.15vw,.78rem);font-weight:700;cursor:pointer;transition:all .22s;display:flex;align-items:center;justify-content:center;gap:7px;'>💬 Chat</button>
+            <button id='c7tab-btn-projects' onclick='c7tab("projects")' style='flex:1;padding:clamp(8px,1.5vw,13px);border-radius:12px;border:1.5px solid rgba(52,211,153,.3);background:rgba(52,211,153,.06);color:#6ee7b7;font-size:clamp(.62rem,1.15vw,.78rem);font-weight:700;cursor:pointer;transition:all .22s;display:flex;align-items:center;justify-content:center;gap:7px;'>📁 Projects</button>
+            <button id='c7tab-btn-code' onclick='c7tab("code")' style='flex:1;padding:clamp(8px,1.5vw,13px);border-radius:12px;border:1.5px solid rgba(124,58,237,.3);background:rgba(124,58,237,.07);color:#c4b5fd;font-size:clamp(.62rem,1.15vw,.78rem);font-weight:700;cursor:pointer;transition:all .22s;display:flex;align-items:center;justify-content:center;gap:7px;'>💻 Code</button>
+          </div>
+          <!-- Default -->
+          <div id='c7tab-default' style='flex:1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;opacity:.35;'>
+            <div style='font-size:clamp(1.8rem,3.5vw,2.6rem);'>👆</div>
+            <div style='font-size:clamp(.68rem,1.25vw,.84rem);color:rgba(255,255,255,.6);'>Selecciona una sección para explorar</div>
+          </div>
+          <!-- Chat panel -->
+          <div id='c7tab-panel-chat' style='display:none;flex:1;flex-direction:column;gap:10px;'>
+            <div style='display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1;'>
+              <div style='background:rgba(217,119,6,.07);border:1px solid rgba(217,119,6,.2);border-radius:14px;padding:clamp(10px,1.8vw,16px);display:flex;flex-direction:column;gap:8px;'>
+                <div style='font-size:clamp(.7rem,1.3vw,.88rem);font-weight:800;color:#fcd34d;'>💬 ¿Qué es el Chat?</div>
+                <div style='font-size:clamp(.56rem,1.02vw,.68rem);color:rgba(255,255,255,.6);line-height:1.5;'>La conversación directa con Claude. Escribe cualquier pregunta o tarea y Claude te responde al instante. Cada conversación es independiente.</div>
+                <div style='display:flex;flex-direction:column;gap:5px;margin-top:4px;'>
+                  <div style='font-size:clamp(.56rem,1.02vw,.68rem);color:rgba(255,255,255,.55);display:flex;gap:6px;'><span style='color:#d97706;'>→</span> Haz preguntas sobre cualquier tema</div>
+                  <div style='font-size:clamp(.56rem,1.02vw,.68rem);color:rgba(255,255,255,.55);display:flex;gap:6px;'><span style='color:#d97706;'>→</span> Sube imágenes, PDFs o documentos</div>
+                  <div style='font-size:clamp(.56rem,1.02vw,.68rem);color:rgba(255,255,255,.55);display:flex;gap:6px;'><span style='color:#d97706;'>→</span> Pide redacción, corrección o traducción</div>
+                  <div style='font-size:clamp(.56rem,1.02vw,.68rem);color:rgba(255,255,255,.55);display:flex;gap:6px;'><span style='color:#d97706;'>→</span> El historial queda guardado</div>
+                </div>
+              </div>
+              <div style='background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:clamp(10px,1.8vw,16px);display:flex;flex-direction:column;gap:8px;'>
+                <div style='font-size:clamp(.7rem,1.3vw,.88rem);font-weight:800;color:#fff;'>🎯 Ejemplo de uso</div>
+                <div style='background:#1c1c1e;border-radius:10px;padding:10px;display:flex;flex-direction:column;gap:6px;flex:1;'>
+                  <div style='align-self:flex-end;background:rgba(217,119,6,.2);border-radius:8px 8px 2px 8px;padding:5px 9px;font-size:clamp(.5rem,.9vw,.62rem);color:rgba(255,255,255,.8);max-width:85%;'>"Escríbeme 5 hooks para un Reel sobre productividad matutina"</div>
+                  <div style='align-self:flex-start;background:rgba(255,255,255,.07);border-radius:2px 8px 8px 8px;padding:5px 9px;font-size:clamp(.5rem,.9vw,.62rem);color:rgba(255,255,255,.65);max-width:90%;line-height:1.5;'>1. "Hace 6 meses no podía levantarme antes de las 10am..."<br>2. "El 90% de las personas exitosas tienen esto en común..."<br>3. "Para qué 5am si trabajas hasta las 3am 🤡"...</div>
+                </div>
+                <div style='background:rgba(217,119,6,.08);border-radius:8px;padding:6px 10px;font-size:clamp(.5rem,.9vw,.62rem);color:#fcd34d;'>💡 <strong>Pro tip:</strong> Sé específico — en vez de "dame ideas", di "dame 5 hooks en tono humorístico para creadores de contenido de 18-25 años"</div>
+              </div>
+            </div>
+          </div>
+          <!-- Projects panel -->
+          <div id='c7tab-panel-projects' style='display:none;flex:1;flex-direction:column;gap:10px;'>
+            <div style='display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1;'>
+              <div style='background:rgba(52,211,153,.06);border:1px solid rgba(52,211,153,.2);border-radius:14px;padding:clamp(10px,1.8vw,16px);display:flex;flex-direction:column;gap:8px;'>
+                <div style='font-size:clamp(.7rem,1.3vw,.88rem);font-weight:800;color:#6ee7b7;'>📁 ¿Qué son los Projects?</div>
+                <div style='font-size:clamp(.56rem,1.02vw,.68rem);color:rgba(255,255,255,.6);line-height:1.5;'>Espacios de trabajo donde Claude recuerda el contexto. Ideal para proyectos que continúan en el tiempo — Claude ya sabe quién eres y qué necesitas.</div>
+                <div style='display:flex;flex-direction:column;gap:5px;margin-top:4px;'>
+                  <div style='font-size:clamp(.56rem,1.02vw,.68rem);color:rgba(255,255,255,.55);display:flex;gap:6px;'><span style='color:#34d399;'>→</span> Agrega instrucciones personalizadas</div>
+                  <div style='font-size:clamp(.56rem,1.02vw,.68rem);color:rgba(255,255,255,.55);display:flex;gap:6px;'><span style='color:#34d399;'>→</span> Sube documentos de referencia</div>
+                  <div style='font-size:clamp(.56rem,1.02vw,.68rem);color:rgba(255,255,255,.55);display:flex;gap:6px;'><span style='color:#34d399;'>→</span> Guarda el contexto entre sesiones</div>
+                  <div style='font-size:clamp(.56rem,1.02vw,.68rem);color:rgba(255,255,255,.55);display:flex;gap:6px;'><span style='color:#34d399;'>→</span> Organiza proyectos por cliente o tema</div>
+                </div>
+              </div>
+              <div style='background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:clamp(10px,1.8vw,16px);display:flex;flex-direction:column;gap:8px;'>
+                <div style='font-size:clamp(.7rem,1.3vw,.88rem);font-weight:800;color:#fff;'>🎯 Ejemplo de uso</div>
+                <div style='background:#1c1c1e;border-radius:10px;padding:10px;display:flex;flex-direction:column;gap:6px;flex:1;'>
+                  <div style='background:rgba(52,211,153,.08);border-radius:6px;padding:6px 8px;font-size:clamp(.46rem,.84vw,.56rem);color:#6ee7b7;border-left:2px solid #34d399;line-height:1.4;'><strong>Instrucciones del proyecto:</strong><br>"Eres mi asistente de contenido para @micanal. Mi nicho es finanzas personales. Tono: profesional pero accesible. Mi audiencia son millennials mexicanos."</div>
+                  <div style='align-self:flex-end;background:rgba(52,211,153,.15);border-radius:8px 8px 2px 8px;padding:5px 9px;font-size:clamp(.5rem,.9vw,.62rem);color:rgba(255,255,255,.8);max-width:85%;'>"Dame ideas para el próximo Reel"</div>
+                  <div style='align-self:flex-start;background:rgba(255,255,255,.07);border-radius:2px 8px 8px 8px;padding:5px 9px;font-size:clamp(.5rem,.9vw,.62rem);color:rgba(255,255,255,.65);max-width:90%;line-height:1.5;'>Claude ya sabe tu nicho, tono y audiencia — no tienes que repetirlo</div>
+                </div>
+                <div style='background:rgba(52,211,153,.08);border-radius:8px;padding:6px 10px;font-size:clamp(.5rem,.9vw,.62rem);color:#6ee7b7;'>💡 <strong>Pro tip:</strong> Crea un project por cliente o por tipo de contenido. Ahorra tiempo explicando contexto en cada conversación.</div>
+              </div>
+            </div>
+          </div>
+          <!-- Code panel -->
+          <div id='c7tab-panel-code' style='display:none;flex:1;flex-direction:column;gap:10px;'>
+            <div style='display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1;'>
+              <div style='background:rgba(124,58,237,.07);border:1px solid rgba(124,58,237,.22);border-radius:14px;padding:clamp(10px,1.8vw,16px);display:flex;flex-direction:column;gap:8px;'>
+                <div style='font-size:clamp(.7rem,1.3vw,.88rem);font-weight:800;color:#c4b5fd;'>💻 ¿Qué es Code?</div>
+                <div style='font-size:clamp(.56rem,1.02vw,.68rem);color:rgba(255,255,255,.6);line-height:1.5;'>Claude es uno de los mejores asistentes de programación del mundo. Puede escribir, revisar, explicar y debuggear código en cualquier lenguaje.</div>
+                <div style='display:flex;flex-direction:column;gap:5px;margin-top:4px;'>
+                  <div style='font-size:clamp(.56rem,1.02vw,.68rem);color:rgba(255,255,255,.55);display:flex;gap:6px;'><span style='color:#a78bfa;'>→</span> Escribe scripts y automatizaciones</div>
+                  <div style='font-size:clamp(.56rem,1.02vw,.68rem);color:rgba(255,255,255,.55);display:flex;gap:6px;'><span style='color:#a78bfa;'>→</span> Pega código con errores para debuggear</div>
+                  <div style='font-size:clamp(.56rem,1.02vw,.68rem);color:rgba(255,255,255,.55);display:flex;gap:6px;'><span style='color:#a78bfa;'>→</span> Explica código que no entiendes</div>
+                  <div style='font-size:clamp(.56rem,1.02vw,.68rem);color:rgba(255,255,255,.55);display:flex;gap:6px;'><span style='color:#a78bfa;'>→</span> Genera fórmulas de Excel / Sheets</div>
+                </div>
+              </div>
+              <div style='background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:clamp(10px,1.8vw,16px);display:flex;flex-direction:column;gap:8px;'>
+                <div style='font-size:clamp(.7rem,1.3vw,.88rem);font-weight:800;color:#fff;'>🎯 Ejemplo de uso</div>
+                <div style='background:#1a1a1a;border-radius:10px;padding:10px;display:flex;flex-direction:column;gap:4px;flex:1;font-family:monospace;overflow:hidden;'>
+                  <div style='font-size:clamp(.44rem,.8vw,.54rem);color:rgba(255,255,255,.3);margin-bottom:4px;'># Prompt del usuario:</div>
+                  <div style='font-size:clamp(.44rem,.8vw,.54rem);color:#fcd34d;line-height:1.4;'>"Crea una fórmula en Google Sheets que calcule el engagement rate de mi cuenta si tengo los likes en columna B, comentarios en C y seguidores en D"</div>
+                  <div style='font-size:clamp(.44rem,.8vw,.54rem);color:rgba(255,255,255,.3);margin-top:4px;'># Respuesta de Claude:</div>
+                  <div style='font-size:clamp(.44rem,.8vw,.54rem);color:#86efac;line-height:1.5;'>=((B2+C2)/D2)*100</div>
+                  <div style='font-size:clamp(.44rem,.8vw,.54rem);color:rgba(255,255,255,.45);line-height:1.4;'>Esta fórmula calcula: (Likes + Comentarios) ÷ Seguidores × 100...</div>
+                </div>
+                <div style='background:rgba(124,58,237,.1);border-radius:8px;padding:6px 10px;font-size:clamp(.5rem,.9vw,.62rem);color:#c4b5fd;'>💡 <strong>Pro tip:</strong> No necesitas saber programar. Claude explica cada línea de código y puedes pedir versiones más simples.</div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .c7tab-active { transform:scale(1.03); box-shadow:0 0 20px rgba(217,119,6,.2); }
+            #c7tab-btn-chat.c7tab-active { background:rgba(217,119,6,.22)!important; border-color:rgba(217,119,6,.55)!important; color:#fff!important; }
+            #c7tab-btn-projects.c7tab-active { background:rgba(52,211,153,.18)!important; border-color:rgba(52,211,153,.5)!important; color:#fff!important; }
+            #c7tab-btn-code.c7tab-active { background:rgba(124,58,237,.2)!important; border-color:rgba(124,58,237,.55)!important; color:#fff!important; }
+          </style>
+          <script>document.getElementById('c7tab-default').style.display='flex';<\/script>
+        </div>
+      `}},
+
+      // 7 — Quote
+      { type: "highlight", data: {
+        quote: "La IA no va a quitarte el trabajo — pero sí lo hará alguien que sepa usarla mejor que tú.",
+        author: "— ChinoTeacher"
+      }},
+
+      // 8 — Cierre
+      { type: "rawhtml", data: { html: `
+        <div style='display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;background:linear-gradient(160deg,#0c0805 0%,#1a1005 50%,#08091a 100%);padding:6%;text-align:center;gap:clamp(12px,2.2vw,22px);'>
+          <div style='font-size:clamp(1.8rem,3.5vw,2.8rem);'>🤖✨</div>
+          <h2 style='font-size:clamp(1.2rem,2.8vw,2.2rem);font-weight:900;background:linear-gradient(135deg,#fff 20%,#fcd34d 55%,#d97706 85%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.15;'>Tu siguiente paso</h2>
+          <p style='font-size:clamp(.64rem,1.18vw,.8rem);color:rgba(255,255,255,.5);max-width:500px;line-height:1.6;'>Instala Claude Desktop hoy y prueba las 3 funciones que vimos — un chat simple, un project de tu nicho y una pregunta de código.</p>
+          <div style='width:140px;height:1px;background:linear-gradient(90deg,transparent,rgba(217,119,6,.4),transparent);'></div>
+          <div style='display:flex;gap:clamp(8px,1.5vw,14px);justify-content:center;flex-wrap:wrap;'>
+            <div style='background:rgba(217,119,6,.1);border:1px solid rgba(217,119,6,.25);border-radius:14px;padding:clamp(10px,1.8vw,16px) clamp(14px,2.2vw,22px);'>
+              <div style='font-size:clamp(1.2rem,2.2vw,1.8rem);margin-bottom:6px;'>1️⃣</div>
+              <div style='font-size:clamp(.56rem,1.02vw,.7rem);color:rgba(255,255,255,.6);line-height:1.5;'>Descarga desde<br><strong style='color:#fcd34d;'>claude.ai/download</strong></div>
+            </div>
+            <div style='background:rgba(217,119,6,.1);border:1px solid rgba(217,119,6,.25);border-radius:14px;padding:clamp(10px,1.8vw,16px) clamp(14px,2.2vw,22px);'>
+              <div style='font-size:clamp(1.2rem,2.2vw,1.8rem);margin-bottom:6px;'>2️⃣</div>
+              <div style='font-size:clamp(.56rem,1.02vw,.7rem);color:rgba(255,255,255,.6);line-height:1.5;'>Crea un Project<br>para tu nicho</div>
+            </div>
+            <div style='background:rgba(217,119,6,.1);border:1px solid rgba(217,119,6,.25);border-radius:14px;padding:clamp(10px,1.8vw,16px) clamp(14px,2.2vw,22px);'>
+              <div style='font-size:clamp(1.2rem,2.2vw,1.8rem);margin-bottom:6px;'>3️⃣</div>
+              <div style='font-size:clamp(.56rem,1.02vw,.7rem);color:rgba(255,255,255,.6);line-height:1.5;'>Pide tu primer<br>guión de Reel</div>
+            </div>
+          </div>
+        </div>
+      `}},
+
+    ]
+  }
+
 ];
 
 // ═══════════════════════════════════════════════════════
@@ -3547,6 +3987,26 @@ function ig3phase(n) {
 }
 
 // ═══════════════════════════════════════════════════════
+
+  function c7os(os) {
+    document.getElementById('c7os-default').style.display = 'none';
+    ['windows','mac'].forEach(k => {
+      const btn = document.getElementById('c7os-btn-' + k);
+      const panel = document.getElementById('c7os-panel-' + k);
+      if (btn) btn.classList.toggle('c7os-active', k === os);
+      if (panel) panel.style.display = k === os ? 'flex' : 'none';
+    });
+  }
+  function c7tab(t) {
+    document.getElementById('c7tab-default').style.display = 'none';
+    ['chat','projects','code'].forEach(k => {
+      const btn = document.getElementById('c7tab-btn-' + k);
+      const panel = document.getElementById('c7tab-panel-' + k);
+      if (btn) btn.classList.toggle('c7tab-active', k === t);
+      if (panel) panel.style.display = k === t ? 'flex' : 'none';
+    });
+  }
+
 //  PORTAL
 // ═══════════════════════════════════════════════════════
 function renderPortal() {
