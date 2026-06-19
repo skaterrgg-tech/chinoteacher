@@ -3969,15 +3969,23 @@ Plataforma: TikTok / Reels</pre>
     slides: [
 
       // 1 — Cover
-      { type: "cover", data: {
-        label: "Clase 08", icon: "🎨",
-        title: "¿Qué contenido debo hacer?",
-        sub: "Encuentra tu voz, define tu tema y publica sin miedo"
-      }},
+      { type: "rawhtml", data: { html: `
+        <div style='display:flex;flex-direction:row;align-items:center;justify-content:center;height:100%;padding:clamp(22px,4vw,50px) clamp(20px,3.5vw,42px);gap:clamp(14px,2.5vw,28px);'>
+          <div style='display:flex;flex-direction:column;gap:clamp(12px,2vw,18px);flex:1;'>
+            <span style='font-size:clamp(2.8rem,5.5vw,4.5rem);'>🎨</span>
+            <div style='font-size:clamp(.78rem,1.42vw,.92rem);font-weight:700;letter-spacing:2px;color:#a855f7;text-transform:uppercase;'>Clase 08</div>
+            <h1 style='font-size:clamp(1.5rem,3.2vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;'>¿Qué contenido debo hacer?</h1>
+            <p style='font-size:clamp(.82rem,1.5vw,1rem);color:rgba(255,255,255,.5);line-height:1.6;max-width:380px;'>Encuentra tu voz, define tu tema y publica sin miedo.</p>
+          </div>
+          <div style='flex-shrink:0;display:flex;align-items:flex-end;'>
+            <img src='Personaje/freepik_que-el-personaje-img1-este-gritando-muy-fuerte-a-un-microfono._0001.png' style='height:clamp(180px,34vw,300px);width:auto;filter:drop-shadow(0 0 40px rgba(168,85,247,.55));'>
+          </div>
+        </div>
+      `}},
 
       // 2 — El triángulo del creador
       { type: "rawhtml", data: { html: `
-        <div style='display:flex;flex-direction:column;height:100%;background:linear-gradient(160deg,#0d0022 0%,#1e0545 60%,#050a1e 100%);padding:clamp(14px,2.5vw,26px);gap:clamp(10px,1.8vw,16px);'>
+        <div style='display:flex;flex-direction:column;height:100%;background:linear-gradient(160deg,#0d0022 0%,#1e0545 60%,#050a1e 100%);padding:clamp(14px,2.5vw,26px);gap:clamp(10px,1.8vw,16px);position:relative;overflow:hidden;'>
           <div>
             <span style='font-size:clamp(.8rem,1.46vw,.96rem);font-weight:700;letter-spacing:2px;color:#a855f7;text-transform:uppercase;'>El punto de partida</span>
             <h2 style='font-size:clamp(1.2rem,2.5vw,1.9rem);font-weight:900;color:#fff;margin-top:4px;'>Haz contenido de lo que...</h2>
@@ -4022,12 +4030,13 @@ Plataforma: TikTok / Reels</pre>
             <span style='font-size:clamp(1.2rem,2.2vw,1.6rem);flex-shrink:0;'>💡</span>
             <div style='font-size:clamp(.76rem,1.4vw,.9rem);color:rgba(255,255,255,.75);'><strong style='color:#c084fc;'>No necesitas los tres a la vez.</strong> Basta con que al menos UNO te mueva — donde se cruzan es tu nicho ideal.</div>
           </div>
+          <img src='Personaje/freepik_que-el-personaje-img1-este-escribiendo-en-una-pizarra-en-diferentes-idiomas._0001.png' style='position:absolute;bottom:-12px;right:-8px;height:clamp(130px,24vw,195px);width:auto;pointer-events:none;filter:drop-shadow(0 0 22px rgba(168,85,247,.4));opacity:.88;'>
         </div>
       `}},
 
       // 3 — Errores típicos
       { type: "rawhtml", data: { html: `
-        <div style='display:flex;flex-direction:column;height:100%;background:linear-gradient(160deg,#0d0022 0%,#1e0545 60%,#050a1e 100%);padding:clamp(14px,2.5vw,26px);gap:clamp(10px,1.8vw,16px);'>
+        <div style='display:flex;flex-direction:column;height:100%;background:linear-gradient(160deg,#0d0022 0%,#1e0545 60%,#050a1e 100%);padding:clamp(14px,2.5vw,26px);gap:clamp(10px,1.8vw,16px);position:relative;overflow:hidden;'>
           <div>
             <span style='font-size:clamp(.8rem,1.46vw,.96rem);font-weight:700;letter-spacing:2px;color:#f87171;text-transform:uppercase;'>Errores típicos</span>
             <h2 style='font-size:clamp(1.2rem,2.5vw,1.9rem);font-weight:900;color:#fff;margin-top:4px;'>Lo que frena a la mayoría</h2>
@@ -4083,6 +4092,7 @@ Plataforma: TikTok / Reels</pre>
             </div>
 
           </div>
+          <img src='Personaje/freepik_que-el-personaje-img1-este-conectando-un-cable-pero-se-esta-electrocutando._0001.png' style='position:absolute;bottom:-15px;right:-5px;height:clamp(140px,26vw,210px);width:auto;pointer-events:none;filter:drop-shadow(0 0 28px rgba(99,102,241,.5));opacity:.9;'>
         </div>
       `}},
 
@@ -4149,7 +4159,7 @@ Plataforma: TikTok / Reels</pre>
 
       // 5 — Ideas sencillas para empezar
       { type: "rawhtml", data: { html: `
-        <div style='display:flex;flex-direction:column;height:100%;background:linear-gradient(160deg,#0d0022 0%,#1e0545 60%,#050a1e 100%);padding:clamp(14px,2.5vw,26px);gap:clamp(10px,1.8vw,16px);'>
+        <div style='display:flex;flex-direction:column;height:100%;background:linear-gradient(160deg,#0d0022 0%,#1e0545 60%,#050a1e 100%);padding:clamp(14px,2.5vw,26px);gap:clamp(10px,1.8vw,16px);position:relative;overflow:hidden;'>
           <div>
             <span style='font-size:clamp(.8rem,1.46vw,.96rem);font-weight:700;letter-spacing:2px;color:#a855f7;text-transform:uppercase;'>Ideas para hoy</span>
             <h2 style='font-size:clamp(1.2rem,2.5vw,1.9rem);font-weight:900;color:#fff;margin-top:4px;'>8 tipos de contenido con los que puedes empezar ahora</h2>
@@ -4205,12 +4215,13 @@ Plataforma: TikTok / Reels</pre>
             </div>
 
           </div>
+          <img src='Personaje/freepik_que-el-personaje-img1-este-llenando-una-album-de-estampas-y-tenga-estampas-pegadas-por-todo-el-cuerpo._0001.png' style='position:absolute;bottom:-10px;left:-8px;height:clamp(120px,22vw,180px);width:auto;pointer-events:none;filter:drop-shadow(0 0 20px rgba(168,85,247,.4));opacity:.85;'>
         </div>
       `}},
 
       // 6 — Carta de compromiso
       { type: "rawhtml", data: { html: `
-        <div style='display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;background:linear-gradient(160deg,#0d0022 0%,#1e0545 60%,#050a1e 100%);padding:clamp(12px,2.2vw,22px);gap:clamp(10px,1.8vw,14px);'>
+        <div style='display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;background:linear-gradient(160deg,#0d0022 0%,#1e0545 60%,#050a1e 100%);padding:clamp(12px,2.2vw,22px);gap:clamp(10px,1.8vw,14px);position:relative;overflow:hidden;'>
           <div style='text-align:center;flex-shrink:0;'>
             <span style='font-size:clamp(.8rem,1.46vw,.96rem);font-weight:700;letter-spacing:2px;color:#a855f7;text-transform:uppercase;'>Momento especial</span>
             <h2 style='font-size:clamp(1.2rem,2.5vw,1.9rem);font-weight:900;color:#fff;margin-top:4px;'>Mi carta de compromiso</h2>
@@ -4245,6 +4256,7 @@ Plataforma: TikTok / Reels</pre>
               <div style='font-size:clamp(.64rem,1.16vw,.76rem);color:#a16207;margin-top:4px;line-height:1.4;'>El mundo está esperando tu contenido. Hoy empieza todo.</div>
             </div>
           </div>
+          <img id='c8charjump' src='Personaje/freepik_que-el-personaje-img1-este-saltando-expresando-mucha-felicidad_0001.png' style='position:absolute;bottom:-15px;right:clamp(5px,2vw,20px);height:clamp(130px,24vw,190px);width:auto;pointer-events:none;filter:drop-shadow(0 0 30px rgba(168,85,247,.5));opacity:0;transition:opacity .6s ease .2s;'>
         </div>
         <script>
         (function(){
@@ -4261,8 +4273,10 @@ Plataforma: TikTok / Reels</pre>
         function c8sign(){
           var btn=document.getElementById('c8btn');
           var seal=document.getElementById('c8seal');
+          var ch=document.getElementById('c8charjump');
           if(btn) btn.style.display='none';
           if(seal) seal.style.display='block';
+          if(ch) ch.style.opacity='1';
           c8nameUpdate();
         }
         <\/script>
@@ -4271,7 +4285,7 @@ Plataforma: TikTok / Reels</pre>
 
       // 7 — Cierre
       { type: "rawhtml", data: { html: `
-        <div style='display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;background:linear-gradient(160deg,#0d0022 0%,#1e0545 55%,#050a1e 100%);padding:6%;text-align:center;gap:clamp(14px,2.5vw,22px);'>
+        <div style='display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;background:linear-gradient(160deg,#0d0022 0%,#1e0545 55%,#050a1e 100%);padding:6%;text-align:center;gap:clamp(14px,2.5vw,22px);position:relative;overflow:hidden;'>
           <div style='font-size:clamp(2.4rem,5vw,3.8rem);'>🚀✨</div>
           <h2 style='font-size:clamp(1.6rem,3.5vw,2.8rem);font-weight:900;background:linear-gradient(135deg,#fff 20%,#c084fc 55%,#a855f7 85%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.15;'>Hoy publicas. No mañana.</h2>
           <p style='font-size:clamp(.82rem,1.5vw,1rem);color:rgba(255,255,255,.6);max-width:500px;line-height:1.6;'>Tu primer video no tiene que ser perfecto. Solo tiene que <em style='color:#c084fc;'>existir.</em> La perfección es el enemigo de lo publicado.</p>
@@ -4290,6 +4304,7 @@ Plataforma: TikTok / Reels</pre>
               <div style='font-size:clamp(.78rem,1.45vw,.94rem);color:rgba(255,255,255,.7);line-height:1.5;'>Publica y etiqueta<br><strong style='color:#c084fc;'>@ChinoTeacher</strong></div>
             </div>
           </div>
+          <img src='Personaje/freepik_que-el-personaje-img1-este-exportando-un-video-en-una-macbook-en-capcut-este-esta-levantando-el-pulgar-con-una-mano-y-con-la-otra-sosteniendo-la-macbook._0001.png' style='position:absolute;bottom:-12px;right:-10px;height:clamp(150px,28vw,230px);width:auto;pointer-events:none;filter:drop-shadow(0 0 35px rgba(168,85,247,.55));opacity:.92;'>
         </div>
       `}},
 
