@@ -4634,7 +4634,7 @@ Plataforma: TikTok / Reels</pre>
   {
     id: 10,
     title: "Claude como Editor de Video",
-    description: "Prompts y configuración para crear videos animados con IA",
+    description: "Los prompts exactos para que Claude instale y edite videos por ti",
     emoji: "🎬",
     bg: "linear-gradient(135deg,#0f0c29 0%,#302b63 40%,#6d28d9 100%)",
     slides: [
@@ -4654,78 +4654,117 @@ Plataforma: TikTok / Reels</pre>
         </div>
       `}},
 
-      // 2 — Qué necesitas
+      // 2 — Prompt de instalación
       { type: "rawhtml", data: { html: `
-        <div style='padding:5% 6%;height:100%;display:flex;flex-direction:column;justify-content:center;gap:clamp(12px,1.8vw,20px);box-sizing:border-box;'>
+        <div style='padding:5% 6%;height:100%;display:flex;flex-direction:column;justify-content:center;gap:clamp(14px,2vw,22px);box-sizing:border-box;'>
           <div style='text-align:center;'>
-            <div style='font-size:clamp(.64rem,1.1vw,.78rem);letter-spacing:.15em;color:rgba(167,139,250,.7);font-weight:700;text-transform:uppercase;margin-bottom:6px;'>Antes de empezar</div>
-            <h2 style='font-size:clamp(1.4rem,2.8vw,2.2rem);font-weight:900;color:#fff;margin:0;'>3 cosas que necesitas</h2>
+            <div style='display:inline-flex;align-items:center;gap:8px;background:rgba(167,139,250,.12);border:1px solid rgba(167,139,250,.25);border-radius:20px;padding:5px 14px;margin-bottom:10px;'>
+              <span style='font-size:.8rem;'>💬</span>
+              <span style='font-size:clamp(.62rem,1vw,.76rem);color:#c4b5fd;font-weight:700;letter-spacing:.1em;text-transform:uppercase;'>Paso 1 — Dale este prompt a Claude Code</span>
+            </div>
+            <h2 style='font-size:clamp(1.3rem,2.6vw,2rem);font-weight:900;color:#fff;margin:0;'>El prompt de instalación</h2>
           </div>
-          <div style='display:flex;flex-direction:column;gap:clamp(8px,1.3vw,14px);'>
-            <div style='display:flex;align-items:center;gap:14px;background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.2);border-radius:14px;padding:clamp(10px,1.6vw,16px) clamp(14px,2vw,20px);'>
-              <div style='width:42px;height:42px;min-width:42px;background:linear-gradient(135deg,#7c3aed,#a78bfa);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;'>🤖</div>
-              <div>
-                <div style='font-size:clamp(.84rem,1.45vw,1rem);font-weight:800;color:#e0d9ff;'>Claude Code — Plan Pro o Max</div>
-                <div style='font-size:clamp(.67rem,1.05vw,.8rem);color:rgba(255,255,255,.5);margin-top:2px;'>El plan gratuito no incluye Claude Code. Necesitas suscripción de pago en claude.ai.</div>
+          <div style='background:rgba(0,0,0,.5);border:1.5px solid rgba(167,139,250,.35);border-radius:18px;overflow:hidden;'>
+            <div style='background:rgba(167,139,250,.1);border-bottom:1px solid rgba(167,139,250,.2);padding:10px 16px;display:flex;align-items:center;gap:8px;'>
+              <div style='width:10px;height:10px;border-radius:50%;background:#ff5f57;'></div>
+              <div style='width:10px;height:10px;border-radius:50%;background:#ffbd2e;'></div>
+              <div style='width:10px;height:10px;border-radius:50%;background:#28ca41;'></div>
+              <span style='font-size:clamp(.6rem,.9vw,.72rem);color:rgba(255,255,255,.35);margin-left:6px;font-family:monospace;'>Claude Code</span>
+            </div>
+            <div style='padding:clamp(16px,2.4vw,24px);'>
+              <div style='display:flex;gap:12px;align-items:flex-start;'>
+                <div style='width:30px;height:30px;min-width:30px;background:linear-gradient(135deg,#7c3aed,#a78bfa);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;margin-top:2px;'>👤</div>
+                <div style='flex:1;background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.18);border-radius:4px 14px 14px 14px;padding:clamp(12px,1.8vw,18px);'>
+                  <p style='font-size:clamp(.78rem,1.3vw,.95rem);color:#e0d9ff;line-height:1.65;margin:0;font-style:italic;'>Instala y configura <strong style='color:#a78bfa;font-style:normal;'>Remotion</strong> en mi ordenador para poder editar videos automáticamente. Instala también todo lo que necesites para que funcione, incluyendo <strong style='color:#a78bfa;font-style:normal;'>FFmpeg</strong>.</p>
+                </div>
               </div>
             </div>
-            <div style='display:flex;align-items:center;gap:14px;background:rgba(99,102,241,.08);border:1px solid rgba(99,102,241,.2);border-radius:14px;padding:clamp(10px,1.6vw,16px) clamp(14px,2vw,20px);'>
-              <div style='width:42px;height:42px;min-width:42px;background:linear-gradient(135deg,#4338ca,#818cf8);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;'>⚙️</div>
-              <div>
-                <div style='font-size:clamp(.84rem,1.45vw,1rem);font-weight:800;color:#e0d9ff;'>Node.js instalado en tu computadora</div>
-                <div style='font-size:clamp(.67rem,1.05vw,.8rem);color:rgba(255,255,255,.5);margin-top:2px;'>Remotion funciona como proyecto web local. Node.js es el motor que lo ejecuta.</div>
-              </div>
+          </div>
+          <div style='display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1.2vw,12px);'>
+            <div style='text-align:center;background:rgba(74,222,128,.07);border:1px solid rgba(74,222,128,.18);border-radius:12px;padding:clamp(8px,1.3vw,12px) 8px;'>
+              <div style='font-size:1rem;margin-bottom:4px;'>📦</div>
+              <div style='font-size:clamp(.62rem,.95vw,.74rem);color:#86efac;font-weight:700;'>Remotion</div>
+              <div style='font-size:clamp(.58rem,.85vw,.68rem);color:rgba(255,255,255,.4);margin-top:2px;'>motor de video</div>
             </div>
-            <div style='display:flex;align-items:center;gap:14px;background:rgba(236,72,153,.08);border:1px solid rgba(236,72,153,.2);border-radius:14px;padding:clamp(10px,1.6vw,16px) clamp(14px,2vw,20px);'>
-              <div style='width:42px;height:42px;min-width:42px;background:linear-gradient(135deg,#be185d,#f472b6);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;'>🎬</div>
-              <div>
-                <div style='font-size:clamp(.84rem,1.45vw,1rem);font-weight:800;color:#e0d9ff;'>El skill oficial de Remotion</div>
-                <div style='font-size:clamp(.67rem,1.05vw,.8rem);color:rgba(255,255,255,.5);margin-top:2px;'>Se activa directo en Claude Code. Es el "puente" entre Claude y la creación de video.</div>
-              </div>
+            <div style='text-align:center;background:rgba(99,102,241,.07);border:1px solid rgba(99,102,241,.18);border-radius:12px;padding:clamp(8px,1.3vw,12px) 8px;'>
+              <div style='font-size:1rem;margin-bottom:4px;'>🎞️</div>
+              <div style='font-size:clamp(.62rem,.95vw,.74rem);color:#a5b4fc;font-weight:700;'>FFmpeg</div>
+              <div style='font-size:clamp(.58rem,.85vw,.68rem);color:rgba(255,255,255,.4);margin-top:2px;'>exporta los archivos</div>
             </div>
+            <div style='text-align:center;background:rgba(236,72,153,.07);border:1px solid rgba(236,72,153,.18);border-radius:12px;padding:clamp(8px,1.3vw,12px) 8px;'>
+              <div style='font-size:1rem;margin-bottom:4px;'>⚙️</div>
+              <div style='font-size:clamp(.62rem,.95vw,.74rem);color:#f9a8d4;font-weight:700;'>Node.js + deps</div>
+              <div style='font-size:clamp(.58rem,.85vw,.68rem);color:rgba(255,255,255,.4);margin-top:2px;'>todo lo necesario</div>
+            </div>
+          </div>
+          <div style='background:rgba(251,191,36,.07);border:1px solid rgba(251,191,36,.2);border-radius:10px;padding:10px 16px;text-align:center;'>
+            <div style='font-size:clamp(.68rem,1.1vw,.8rem);color:#fbbf24;'>⚡ Claude instala todo automáticamente — no necesitas saber qué es cada cosa.</div>
           </div>
         </div>
       `}},
 
-      // 3 — Cómo configurarlo
+      // 3 — Prompt de verificación
       { type: "rawhtml", data: { html: `
-        <div style='padding:5% 6%;height:100%;display:flex;flex-direction:column;justify-content:center;gap:clamp(12px,1.8vw,20px);box-sizing:border-box;'>
+        <div style='padding:5% 6%;height:100%;display:flex;flex-direction:column;justify-content:center;gap:clamp(14px,2vw,22px);box-sizing:border-box;'>
           <div style='text-align:center;'>
-            <div style='font-size:clamp(.64rem,1.1vw,.78rem);letter-spacing:.15em;color:rgba(167,139,250,.7);font-weight:700;text-transform:uppercase;margin-bottom:6px;'>Setup</div>
-            <h2 style='font-size:clamp(1.4rem,2.8vw,2.2rem);font-weight:900;color:#fff;margin:0;'>Configuración en 3 pasos</h2>
+            <div style='display:inline-flex;align-items:center;gap:8px;background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.25);border-radius:20px;padding:5px 14px;margin-bottom:10px;'>
+              <span style='font-size:.8rem;'>🔍</span>
+              <span style='font-size:clamp(.62rem,1vw,.76rem);color:#67e8f9;font-weight:700;letter-spacing:.1em;text-transform:uppercase;'>Paso 2 — Verifica que todo esté bien</span>
+            </div>
+            <h2 style='font-size:clamp(1.3rem,2.6vw,2rem);font-weight:900;color:#fff;margin:0;'>El prompt de verificación</h2>
           </div>
-          <div style='display:flex;flex-direction:column;gap:clamp(8px,1.3vw,14px);'>
-            <div style='display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(167,139,250,.15);border-radius:14px;padding:clamp(10px,1.6vw,16px) clamp(14px,2vw,20px);'>
-              <div style='width:32px;height:32px;min-width:32px;background:linear-gradient(135deg,#7c3aed,#a78bfa);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;color:#fff;margin-top:2px;'>1</div>
-              <div style='flex:1;'>
-                <div style='font-size:clamp(.84rem,1.4vw,.98rem);font-weight:800;color:#e0d9ff;margin-bottom:4px;'>Consigue Claude Code</div>
-                <div style='font-size:clamp(.66rem,1.05vw,.8rem);color:rgba(255,255,255,.5);line-height:1.5;'>Accede desde claude.ai — elige plan Pro o Max. Disponible como app de escritorio, extensión de VSCode o web.</div>
+          <div style='background:rgba(0,0,0,.5);border:1.5px solid rgba(34,211,238,.3);border-radius:18px;overflow:hidden;'>
+            <div style='background:rgba(34,211,238,.08);border-bottom:1px solid rgba(34,211,238,.18);padding:10px 16px;display:flex;align-items:center;gap:8px;'>
+              <div style='width:10px;height:10px;border-radius:50%;background:#ff5f57;'></div>
+              <div style='width:10px;height:10px;border-radius:50%;background:#ffbd2e;'></div>
+              <div style='width:10px;height:10px;border-radius:50%;background:#28ca41;'></div>
+              <span style='font-size:clamp(.6rem,.9vw,.72rem);color:rgba(255,255,255,.35);margin-left:6px;font-family:monospace;'>Claude Code</span>
+            </div>
+            <div style='padding:clamp(16px,2.4vw,24px);'>
+              <div style='display:flex;gap:12px;align-items:flex-start;'>
+                <div style='width:30px;height:30px;min-width:30px;background:linear-gradient(135deg,#0891b2,#22d3ee);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;margin-top:2px;'>👤</div>
+                <div style='flex:1;background:rgba(34,211,238,.08);border:1px solid rgba(34,211,238,.18);border-radius:4px 14px 14px 14px;padding:clamp(12px,1.8vw,18px);'>
+                  <p style='font-size:clamp(.78rem,1.3vw,.95rem);color:#e0f7ff;line-height:1.65;margin:0;font-style:italic;'>Verifica que esté instalado correctamente y dime si falta algo.</p>
+                </div>
               </div>
             </div>
-            <div style='display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(99,102,241,.15);border-radius:14px;padding:clamp(10px,1.6vw,16px) clamp(14px,2vw,20px);'>
-              <div style='width:32px;height:32px;min-width:32px;background:linear-gradient(135deg,#4338ca,#818cf8);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;color:#fff;margin-top:2px;'>2</div>
-              <div style='flex:1;'>
-                <div style='font-size:clamp(.84rem,1.4vw,.98rem);font-weight:800;color:#e0d9ff;margin-bottom:4px;'>Instala el skill de Remotion</div>
-                <div style='font-size:clamp(.66rem,1.05vw,.8rem);color:rgba(255,255,255,.5);line-height:1.5;'>Dentro de Claude Code escribe <span style='font-family:monospace;color:#a5b4fc;background:rgba(99,102,241,.15);padding:1px 6px;border-radius:4px;'>/skills</span> → busca "Remotion" → instala el skill oficial. Node.js debe estar instalado primero.</div>
+          </div>
+          <div style='display:flex;flex-direction:column;gap:clamp(7px,1.1vw,11px);'>
+            <div style='font-size:clamp(.66rem,1.1vw,.8rem);color:rgba(255,255,255,.45);font-weight:600;text-transform:uppercase;letter-spacing:.1em;'>Qué debe responderte Claude ✓</div>
+            <div style='display:grid;grid-template-columns:1fr 1fr;gap:clamp(7px,1.1vw,11px);'>
+              <div style='display:flex;gap:10px;align-items:center;background:rgba(74,222,128,.06);border:1px solid rgba(74,222,128,.18);border-radius:10px;padding:10px 14px;'>
+                <span style='color:#4ade80;font-size:1rem;'>✅</span>
+                <span style='font-size:clamp(.68rem,1.1vw,.8rem);color:rgba(255,255,255,.7);'>Remotion instalado y configurado</span>
+              </div>
+              <div style='display:flex;gap:10px;align-items:center;background:rgba(74,222,128,.06);border:1px solid rgba(74,222,128,.18);border-radius:10px;padding:10px 14px;'>
+                <span style='color:#4ade80;font-size:1rem;'>✅</span>
+                <span style='font-size:clamp(.68rem,1.1vw,.8rem);color:rgba(255,255,255,.7);'>FFmpeg disponible en el sistema</span>
+              </div>
+              <div style='display:flex;gap:10px;align-items:center;background:rgba(74,222,128,.06);border:1px solid rgba(74,222,128,.18);border-radius:10px;padding:10px 14px;'>
+                <span style='color:#4ade80;font-size:1rem;'>✅</span>
+                <span style='font-size:clamp(.68rem,1.1vw,.8rem);color:rgba(255,255,255,.7);'>Node.js y dependencias listas</span>
+              </div>
+              <div style='display:flex;gap:10px;align-items:center;background:rgba(74,222,128,.06);border:1px solid rgba(74,222,128,.18);border-radius:10px;padding:10px 14px;'>
+                <span style='color:#4ade80;font-size:1rem;'>✅</span>
+                <span style='font-size:clamp(.68rem,1.1vw,.8rem);color:rgba(255,255,255,.7);'>Preview lista en localhost:3000</span>
               </div>
             </div>
-            <div style='display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(236,72,153,.15);border-radius:14px;padding:clamp(10px,1.6vw,16px) clamp(14px,2vw,20px);'>
-              <div style='width:32px;height:32px;min-width:32px;background:linear-gradient(135deg,#be185d,#f472b6);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;color:#fff;margin-top:2px;'>3</div>
-              <div style='flex:1;'>
-                <div style='font-size:clamp(.84rem,1.4vw,.98rem);font-weight:800;color:#e0d9ff;margin-bottom:4px;'>¡Dale tu primer prompt!</div>
-                <div style='background:rgba(0,0,0,.35);border:1px solid rgba(236,72,153,.2);border-radius:8px;padding:8px 12px;font-family:monospace;font-size:clamp(.62rem,.95vw,.76rem);color:#f9a8d4;margin-bottom:4px;'>Crea un video de 15 segundos para Instagram...</div>
-                <div style='font-size:clamp(.63rem,.95vw,.75rem);color:rgba(255,255,255,.4);'>La preview se abre automáticamente en tu navegador en localhost:3000</div>
-              </div>
-            </div>
+          </div>
+          <div style='background:rgba(167,139,250,.07);border:1px solid rgba(167,139,250,.2);border-radius:10px;padding:10px 16px;text-align:center;'>
+            <div style='font-size:clamp(.68rem,1.1vw,.8rem);color:#c4b5fd;'>Si Claude detecta algo faltante, él mismo lo instala. Solo sigue sus instrucciones.</div>
           </div>
         </div>
       `}},
 
       // 4 — Qué SÍ puede hacer
       { type: "rawhtml", data: { html: `
-        <div style='padding:5% 6%;height:100%;display:flex;flex-direction:column;justify-content:center;gap:clamp(12px,1.8vw,20px);box-sizing:border-box;'>
+        <div style='padding:5% 6%;height:100%;display:flex;flex-direction:column;justify-content:center;gap:clamp(12px,1.8vw,18px);box-sizing:border-box;'>
           <div style='text-align:center;'>
-            <div style='font-size:clamp(.64rem,1.1vw,.78rem);letter-spacing:.15em;color:#4ade80;font-weight:700;text-transform:uppercase;margin-bottom:6px;'>✅ Lo que SÍ funciona</div>
+            <div style='display:inline-flex;align-items:center;gap:8px;background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);border-radius:20px;padding:6px 18px;margin-bottom:8px;'>
+              <span style='font-size:.9rem;'>🎉</span>
+              <span style='font-size:clamp(.66rem,1.05vw,.8rem);color:#4ade80;font-weight:800;'>¡Ya estás listo para editar videos!</span>
+            </div>
+            <div style='font-size:clamp(.64rem,1.1vw,.78rem);letter-spacing:.15em;color:rgba(74,222,128,.7);font-weight:700;text-transform:uppercase;margin-bottom:5px;'>✅ Lo que SÍ funciona</div>
             <h2 style='font-size:clamp(1.3rem,2.6vw,2.1rem);font-weight:900;color:#fff;margin:0;'>Claude brilla en esto</h2>
           </div>
           <div style='display:grid;grid-template-columns:1fr 1fr;gap:clamp(8px,1.3vw,12px);'>
