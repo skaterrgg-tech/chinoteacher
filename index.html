@@ -4628,6 +4628,281 @@ Plataforma: TikTok / Reels</pre>
       `}},
 
     ]
+  },
+
+  // Clase 10 — Claude como Editor de Video
+  {
+    id: 10,
+    title: "Claude como Editor de Video",
+    description: "Prompts y configuración para crear videos animados con IA",
+    emoji: "🎬",
+    bg: "linear-gradient(135deg,#0f0c29 0%,#302b63 40%,#6d28d9 100%)",
+    slides: [
+
+      // 1 — Cover
+      { type: "rawhtml", data: { html: `
+        <div style='display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:6%;text-align:center;gap:clamp(12px,2vw,20px);'>
+          <div style='font-size:clamp(2.8rem,5.5vw,4rem);'>🎬</div>
+          <div style='font-size:clamp(.65rem,1.1vw,.8rem);letter-spacing:.18em;color:rgba(167,139,250,.7);font-weight:700;text-transform:uppercase;'>Clase 10</div>
+          <h1 style='font-size:clamp(1.8rem,3.8vw,3rem);font-weight:900;background:linear-gradient(135deg,#fff 20%,#a78bfa 55%,#818cf8 85%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.15;margin:0;'>Claude como<br>Editor de Video</h1>
+          <p style='font-size:clamp(.78rem,1.3vw,.92rem);color:rgba(255,255,255,.55);max-width:480px;line-height:1.6;margin:0;'>Configura Claude con la herramienta correcta y crea videos animados con prompts simples — sin tocar código.</p>
+          <div style='display:flex;gap:clamp(6px,1vw,10px);margin-top:6px;flex-wrap:wrap;justify-content:center;'>
+            <span style='background:rgba(167,139,250,.15);border:1px solid rgba(167,139,250,.3);border-radius:20px;padding:5px 14px;font-size:clamp(.62rem,1vw,.76rem);color:#c4b5fd;'>Claude Code</span>
+            <span style='background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.3);border-radius:20px;padding:5px 14px;font-size:clamp(.62rem,1vw,.76rem);color:#a5b4fc;'>Remotion</span>
+            <span style='background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.3);border-radius:20px;padding:5px 14px;font-size:clamp(.62rem,1vw,.76rem);color:#f9a8d4;'>Node.js</span>
+          </div>
+        </div>
+      `}},
+
+      // 2 — Qué necesitas
+      { type: "rawhtml", data: { html: `
+        <div style='padding:5% 6%;height:100%;display:flex;flex-direction:column;justify-content:center;gap:clamp(12px,1.8vw,20px);box-sizing:border-box;'>
+          <div style='text-align:center;'>
+            <div style='font-size:clamp(.64rem,1.1vw,.78rem);letter-spacing:.15em;color:rgba(167,139,250,.7);font-weight:700;text-transform:uppercase;margin-bottom:6px;'>Antes de empezar</div>
+            <h2 style='font-size:clamp(1.4rem,2.8vw,2.2rem);font-weight:900;color:#fff;margin:0;'>3 cosas que necesitas</h2>
+          </div>
+          <div style='display:flex;flex-direction:column;gap:clamp(8px,1.3vw,14px);'>
+            <div style='display:flex;align-items:center;gap:14px;background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.2);border-radius:14px;padding:clamp(10px,1.6vw,16px) clamp(14px,2vw,20px);'>
+              <div style='width:42px;height:42px;min-width:42px;background:linear-gradient(135deg,#7c3aed,#a78bfa);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;'>🤖</div>
+              <div>
+                <div style='font-size:clamp(.84rem,1.45vw,1rem);font-weight:800;color:#e0d9ff;'>Claude Code — Plan Pro o Max</div>
+                <div style='font-size:clamp(.67rem,1.05vw,.8rem);color:rgba(255,255,255,.5);margin-top:2px;'>El plan gratuito no incluye Claude Code. Necesitas suscripción de pago en claude.ai.</div>
+              </div>
+            </div>
+            <div style='display:flex;align-items:center;gap:14px;background:rgba(99,102,241,.08);border:1px solid rgba(99,102,241,.2);border-radius:14px;padding:clamp(10px,1.6vw,16px) clamp(14px,2vw,20px);'>
+              <div style='width:42px;height:42px;min-width:42px;background:linear-gradient(135deg,#4338ca,#818cf8);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;'>⚙️</div>
+              <div>
+                <div style='font-size:clamp(.84rem,1.45vw,1rem);font-weight:800;color:#e0d9ff;'>Node.js instalado en tu computadora</div>
+                <div style='font-size:clamp(.67rem,1.05vw,.8rem);color:rgba(255,255,255,.5);margin-top:2px;'>Remotion funciona como proyecto web local. Node.js es el motor que lo ejecuta.</div>
+              </div>
+            </div>
+            <div style='display:flex;align-items:center;gap:14px;background:rgba(236,72,153,.08);border:1px solid rgba(236,72,153,.2);border-radius:14px;padding:clamp(10px,1.6vw,16px) clamp(14px,2vw,20px);'>
+              <div style='width:42px;height:42px;min-width:42px;background:linear-gradient(135deg,#be185d,#f472b6);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;'>🎬</div>
+              <div>
+                <div style='font-size:clamp(.84rem,1.45vw,1rem);font-weight:800;color:#e0d9ff;'>El skill oficial de Remotion</div>
+                <div style='font-size:clamp(.67rem,1.05vw,.8rem);color:rgba(255,255,255,.5);margin-top:2px;'>Se activa directo en Claude Code. Es el "puente" entre Claude y la creación de video.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `}},
+
+      // 3 — Cómo configurarlo
+      { type: "rawhtml", data: { html: `
+        <div style='padding:5% 6%;height:100%;display:flex;flex-direction:column;justify-content:center;gap:clamp(12px,1.8vw,20px);box-sizing:border-box;'>
+          <div style='text-align:center;'>
+            <div style='font-size:clamp(.64rem,1.1vw,.78rem);letter-spacing:.15em;color:rgba(167,139,250,.7);font-weight:700;text-transform:uppercase;margin-bottom:6px;'>Setup</div>
+            <h2 style='font-size:clamp(1.4rem,2.8vw,2.2rem);font-weight:900;color:#fff;margin:0;'>Configuración en 3 pasos</h2>
+          </div>
+          <div style='display:flex;flex-direction:column;gap:clamp(8px,1.3vw,14px);'>
+            <div style='display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(167,139,250,.15);border-radius:14px;padding:clamp(10px,1.6vw,16px) clamp(14px,2vw,20px);'>
+              <div style='width:32px;height:32px;min-width:32px;background:linear-gradient(135deg,#7c3aed,#a78bfa);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;color:#fff;margin-top:2px;'>1</div>
+              <div style='flex:1;'>
+                <div style='font-size:clamp(.84rem,1.4vw,.98rem);font-weight:800;color:#e0d9ff;margin-bottom:4px;'>Consigue Claude Code</div>
+                <div style='font-size:clamp(.66rem,1.05vw,.8rem);color:rgba(255,255,255,.5);line-height:1.5;'>Accede desde claude.ai — elige plan Pro o Max. Disponible como app de escritorio, extensión de VSCode o web.</div>
+              </div>
+            </div>
+            <div style='display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(99,102,241,.15);border-radius:14px;padding:clamp(10px,1.6vw,16px) clamp(14px,2vw,20px);'>
+              <div style='width:32px;height:32px;min-width:32px;background:linear-gradient(135deg,#4338ca,#818cf8);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;color:#fff;margin-top:2px;'>2</div>
+              <div style='flex:1;'>
+                <div style='font-size:clamp(.84rem,1.4vw,.98rem);font-weight:800;color:#e0d9ff;margin-bottom:4px;'>Instala el skill de Remotion</div>
+                <div style='font-size:clamp(.66rem,1.05vw,.8rem);color:rgba(255,255,255,.5);line-height:1.5;'>Dentro de Claude Code escribe <span style='font-family:monospace;color:#a5b4fc;background:rgba(99,102,241,.15);padding:1px 6px;border-radius:4px;'>/skills</span> → busca "Remotion" → instala el skill oficial. Node.js debe estar instalado primero.</div>
+              </div>
+            </div>
+            <div style='display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(236,72,153,.15);border-radius:14px;padding:clamp(10px,1.6vw,16px) clamp(14px,2vw,20px);'>
+              <div style='width:32px;height:32px;min-width:32px;background:linear-gradient(135deg,#be185d,#f472b6);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;color:#fff;margin-top:2px;'>3</div>
+              <div style='flex:1;'>
+                <div style='font-size:clamp(.84rem,1.4vw,.98rem);font-weight:800;color:#e0d9ff;margin-bottom:4px;'>¡Dale tu primer prompt!</div>
+                <div style='background:rgba(0,0,0,.35);border:1px solid rgba(236,72,153,.2);border-radius:8px;padding:8px 12px;font-family:monospace;font-size:clamp(.62rem,.95vw,.76rem);color:#f9a8d4;margin-bottom:4px;'>Crea un video de 15 segundos para Instagram...</div>
+                <div style='font-size:clamp(.63rem,.95vw,.75rem);color:rgba(255,255,255,.4);'>La preview se abre automáticamente en tu navegador en localhost:3000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `}},
+
+      // 4 — Qué SÍ puede hacer
+      { type: "rawhtml", data: { html: `
+        <div style='padding:5% 6%;height:100%;display:flex;flex-direction:column;justify-content:center;gap:clamp(12px,1.8vw,20px);box-sizing:border-box;'>
+          <div style='text-align:center;'>
+            <div style='font-size:clamp(.64rem,1.1vw,.78rem);letter-spacing:.15em;color:#4ade80;font-weight:700;text-transform:uppercase;margin-bottom:6px;'>✅ Lo que SÍ funciona</div>
+            <h2 style='font-size:clamp(1.3rem,2.6vw,2.1rem);font-weight:900;color:#fff;margin:0;'>Claude brilla en esto</h2>
+          </div>
+          <div style='display:grid;grid-template-columns:1fr 1fr;gap:clamp(8px,1.3vw,12px);'>
+            <div style='background:rgba(74,222,128,.06);border:1px solid rgba(74,222,128,.2);border-radius:12px;padding:clamp(10px,1.5vw,14px);'>
+              <div style='font-size:1.3rem;margin-bottom:5px;'>🎥</div>
+              <div style='font-size:clamp(.8rem,1.35vw,.94rem);font-weight:700;color:#86efac;margin-bottom:3px;'>Videos animados desde cero</div>
+              <div style='font-size:clamp(.62rem,1vw,.76rem);color:rgba(255,255,255,.5);line-height:1.4;'>Demos de producto, explicativos, intros de canal.</div>
+            </div>
+            <div style='background:rgba(74,222,128,.06);border:1px solid rgba(74,222,128,.2);border-radius:12px;padding:clamp(10px,1.5vw,14px);'>
+              <div style='font-size:1.3rem;margin-bottom:5px;'>📱</div>
+              <div style='font-size:clamp(.8rem,1.35vw,.94rem);font-weight:700;color:#86efac;margin-bottom:3px;'>Mockups de apps animados</div>
+              <div style='font-size:clamp(.62rem,1vw,.76rem);color:rgba(255,255,255,.5);line-height:1.4;'>Muestra tu app o producto con animaciones profesionales.</div>
+            </div>
+            <div style='background:rgba(74,222,128,.06);border:1px solid rgba(74,222,128,.2);border-radius:12px;padding:clamp(10px,1.5vw,14px);'>
+              <div style='font-size:1.3rem;margin-bottom:5px;'>💬</div>
+              <div style='font-size:clamp(.8rem,1.35vw,.94rem);font-weight:700;color:#86efac;margin-bottom:3px;'>Subtítulos y texto animado</div>
+              <div style='font-size:clamp(.62rem,1vw,.76rem);color:rgba(255,255,255,.5);line-height:1.4;'>Hooks de texto, subtítulos llamativos, CTAs animados.</div>
+            </div>
+            <div style='background:rgba(74,222,128,.06);border:1px solid rgba(74,222,128,.2);border-radius:12px;padding:clamp(10px,1.5vw,14px);'>
+              <div style='font-size:1.3rem;margin-bottom:5px;'>🔄</div>
+              <div style='font-size:clamp(.8rem,1.35vw,.94rem);font-weight:700;color:#86efac;margin-bottom:3px;'>Iteración en tiempo real</div>
+              <div style='font-size:clamp(.62rem,1vw,.76rem);color:rgba(255,255,255,.5);line-height:1.4;'>Pides cambios, se actualiza en segundos. Sin reexportar.</div>
+            </div>
+            <div style='background:rgba(74,222,128,.06);border:1px solid rgba(74,222,128,.2);border-radius:12px;padding:clamp(10px,1.5vw,14px);'>
+              <div style='font-size:1.3rem;margin-bottom:5px;'>📐</div>
+              <div style='font-size:clamp(.8rem,1.35vw,.94rem);font-weight:700;color:#86efac;margin-bottom:3px;'>Vertical y horizontal</div>
+              <div style='font-size:clamp(.62rem,1vw,.76rem);color:rgba(255,255,255,.5);line-height:1.4;'>Reels, TikToks, YouTube — cualquier formato.</div>
+            </div>
+            <div style='background:rgba(74,222,128,.06);border:1px solid rgba(74,222,128,.2);border-radius:12px;padding:clamp(10px,1.5vw,14px);'>
+              <div style='font-size:1.3rem;margin-bottom:5px;'>⚡</div>
+              <div style='font-size:clamp(.8rem,1.35vw,.94rem);font-weight:700;color:#86efac;margin-bottom:3px;'>Todo en ~5 minutos</div>
+              <div style='font-size:clamp(.62rem,1vw,.76rem);color:rgba(255,255,255,.5);line-height:1.4;'>Desde el primer prompt hasta el video exportado.</div>
+            </div>
+          </div>
+        </div>
+      `}},
+
+      // 5 — Qué NO puede hacer
+      { type: "rawhtml", data: { html: `
+        <div style='padding:5% 6%;height:100%;display:flex;flex-direction:column;justify-content:center;gap:clamp(12px,1.8vw,20px);box-sizing:border-box;'>
+          <div style='text-align:center;'>
+            <div style='font-size:clamp(.64rem,1.1vw,.78rem);letter-spacing:.15em;color:#f87171;font-weight:700;text-transform:uppercase;margin-bottom:6px;'>❌ Lo que NO funciona</div>
+            <h2 style='font-size:clamp(1.3rem,2.6vw,2.1rem);font-weight:900;color:#fff;margin:0;'>No es CapCut ni Premiere</h2>
+          </div>
+          <div style='display:flex;flex-direction:column;gap:clamp(8px,1.3vw,12px);'>
+            <div style='display:flex;gap:14px;align-items:center;background:rgba(248,113,113,.06);border:1px solid rgba(248,113,113,.2);border-radius:12px;padding:clamp(10px,1.5vw,14px) clamp(14px,2vw,18px);'>
+              <div style='font-size:1.3rem;min-width:28px;text-align:center;'>✂️</div>
+              <div>
+                <div style='font-size:clamp(.8rem,1.35vw,.94rem);font-weight:700;color:#fca5a5;'>Editar footage grabado en una línea de tiempo</div>
+                <div style='font-size:clamp(.63rem,1vw,.76rem);color:rgba(255,255,255,.45);margin-top:2px;'>No puede hacer cortes frame a frame como un editor tradicional.</div>
+              </div>
+            </div>
+            <div style='display:flex;gap:14px;align-items:center;background:rgba(248,113,113,.06);border:1px solid rgba(248,113,113,.2);border-radius:12px;padding:clamp(10px,1.5vw,14px) clamp(14px,2vw,18px);'>
+              <div style='font-size:1.3rem;min-width:28px;text-align:center;'>🎭</div>
+              <div>
+                <div style='font-size:clamp(.8rem,1.35vw,.94rem);font-weight:700;color:#fca5a5;'>Generar personas o actores reales</div>
+                <div style='font-size:clamp(.63rem,1vw,.76rem);color:rgba(255,255,255,.45);margin-top:2px;'>No genera caras humanas ni footage de cámara real.</div>
+              </div>
+            </div>
+            <div style='display:flex;gap:14px;align-items:center;background:rgba(248,113,113,.06);border:1px solid rgba(248,113,113,.2);border-radius:12px;padding:clamp(10px,1.5vw,14px) clamp(14px,2vw,18px);'>
+              <div style='font-size:1.3rem;min-width:28px;text-align:center;'>🎬</div>
+              <div>
+                <div style='font-size:clamp(.8rem,1.35vw,.94rem);font-weight:700;color:#fca5a5;'>Procesar video crudo de tu cámara</div>
+                <div style='font-size:clamp(.63rem,1vw,.76rem);color:rgba(255,255,255,.45);margin-top:2px;'>No abre un .mp4 de tu grabación y lo edita directamente.</div>
+              </div>
+            </div>
+            <div style='display:flex;gap:14px;align-items:center;background:rgba(248,113,113,.06);border:1px solid rgba(248,113,113,.2);border-radius:12px;padding:clamp(10px,1.5vw,14px) clamp(14px,2vw,18px);'>
+              <div style='font-size:1.3rem;min-width:28px;text-align:center;'>🔌</div>
+              <div>
+                <div style='font-size:clamp(.8rem,1.35vw,.94rem);font-weight:700;color:#fca5a5;'>Importar proyectos de CapCut, Premiere o DaVinci</div>
+                <div style='font-size:clamp(.63rem,1vw,.76rem);color:rgba(255,255,255,.45);margin-top:2px;'>Empieza desde cero o con imágenes y assets que tú le proporciones.</div>
+              </div>
+            </div>
+          </div>
+          <div style='background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.2);border-radius:10px;padding:10px 16px;text-align:center;'>
+            <div style='font-size:clamp(.7rem,1.15vw,.83rem);color:#c4b5fd;'>💡 Úsalo para <strong>videos animados y de diseño</strong>. Para footage real, sigue usando CapCut o Premiere.</div>
+          </div>
+        </div>
+      `}},
+
+      // 6 — El prompt maestro
+      { type: "rawhtml", data: { html: `
+        <div style='padding:5% 6%;height:100%;display:flex;flex-direction:column;justify-content:center;gap:clamp(12px,1.8vw,20px);box-sizing:border-box;'>
+          <div style='text-align:center;'>
+            <div style='font-size:clamp(.64rem,1.1vw,.78rem);letter-spacing:.15em;color:rgba(167,139,250,.7);font-weight:700;text-transform:uppercase;margin-bottom:6px;'>El prompt maestro</div>
+            <h2 style='font-size:clamp(1.3rem,2.6vw,2.1rem);font-weight:900;color:#fff;margin:0;'>La fórmula que siempre funciona</h2>
+          </div>
+          <div style='background:rgba(0,0,0,.45);border:1px solid rgba(167,139,250,.25);border-radius:16px;padding:clamp(14px,2vw,22px);'>
+            <div style='font-size:clamp(.62rem,1vw,.74rem);color:rgba(167,139,250,.6);margin-bottom:10px;font-weight:700;letter-spacing:.1em;'>ESTRUCTURA DEL PROMPT</div>
+            <div style='display:flex;flex-direction:column;gap:9px;font-family:monospace;font-size:clamp(.68rem,1.1vw,.82rem);line-height:1.6;'>
+              <div><span style='color:#86efac;'>Crea un video de</span> <span style='background:rgba(74,222,128,.15);border-radius:4px;padding:1px 7px;color:#4ade80;'>[duración en segundos]</span> <span style='color:#86efac;'>para</span> <span style='background:rgba(99,102,241,.2);border-radius:4px;padding:1px 7px;color:#a5b4fc;'>[plataforma]</span><span style='color:#86efac;'>.</span></div>
+              <div><span style='color:#f9a8d4;'>[Describe lo que debe mostrar: hook, contenido principal, llamada a la acción].</span></div>
+              <div><span style='color:#fcd34d;'>Estilo:</span> <span style='background:rgba(251,191,36,.1);border-radius:4px;padding:1px 7px;color:#fbbf24;'>[colores, tipografía, energía — rápido/suave/minimalista]</span><span style='color:#fcd34d;'>.</span></div>
+              <div><span style='color:#67e8f9;'>Formato:</span> <span style='background:rgba(103,232,249,.1);border-radius:4px;padding:1px 7px;color:#22d3ee;'>[1080x1920 vertical / 1920x1080 horizontal]</span><span style='color:#67e8f9;'>.</span></div>
+            </div>
+          </div>
+          <div style='display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(6px,1vw,10px);'>
+            <div style='text-align:center;background:rgba(74,222,128,.07);border:1px solid rgba(74,222,128,.18);border-radius:10px;padding:clamp(8px,1.3vw,12px) 6px;'>
+              <div style='font-size:.9rem;margin-bottom:4px;'>⏱️</div>
+              <div style='font-size:clamp(.6rem,.9vw,.72rem);color:#86efac;font-weight:700;'>Duración</div>
+              <div style='font-size:clamp(.56rem,.82vw,.68rem);color:rgba(255,255,255,.4);margin-top:2px;'>15, 20 o 30 seg</div>
+            </div>
+            <div style='text-align:center;background:rgba(99,102,241,.07);border:1px solid rgba(99,102,241,.18);border-radius:10px;padding:clamp(8px,1.3vw,12px) 6px;'>
+              <div style='font-size:.9rem;margin-bottom:4px;'>📱</div>
+              <div style='font-size:clamp(.6rem,.9vw,.72rem);color:#a5b4fc;font-weight:700;'>Plataforma</div>
+              <div style='font-size:clamp(.56rem,.82vw,.68rem);color:rgba(255,255,255,.4);margin-top:2px;'>IG, TikTok, YouTube</div>
+            </div>
+            <div style='text-align:center;background:rgba(251,191,36,.07);border:1px solid rgba(251,191,36,.18);border-radius:10px;padding:clamp(8px,1.3vw,12px) 6px;'>
+              <div style='font-size:.9rem;margin-bottom:4px;'>🎨</div>
+              <div style='font-size:clamp(.6rem,.9vw,.72rem);color:#fbbf24;font-weight:700;'>Estilo</div>
+              <div style='font-size:clamp(.56rem,.82vw,.68rem);color:rgba(255,255,255,.4);margin-top:2px;'>colores, look, energía</div>
+            </div>
+            <div style='text-align:center;background:rgba(34,211,238,.07);border:1px solid rgba(34,211,238,.18);border-radius:10px;padding:clamp(8px,1.3vw,12px) 6px;'>
+              <div style='font-size:.9rem;margin-bottom:4px;'>📐</div>
+              <div style='font-size:clamp(.6rem,.9vw,.72rem);color:#22d3ee;font-weight:700;'>Formato</div>
+              <div style='font-size:clamp(.56rem,.82vw,.68rem);color:rgba(255,255,255,.4);margin-top:2px;'>vertical / horizontal</div>
+            </div>
+          </div>
+        </div>
+      `}},
+
+      // 7 — Prompts por tipo de video
+      { type: "rawhtml", data: { html: `
+        <div style='padding:4% 5%;height:100%;display:flex;flex-direction:column;justify-content:flex-start;gap:clamp(10px,1.5vw,14px);box-sizing:border-box;'>
+          <div style='text-align:center;flex-shrink:0;'>
+            <div style='font-size:clamp(.62rem,1vw,.76rem);letter-spacing:.15em;color:rgba(167,139,250,.7);font-weight:700;text-transform:uppercase;margin-bottom:4px;'>Prompts listos para usar</div>
+            <h2 style='font-size:clamp(1.2rem,2.4vw,1.9rem);font-weight:900;color:#fff;margin:0;'>Copia, pega y personaliza</h2>
+          </div>
+          <div style='display:grid;grid-template-columns:1fr 1fr;gap:clamp(8px,1.2vw,12px);flex:1;'>
+            <div style='background:rgba(167,139,250,.07);border:1px solid rgba(167,139,250,.2);border-radius:12px;padding:clamp(10px,1.4vw,14px);display:flex;flex-direction:column;gap:6px;'>
+              <div style='font-size:clamp(.68rem,1.05vw,.8rem);font-weight:800;color:#c4b5fd;'>🎯 Demo de producto — 20 seg</div>
+              <div style='background:rgba(0,0,0,.3);border-radius:8px;padding:8px;font-size:clamp(.58rem,.86vw,.7rem);color:rgba(255,255,255,.6);line-height:1.55;font-family:monospace;flex:1;'>Crea un demo de 20 seg para [nombre del producto]. Empieza con un hook de problema, haz un reveal del logo, muestra 3 funciones clave con mockup animado de celular, transiciones suaves y termina con un CTA. Colores de la marca: [URL o colores]. Formato: 1080x1920.</div>
+            </div>
+            <div style='background:rgba(99,102,241,.07);border:1px solid rgba(99,102,241,.2);border-radius:12px;padding:clamp(10px,1.4vw,14px);display:flex;flex-direction:column;gap:6px;'>
+              <div style='font-size:clamp(.68rem,1.05vw,.8rem);font-weight:800;color:#a5b4fc;'>📲 Tutorial de app — 30 seg</div>
+              <div style='background:rgba(0,0,0,.3);border-radius:8px;padding:8px;font-size:clamp(.58rem,.86vw,.7rem);color:rgba(255,255,255,.6);line-height:1.55;font-family:monospace;flex:1;'>Crea un tutorial de 30 seg de [app]. Anima los screenshots en mockup de celular con texto explicativo en cada paso. Transiciones fluidas, musica de fondo energica, CTA al final. Vertical para Reels y TikTok, formato 1080x1920.</div>
+            </div>
+            <div style='background:rgba(236,72,153,.07);border:1px solid rgba(236,72,153,.2);border-radius:12px;padding:clamp(10px,1.4vw,14px);display:flex;flex-direction:column;gap:6px;'>
+              <div style='font-size:clamp(.68rem,1.05vw,.8rem);font-weight:800;color:#f9a8d4;'>⚡ Anuncio rápido — 15 seg</div>
+              <div style='background:rgba(0,0,0,.3);border-radius:8px;padding:8px;font-size:clamp(.58rem,.86vw,.7rem);color:rgba(255,255,255,.6);line-height:1.55;font-family:monospace;flex:1;'>Crea un anuncio de 15 seg para [producto]. Abre con 2 seg de hook en texto, muestra el producto en accion, lista 3 beneficios con iconos animados, cierra con logo y boton CTA. Ritmo rapido, alta energia. Formato: 1080x1920.</div>
+            </div>
+            <div style='background:rgba(34,211,238,.07);border:1px solid rgba(34,211,238,.2);border-radius:12px;padding:clamp(10px,1.4vw,14px);display:flex;flex-direction:column;gap:6px;'>
+              <div style='font-size:clamp(.68rem,1.05vw,.8rem);font-weight:800;color:#67e8f9;'>🎓 Video explicativo — 30 seg</div>
+              <div style='background:rgba(0,0,0,.3);border-radius:8px;padding:8px;font-size:clamp(.58rem,.86vw,.7rem);color:rgba(255,255,255,.6);line-height:1.55;font-family:monospace;flex:1;'>Crea un explicativo de 30 seg sobre [tema]. Muestra el problema con texto y animacion, luego la solucion paso a paso con graficos animados. Estilo minimalista, colores: [marca], musica suave de fondo. Horizontal 1920x1080 para YouTube.</div>
+            </div>
+          </div>
+          <div style='background:rgba(251,191,36,.07);border:1px solid rgba(251,191,36,.2);border-radius:10px;padding:8px 14px;flex-shrink:0;'>
+            <div style='font-size:clamp(.66rem,1.05vw,.78rem);color:#fbbf24;'>💡 <strong>Tip:</strong> Mientras más específico seas (tiempos exactos, colores, número de escenas), mejores resultados.</div>
+          </div>
+        </div>
+      `}},
+
+      // 8 — Cierre
+      { type: "rawhtml", data: { html: `
+        <div style='display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:6%;text-align:center;gap:clamp(14px,2.2vw,22px);'>
+          <div style='font-size:clamp(2.4rem,5vw,3.6rem);'>🚀</div>
+          <h2 style='font-size:clamp(1.4rem,3vw,2.4rem);font-weight:900;background:linear-gradient(135deg,#fff 20%,#a78bfa 55%,#818cf8 85%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.18;margin:0;'>En 5 minutos puedes<br>tener tu primer video</h2>
+          <p style='font-size:clamp(.78rem,1.4vw,.95rem);color:rgba(255,255,255,.55);max-width:500px;line-height:1.6;margin:0;'>No necesitas saber programar. Solo describes lo que quieres, Claude lo construye y tú iteras hasta que quede perfecto.</p>
+          <div style='width:120px;height:1px;background:linear-gradient(90deg,transparent,rgba(167,139,250,.5),transparent);'></div>
+          <div style='display:flex;gap:clamp(8px,1.3vw,14px);justify-content:center;flex-wrap:wrap;'>
+            <div style='background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.25);border-radius:14px;padding:clamp(10px,1.6vw,14px) clamp(12px,1.8vw,18px);'>
+              <div style='font-size:clamp(1.5rem,2.8vw,2rem);margin-bottom:6px;'>⏱️</div>
+              <div style='font-size:clamp(.72rem,1.25vw,.88rem);color:rgba(255,255,255,.65);line-height:1.4;'>~5 minutos<br><strong style='color:#c4b5fd;'>por video</strong></div>
+            </div>
+            <div style='background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.25);border-radius:14px;padding:clamp(10px,1.6vw,14px) clamp(12px,1.8vw,18px);'>
+              <div style='font-size:clamp(1.5rem,2.8vw,2rem);margin-bottom:6px;'>💬</div>
+              <div style='font-size:clamp(.72rem,1.25vw,.88rem);color:rgba(255,255,255,.65);line-height:1.4;'>Solo un prompt<br><strong style='color:#a5b4fc;'>para empezar</strong></div>
+            </div>
+            <div style='background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.25);border-radius:14px;padding:clamp(10px,1.6vw,14px) clamp(12px,1.8vw,18px);'>
+              <div style='font-size:clamp(1.5rem,2.8vw,2rem);margin-bottom:6px;'>🔄</div>
+              <div style='font-size:clamp(.72rem,1.25vw,.88rem);color:rgba(255,255,255,.65);line-height:1.4;'>Preview en vivo<br><strong style='color:#818cf8;'>iteras en segundos</strong></div>
+            </div>
+          </div>
+        </div>
+      `}},
+
+    ]
   }
 
 ];
