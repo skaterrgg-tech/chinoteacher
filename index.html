@@ -5639,99 +5639,183 @@ Plataforma: TikTok / Reels</pre>
         </div>
       `}},
 
-      // 7 — Interactive YouTube Preview
+      // 7 — Formulario de personalización
       { type: "rawhtml", data: { html: `
-        <div style='padding:2.5% 4%;height:100%;display:flex;flex-direction:column;gap:clamp(6px,.95vw,10px);box-sizing:border-box;'>
-          <div style='flex-shrink:0;'>
-            <h2 style='font-size:clamp(1rem,1.9vw,1.45rem);font-weight:900;color:#fff;margin:0 0 1px;'>Así se vería tu canal</h2>
-            <p style='font-size:clamp(.58rem,.9vw,.7rem);color:rgba(255,255,255,.36);margin:0;'>Personaliza y mira cómo queda. Haz clic en banner, foto o miniatura para ver el prompt de Claude.</p>
+        <div style='padding:5% 6%;height:100%;display:flex;flex-direction:column;justify-content:center;gap:clamp(14px,2.2vw,20px);box-sizing:border-box;'>
+
+          <div style='text-align:center;'>
+            <div style='font-size:clamp(.64rem,1.1vw,.78rem);letter-spacing:.15em;color:rgba(99,102,241,.8);font-weight:700;text-transform:uppercase;margin-bottom:6px;'>Paso 5</div>
+            <h2 style='font-size:clamp(1.3rem,2.6vw,2.1rem);font-weight:900;color:#fff;margin:0 0 4px;'>Personaliza tu canal</h2>
+            <p style='font-size:clamp(.72rem,1.15vw,.86rem);color:rgba(255,255,255,.42);margin:0;'>Sube tu foto de perfil, tu banner y escribe el nombre. Luego haz clic en <strong style='color:#a5b4fc;'>Ver mi canal</strong>.</p>
           </div>
-          <div style='display:flex;gap:clamp(5px,.9vw,9px);flex-shrink:0;align-items:center;flex-wrap:wrap;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:clamp(6px,.9vw,9px) clamp(10px,1.5vw,14px);'>
-            <label for='c12ai' style='cursor:pointer;display:inline-flex;align-items:center;gap:5px;background:rgba(99,102,241,.18);border:1px solid rgba(99,102,241,.4);border-radius:20px;padding:4px 12px;font-size:clamp(.58rem,.88vw,.7rem);color:#a5b4fc;font-weight:700;white-space:nowrap;'>
-              📷 Foto de perfil
-              <input id='c12ai' type='file' accept='image/*' style='display:none;' onchange='c12upAvatar(this)'>
+
+          <div>
+            <div style='font-size:clamp(.6rem,.9vw,.7rem);font-weight:700;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px;'>🖼️ Banner del canal <span style='font-weight:400;color:rgba(255,255,255,.22);font-size:.9em;'>(2560 × 1440 px)</span></div>
+            <label for='c12bi' style='cursor:pointer;display:block;'>
+              <div id='c12bprev' style='width:100%;height:clamp(56px,9vw,82px);background:rgba(99,102,241,.06);border:2px dashed rgba(99,102,241,.3);border-radius:10px;display:flex;align-items:center;justify-content:center;transition:border-color .2s;background-size:cover;background-position:center;' onmouseenter='this.style.borderColor="rgba(99,102,241,.65)"' onmouseleave='this.style.borderColor="rgba(99,102,241,.3)"'>
+                <div id='c12btxt' style='text-align:center;pointer-events:none;'>
+                  <div style='font-size:clamp(1.2rem,2vw,1.6rem);margin-bottom:3px;'>⬆️</div>
+                  <div style='font-size:clamp(.6rem,.9vw,.7rem);color:rgba(255,255,255,.3);'>Haz clic para subir tu banner</div>
+                </div>
+              </div>
+              <input id='c12bi' type='file' accept='image/*' style='display:none;' onchange='c12prevBanner(this)'>
             </label>
-            <label for='c12bi' style='cursor:pointer;display:inline-flex;align-items:center;gap:5px;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.3);border-radius:20px;padding:4px 12px;font-size:clamp(.58rem,.88vw,.7rem);color:#fca5a5;font-weight:700;white-space:nowrap;'>
-              🖼️ Banner
-              <input id='c12bi' type='file' accept='image/*' style='display:none;' onchange='c12upBanner(this)'>
-            </label>
-            <input id='c12ni' type='text' placeholder='Nombre de tu canal' oninput='c12upName(this.value)' maxlength='60' style='flex:1;min-width:110px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:4px 9px;font-size:clamp(.58rem,.88vw,.7rem);color:#fff;outline:none;font-family:inherit;'>
-            <input id='c12di' type='text' placeholder='Tu descripción' oninput='c12upDesc(this.value)' maxlength='80' style='flex:1;min-width:90px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:4px 9px;font-size:clamp(.58rem,.88vw,.7rem);color:#fff;outline:none;font-family:inherit;'>
           </div>
+
+          <div style='display:flex;gap:clamp(14px,2.2vw,22px);align-items:flex-end;'>
+            <div style='flex-shrink:0;text-align:center;'>
+              <div style='font-size:clamp(.6rem,.9vw,.7rem);font-weight:700;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px;'>📷 Foto de perfil</div>
+              <label for='c12ai' style='cursor:pointer;display:block;'>
+                <div id='c12aprev' style='width:clamp(60px,9.5vw,82px);height:clamp(60px,9.5vw,82px);border-radius:50%;background:rgba(99,102,241,.08);border:2px dashed rgba(99,102,241,.35);display:flex;align-items:center;justify-content:center;margin:0 auto;transition:border-color .2s;background-size:cover;background-position:center;' onmouseenter='this.style.borderColor="rgba(99,102,241,.75)"' onmouseleave='this.style.borderColor="rgba(99,102,241,.35)"'>
+                  <span id='c12atxt' style='font-size:clamp(1.3rem,2.2vw,1.8rem);'>📷</span>
+                </div>
+                <input id='c12ai' type='file' accept='image/*' style='display:none;' onchange='c12prevAvatar(this)'>
+              </label>
+            </div>
+            <div style='flex:1;display:flex;flex-direction:column;gap:clamp(10px,1.6vw,14px);'>
+              <div>
+                <div style='font-size:clamp(.6rem,.9vw,.7rem);font-weight:700;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;'>Nombre del canal</div>
+                <input id='c12ni' type='text' placeholder='Ej: Diego Creador' maxlength='60' style='width:100%;box-sizing:border-box;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.14);border-radius:8px;padding:clamp(7px,1.1vw,10px) clamp(10px,1.5vw,14px);font-size:clamp(.76rem,1.25vw,.9rem);color:#fff;outline:none;font-family:inherit;transition:border-color .15s;' onfocus='this.style.borderColor="rgba(99,102,241,.7)"' onblur='this.style.borderColor="rgba(255,255,255,.14)"'>
+              </div>
+              <div>
+                <div style='font-size:clamp(.6rem,.9vw,.7rem);font-weight:700;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;'>Descripción</div>
+                <input id='c12di' type='text' placeholder='Ej: Contenido sobre marketing y redes sociales' maxlength='100' style='width:100%;box-sizing:border-box;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.14);border-radius:8px;padding:clamp(7px,1.1vw,10px) clamp(10px,1.5vw,14px);font-size:clamp(.76rem,1.25vw,.9rem);color:#fff;outline:none;font-family:inherit;transition:border-color .15s;' onfocus='this.style.borderColor="rgba(99,102,241,.7)"' onblur='this.style.borderColor="rgba(255,255,255,.14)"'>
+              </div>
+            </div>
+          </div>
+
+          <button onclick='c12submit()' style='width:100%;padding:clamp(11px,1.7vw,15px);background:linear-gradient(135deg,#4f46e5,#7c3aed);border:none;border-radius:12px;color:#fff;font-size:clamp(.88rem,1.5vw,1.08rem);font-weight:800;cursor:pointer;letter-spacing:.02em;transition:opacity .15s;' onmouseenter='this.style.opacity=".86"' onmouseleave='this.style.opacity="1"'>
+            📺 Ver mi canal →
+          </button>
+        </div>
+        <script>
+        var c12avatarSrc = null;
+        var c12bannerSrc = null;
+        function c12prevAvatar(input) {
+          if (!input.files || !input.files[0]) return;
+          var reader = new FileReader();
+          reader.onload = function(e) {
+            c12avatarSrc = e.target.result;
+            var prev = document.getElementById('c12aprev');
+            var txt = document.getElementById('c12atxt');
+            if (prev) { prev.style.background = 'url(' + e.target.result + ') center/cover no-repeat'; prev.style.borderColor = 'rgba(99,102,241,.7)'; }
+            if (txt) txt.style.display = 'none';
+          };
+          reader.readAsDataURL(input.files[0]);
+        }
+        function c12prevBanner(input) {
+          if (!input.files || !input.files[0]) return;
+          var reader = new FileReader();
+          reader.onload = function(e) {
+            c12bannerSrc = e.target.result;
+            var prev = document.getElementById('c12bprev');
+            var txt = document.getElementById('c12btxt');
+            if (prev) { prev.style.background = 'url(' + e.target.result + ') center/cover no-repeat'; prev.style.borderColor = 'rgba(99,102,241,.7)'; }
+            if (txt) txt.style.display = 'none';
+          };
+          reader.readAsDataURL(input.files[0]);
+        }
+        function c12submit() {
+          var name = (document.getElementById('c12ni') || {}).value || '';
+          var desc = (document.getElementById('c12di') || {}).value || '';
+          var nm = document.getElementById('c12nm');
+          if (nm) nm.textContent = name || 'Tu Canal de YouTube';
+          var ds = document.getElementById('c12ds');
+          if (ds) { if (desc) { ds.textContent = desc; ds.style.display = 'block'; } else ds.style.display = 'none'; }
+          if (c12avatarSrc) {
+            var av = document.getElementById('c12av');
+            var avt = document.getElementById('c12avt');
+            if (av) av.style.background = 'url(' + c12avatarSrc + ') center/cover no-repeat';
+            if (avt) avt.style.display = 'none';
+          }
+          if (c12bannerSrc) {
+            var bd = document.getElementById('c12bd');
+            var bt = document.getElementById('c12bt');
+            if (bd) bd.style.background = 'url(' + c12bannerSrc + ') center/cover no-repeat';
+            if (bt) bt.style.opacity = '0';
+          }
+          changeSlide(1);
+        }
+        <\/script>
+      `}},
+
+      // 8 — Preview interactivo de YouTube
+      { type: "rawhtml", data: { html: `
+        <div style='padding:1.5% 2.5%;height:100%;display:flex;flex-direction:column;gap:5px;box-sizing:border-box;'>
+          <p style='font-size:clamp(.56rem,.86vw,.66rem);color:rgba(255,255,255,.24);margin:0;text-align:center;flex-shrink:0;'>Haz clic en el banner, la foto o una miniatura para ver cómo crearla con Claude</p>
 
           <div style='background:#0f0f0f;border-radius:12px;overflow:hidden;flex:1;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.1);min-height:0;'>
 
             <div style='background:#212121;padding:5px 10px;display:flex;align-items:center;gap:7px;flex-shrink:0;'>
               <div style='display:flex;gap:4px;'>
-                <div style='width:8px;height:8px;border-radius:50%;background:#ff5f57;'></div>
-                <div style='width:8px;height:8px;border-radius:50%;background:#ffbd2e;'></div>
-                <div style='width:8px;height:8px;border-radius:50%;background:#28ca41;'></div>
+                <div style='width:7px;height:7px;border-radius:50%;background:#ff5f57;'></div>
+                <div style='width:7px;height:7px;border-radius:50%;background:#ffbd2e;'></div>
+                <div style='width:7px;height:7px;border-radius:50%;background:#28ca41;'></div>
               </div>
-              <div style='flex:1;background:#383838;border-radius:4px;padding:3px 10px;font-size:clamp(.5rem,.75vw,.62rem);color:rgba(255,255,255,.3);font-family:monospace;'>youtube.com/c/tucanal</div>
+              <div style='flex:1;background:#383838;border-radius:4px;padding:2px 10px;font-size:clamp(.48rem,.72vw,.58rem);color:rgba(255,255,255,.28);font-family:monospace;'>youtube.com/c/tucanal</div>
             </div>
 
-            <div id='c12bd' class='c12el' data-c12='banner' onclick='c12show("banner")' style='cursor:pointer;position:relative;background:linear-gradient(135deg,#1e1b4b 0%,#312e81 45%,#4c1d95 75%,#5b21b6 100%);height:clamp(50px,8.5vw,76px);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:filter .15s;background-size:cover;background-position:center;' onmouseenter='this.style.filter="brightness(1.15)"' onmouseleave='this.style.filter="brightness(1)"'>
-              <div id='c12bt' style='display:flex;align-items:center;gap:clamp(6px,1.2vw,12px);pointer-events:none;transition:opacity .3s;'>
-                <div style='font-size:clamp(.62rem,1vw,.78rem);font-weight:900;color:rgba(255,255,255,.75);letter-spacing:.04em;text-transform:uppercase;'>Banner del canal</div>
-                <div style='width:1px;height:14px;background:rgba(255,255,255,.2);'></div>
-                <div style='font-size:clamp(.52rem,.8vw,.62rem);color:rgba(255,255,255,.4);'>2560×1440</div>
+            <div id='c12bd' class='c12el' data-c12='banner' onclick='c12show("banner")' style='cursor:pointer;position:relative;background:linear-gradient(135deg,#1e1b4b 0%,#312e81 45%,#4c1d95 75%,#5b21b6 100%);height:clamp(52px,9vw,82px);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:filter .15s;background-size:cover;background-position:center;' onmouseenter='this.style.filter="brightness(1.12)"' onmouseleave='this.style.filter="brightness(1)"'>
+              <div id='c12bt' style='display:flex;align-items:center;gap:10px;pointer-events:none;transition:opacity .3s;'>
+                <div style='font-size:clamp(.6rem,.96vw,.75rem);font-weight:900;color:rgba(255,255,255,.6);letter-spacing:.04em;text-transform:uppercase;'>Banner del canal</div>
+                <div style='width:1px;height:12px;background:rgba(255,255,255,.18);'></div>
+                <div style='font-size:clamp(.5rem,.76vw,.6rem);color:rgba(255,255,255,.3);'>2560×1440</div>
               </div>
-              <div style='position:absolute;top:4px;right:8px;background:rgba(99,102,241,.45);border:1px solid rgba(99,102,241,.65);border-radius:4px;padding:2px 6px;font-size:clamp(.44rem,.66vw,.54rem);color:#c7d2fe;font-weight:700;pointer-events:none;'>CLIC</div>
             </div>
 
-            <div style='display:flex;align-items:center;gap:clamp(7px,1.2vw,12px);padding:clamp(7px,1.1vw,11px) clamp(10px,1.5vw,15px);background:#0f0f0f;flex-shrink:0;'>
-              <div id='c12av' class='c12el' data-c12='avatar' onclick='c12show("avatar")' style='cursor:pointer;width:clamp(36px,6vw,52px);height:clamp(36px,6vw,52px);min-width:clamp(36px,6vw,52px);border-radius:50%;background:linear-gradient(135deg,#4f46e5,#818cf8);display:flex;align-items:center;justify-content:center;font-size:clamp(.54rem,.86vw,.68rem);color:#fff;font-weight:900;border:2px solid rgba(99,102,241,.5);transition:border-color .15s;overflow:hidden;background-size:cover;background-position:center;' onmouseenter='this.style.borderColor="rgba(250,204,21,.85)"' onmouseleave='this.style.borderColor="rgba(99,102,241,.5)"'><span id='c12avt'>TÚ</span></div>
+            <div style='display:flex;align-items:center;gap:clamp(8px,1.3vw,14px);padding:clamp(8px,1.3vw,13px) clamp(12px,1.8vw,18px);background:#0f0f0f;flex-shrink:0;'>
+              <div id='c12av' class='c12el' data-c12='avatar' onclick='c12show("avatar")' style='cursor:pointer;width:clamp(38px,6.4vw,56px);height:clamp(38px,6.4vw,56px);min-width:clamp(38px,6.4vw,56px);border-radius:50%;background:linear-gradient(135deg,#4f46e5,#818cf8);display:flex;align-items:center;justify-content:center;font-size:clamp(.56rem,.88vw,.7rem);color:#fff;font-weight:900;border:2px solid rgba(99,102,241,.4);transition:border-color .15s;overflow:hidden;background-size:cover;background-position:center;' onmouseenter='this.style.borderColor="rgba(250,204,21,.8)"' onmouseleave='this.style.borderColor="rgba(99,102,241,.4)"'><span id='c12avt'>TÚ</span></div>
               <div style='flex:1;min-width:0;'>
-                <div id='c12nm' style='font-size:clamp(.8rem,1.38vw,.98rem);font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;'>Tu Canal de YouTube</div>
-                <div style='font-size:clamp(.56rem,.86vw,.68rem);color:rgba(255,255,255,.42);margin-top:1px;'>1.2K suscriptores · 24 videos</div>
-                <div id='c12ds' style='font-size:clamp(.52rem,.8vw,.62rem);color:rgba(255,255,255,.3);margin-top:1px;display:none;'></div>
+                <div id='c12nm' style='font-size:clamp(.84rem,1.42vw,1.02rem);font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;'>Tu Canal de YouTube</div>
+                <div style='font-size:clamp(.56rem,.86vw,.68rem);color:rgba(255,255,255,.38);margin-top:1px;'>1.2K suscriptores · 24 videos</div>
+                <div id='c12ds' style='font-size:clamp(.5rem,.76vw,.6rem);color:rgba(255,255,255,.28);margin-top:1px;display:none;'></div>
               </div>
-              <button style='background:#ff0000;color:#fff;border:none;border-radius:20px;padding:clamp(4px,.8vw,7px) clamp(9px,1.5vw,15px);font-size:clamp(.6rem,.92vw,.73rem);font-weight:700;cursor:default;white-space:nowrap;'>Suscribirse</button>
+              <button style='background:#ff0000;color:#fff;border:none;border-radius:20px;padding:clamp(5px,.86vw,8px) clamp(10px,1.6vw,16px);font-size:clamp(.62rem,.94vw,.74rem);font-weight:700;cursor:default;white-space:nowrap;'>Suscribirse</button>
             </div>
 
-            <div style='display:flex;padding:0 clamp(10px,1.5vw,15px);border-bottom:1px solid rgba(255,255,255,.1);background:#0f0f0f;flex-shrink:0;overflow-x:auto;'>
-              <div style='padding:clamp(5px,.9vw,9px) clamp(7px,1.2vw,13px);font-size:clamp(.6rem,.92vw,.72rem);color:#fff;border-bottom:2px solid #fff;white-space:nowrap;'>Inicio</div>
-              <div style='padding:clamp(5px,.9vw,9px) clamp(7px,1.2vw,13px);font-size:clamp(.6rem,.92vw,.72rem);color:rgba(255,255,255,.42);white-space:nowrap;'>Videos</div>
-              <div style='padding:clamp(5px,.9vw,9px) clamp(7px,1.2vw,13px);font-size:clamp(.6rem,.92vw,.72rem);color:rgba(255,255,255,.42);white-space:nowrap;'>Listas</div>
-              <div style='padding:clamp(5px,.9vw,9px) clamp(7px,1.2vw,13px);font-size:clamp(.6rem,.92vw,.72rem);color:rgba(255,255,255,.42);white-space:nowrap;'>Acerca de</div>
+            <div style='display:flex;padding:0 clamp(12px,1.8vw,18px);border-bottom:1px solid rgba(255,255,255,.08);background:#0f0f0f;flex-shrink:0;'>
+              <div style='padding:clamp(5px,.88vw,8px) clamp(8px,1.3vw,13px);font-size:clamp(.6rem,.9vw,.7rem);color:#fff;border-bottom:2px solid #fff;white-space:nowrap;'>Inicio</div>
+              <div style='padding:clamp(5px,.88vw,8px) clamp(8px,1.3vw,13px);font-size:clamp(.6rem,.9vw,.7rem);color:rgba(255,255,255,.4);white-space:nowrap;'>Videos</div>
+              <div style='padding:clamp(5px,.88vw,8px) clamp(8px,1.3vw,13px);font-size:clamp(.6rem,.9vw,.7rem);color:rgba(255,255,255,.4);white-space:nowrap;'>Listas</div>
+              <div style='padding:clamp(5px,.88vw,8px) clamp(8px,1.3vw,13px);font-size:clamp(.6rem,.9vw,.7rem);color:rgba(255,255,255,.4);white-space:nowrap;'>Acerca de</div>
             </div>
 
-            <div style='display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(5px,.9vw,9px);padding:clamp(7px,1.1vw,11px) clamp(10px,1.5vw,15px);flex:1;min-height:0;overflow:hidden;'>
+            <div style='display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(6px,1vw,10px);padding:clamp(8px,1.3vw,13px) clamp(12px,1.8vw,18px);flex:1;min-height:0;overflow:hidden;'>
               <div class='c12el' data-c12='thumb' onclick='c12show("thumb")' style='cursor:pointer;transition:transform .15s;' onmouseenter='this.style.transform="scale(1.03)"' onmouseleave='this.style.transform="scale(1)"'>
-                <div style='border-radius:7px 7px 0 0;background:linear-gradient(135deg,#1e1b4b,#312e81);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;'>
-                  <div style='font-size:clamp(.52rem,.82vw,.64rem);font-weight:800;color:#facc15;text-align:center;padding:4px;text-transform:uppercase;letter-spacing:.04em;'>PORTADA<br>1280×720</div>
-                  <div style='position:absolute;bottom:3px;right:3px;background:rgba(0,0,0,.75);border-radius:3px;padding:1px 4px;font-size:clamp(.46rem,.68vw,.56rem);color:#fff;'>3:24</div>
+                <div style='border-radius:8px 8px 0 0;background:linear-gradient(135deg,#1e1b4b,#312e81);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;'>
+                  <div style='font-size:clamp(.52rem,.8vw,.62rem);font-weight:800;color:#facc15;text-align:center;text-transform:uppercase;letter-spacing:.04em;'>PORTADA<br>1280×720</div>
+                  <div style='position:absolute;bottom:3px;right:3px;background:rgba(0,0,0,.75);border-radius:3px;padding:1px 4px;font-size:clamp(.44rem,.65vw,.54rem);color:#fff;'>3:24</div>
                 </div>
-                <div style='padding:clamp(3px,.6vw,6px) 0;'>
-                  <div style='font-size:clamp(.6rem,.92vw,.73rem);font-weight:600;color:#fff;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;'>Título del video — estilo consistente</div>
-                  <div style='font-size:clamp(.52rem,.78vw,.62rem);color:rgba(255,255,255,.36);margin-top:2px;'>1.2K vistas · hace 3 días</div>
+                <div style='padding:clamp(4px,.7vw,7px) 0;'>
+                  <div style='font-size:clamp(.6rem,.92vw,.72rem);font-weight:600;color:#fff;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;'>Título del video — mismo estilo siempre</div>
+                  <div style='font-size:clamp(.5rem,.74vw,.6rem);color:rgba(255,255,255,.34);margin-top:2px;'>1.2K vistas · hace 3 días</div>
                 </div>
               </div>
               <div class='c12el' data-c12='thumb' onclick='c12show("thumb")' style='cursor:pointer;transition:transform .15s;' onmouseenter='this.style.transform="scale(1.03)"' onmouseleave='this.style.transform="scale(1)"'>
-                <div style='border-radius:7px 7px 0 0;background:linear-gradient(135deg,#4c1d95,#6d28d9);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;'>
-                  <div style='font-size:clamp(.52rem,.82vw,.64rem);font-weight:800;color:#facc15;text-align:center;padding:4px;text-transform:uppercase;letter-spacing:.04em;'>PORTADA<br>1280×720</div>
-                  <div style='position:absolute;bottom:3px;right:3px;background:rgba(0,0,0,.75);border-radius:3px;padding:1px 4px;font-size:clamp(.46rem,.68vw,.56rem);color:#fff;'>8:47</div>
+                <div style='border-radius:8px 8px 0 0;background:linear-gradient(135deg,#4c1d95,#6d28d9);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;'>
+                  <div style='font-size:clamp(.52rem,.8vw,.62rem);font-weight:800;color:#facc15;text-align:center;text-transform:uppercase;letter-spacing:.04em;'>PORTADA<br>1280×720</div>
+                  <div style='position:absolute;bottom:3px;right:3px;background:rgba(0,0,0,.75);border-radius:3px;padding:1px 4px;font-size:clamp(.44rem,.65vw,.54rem);color:#fff;'>8:47</div>
                 </div>
-                <div style='padding:clamp(3px,.6vw,6px) 0;'>
-                  <div style='font-size:clamp(.6rem,.92vw,.73rem);font-weight:600;color:#fff;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;'>Mismo estilo, otro video de tu canal</div>
-                  <div style='font-size:clamp(.52rem,.78vw,.62rem);color:rgba(255,255,255,.36);margin-top:2px;'>892 vistas · hace 1 semana</div>
+                <div style='padding:clamp(4px,.7vw,7px) 0;'>
+                  <div style='font-size:clamp(.6rem,.92vw,.72rem);font-weight:600;color:#fff;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;'>Otro video con coherencia visual</div>
+                  <div style='font-size:clamp(.5rem,.74vw,.6rem);color:rgba(255,255,255,.34);margin-top:2px;'>892 vistas · hace 1 semana</div>
                 </div>
               </div>
               <div class='c12el' data-c12='thumb' onclick='c12show("thumb")' style='cursor:pointer;transition:transform .15s;' onmouseenter='this.style.transform="scale(1.03)"' onmouseleave='this.style.transform="scale(1)"'>
-                <div style='border-radius:7px 7px 0 0;background:linear-gradient(135deg,#1e3a8a,#1d4ed8);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;'>
-                  <div style='font-size:clamp(.52rem,.82vw,.64rem);font-weight:800;color:#facc15;text-align:center;padding:4px;text-transform:uppercase;letter-spacing:.04em;'>PORTADA<br>1280×720</div>
-                  <div style='position:absolute;bottom:3px;right:3px;background:rgba(0,0,0,.75);border-radius:3px;padding:1px 4px;font-size:clamp(.46rem,.68vw,.56rem);color:#fff;'>12:05</div>
+                <div style='border-radius:8px 8px 0 0;background:linear-gradient(135deg,#1e3a8a,#1d4ed8);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;'>
+                  <div style='font-size:clamp(.52rem,.8vw,.62rem);font-weight:800;color:#facc15;text-align:center;text-transform:uppercase;letter-spacing:.04em;'>PORTADA<br>1280×720</div>
+                  <div style='position:absolute;bottom:3px;right:3px;background:rgba(0,0,0,.75);border-radius:3px;padding:1px 4px;font-size:clamp(.44rem,.65vw,.54rem);color:#fff;'>12:05</div>
                 </div>
-                <div style='padding:clamp(3px,.6vw,6px) 0;'>
-                  <div style='font-size:clamp(.6rem,.92vw,.73rem);font-weight:600;color:#fff;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;'>Los 3 se ven coherentes entre sí</div>
-                  <div style='font-size:clamp(.52rem,.78vw,.62rem);color:rgba(255,255,255,.36);margin-top:2px;'>2.4K vistas · hace 2 semanas</div>
+                <div style='padding:clamp(4px,.7vw,7px) 0;'>
+                  <div style='font-size:clamp(.6rem,.92vw,.72rem);font-weight:600;color:#fff;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;'>Los 3 mantienen el mismo estilo</div>
+                  <div style='font-size:clamp(.5rem,.74vw,.6rem);color:rgba(255,255,255,.34);margin-top:2px;'>2.4K vistas · hace 2 semanas</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div id='c12panel' style='background:rgba(99,102,241,.08);border:1px solid rgba(99,102,241,.22);border-radius:10px;padding:clamp(7px,1.1vw,11px) clamp(10px,1.5vw,15px);flex-shrink:0;display:flex;align-items:center;min-height:clamp(42px,6.2vw,56px);'>
-            <div style='font-size:clamp(.64rem,1vw,.76rem);color:rgba(255,255,255,.38);width:100%;text-align:center;'>Haz clic en el <strong style='color:#a5b4fc;'>banner</strong>, la <strong style='color:#a5b4fc;'>foto de perfil</strong> o una <strong style='color:#a5b4fc;'>miniatura</strong> para ver cómo crearla con Claude</div>
+          <div id='c12panel' style='background:rgba(99,102,241,.07);border:1px solid rgba(99,102,241,.18);border-radius:8px;padding:clamp(6px,1vw,10px) clamp(10px,1.5vw,14px);flex-shrink:0;display:flex;align-items:center;min-height:clamp(38px,5.5vw,50px);'>
+            <div style='font-size:clamp(.6rem,.92vw,.7rem);color:rgba(255,255,255,.32);width:100%;text-align:center;'>Haz clic en el <strong style='color:#a5b4fc;'>banner</strong>, la <strong style='color:#a5b4fc;'>foto de perfil</strong> o una <strong style='color:#a5b4fc;'>miniatura</strong></div>
           </div>
         </div>
         <script>
@@ -5742,46 +5826,14 @@ Plataforma: TikTok / Reels</pre>
             thumb: ['🖼️ Miniatura / Portada — 1280 × 720 px', 'Crea una plantilla de thumbnail para mi canal de [TEMA]. Colores: [COLORES HEX]. Fuente: [FUENTE]. Estructura: [foto izquierda + título derecha / título arriba + fondo imagen]. Aplica este estilo a TODAS mis portadas.']
           };
           var label = data[type][0]; var prompt = data[type][1];
-          document.getElementById('c12panel').innerHTML = '<div style="color:#fb923c;font-weight:800;font-size:clamp(.62rem,.96vw,.74rem);margin-bottom:3px;">' + label + '</div><div style="color:rgba(255,255,255,.34);font-size:clamp(.52rem,.8vw,.62rem);margin-bottom:2px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;">Prompt para Claude:</div><div style="color:#c4b5fd;font-size:clamp(.58rem,.88vw,.7rem);line-height:1.45;font-style:italic;">' + prompt + '</div>';
+          document.getElementById('c12panel').innerHTML = '<div style="color:#fb923c;font-weight:800;font-size:clamp(.6rem,.92vw,.7rem);margin-bottom:3px;">' + label + '</div><div style="color:rgba(255,255,255,.3);font-size:clamp(.5rem,.76vw,.6rem);margin-bottom:2px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;">Prompt para Claude:</div><div style="color:#c4b5fd;font-size:clamp(.56rem,.86vw,.68rem);line-height:1.45;font-style:italic;">' + prompt + '</div>';
           document.querySelectorAll('.c12el').forEach(function(e) { e.style.outline = 'none'; });
           document.querySelectorAll('[data-c12="' + type + '"]').forEach(function(e) { e.style.outline = '2px solid #fb923c'; e.style.borderRadius = type === 'avatar' ? '50%' : '8px'; });
-        }
-        function c12upAvatar(input) {
-          if (!input.files || !input.files[0]) return;
-          var reader = new FileReader();
-          reader.onload = function(e) {
-            var av = document.getElementById('c12av');
-            var avt = document.getElementById('c12avt');
-            if (av) av.style.background = 'url(' + e.target.result + ') center/cover no-repeat';
-            if (avt) avt.style.display = 'none';
-          };
-          reader.readAsDataURL(input.files[0]);
-        }
-        function c12upBanner(input) {
-          if (!input.files || !input.files[0]) return;
-          var reader = new FileReader();
-          reader.onload = function(e) {
-            var bd = document.getElementById('c12bd');
-            var bt = document.getElementById('c12bt');
-            if (bd) bd.style.background = 'url(' + e.target.result + ') center/cover no-repeat';
-            if (bt) bt.style.opacity = '0';
-          };
-          reader.readAsDataURL(input.files[0]);
-        }
-        function c12upName(val) {
-          var el = document.getElementById('c12nm');
-          if (el) el.textContent = val || 'Tu Canal de YouTube';
-        }
-        function c12upDesc(val) {
-          var ds = document.getElementById('c12ds');
-          if (!ds) return;
-          if (val) { ds.textContent = val; ds.style.display = 'block'; }
-          else ds.style.display = 'none';
         }
         <\/script>
       `}},
 
-      // 8 — Cierre
+      // 9 — Cierre
       { type: "rawhtml", data: { html: `
         <div style='display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:6%;text-align:center;gap:clamp(14px,2.2vw,22px);'>
           <div style='font-size:clamp(2.4rem,5vw,3.6rem);'>🚀</div>
