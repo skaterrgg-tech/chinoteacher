@@ -5684,6 +5684,39 @@ Plataforma: TikTok / Reels</pre>
             </div>
           </div>
 
+          <div>
+            <div style='font-size:clamp(.6rem,.9vw,.7rem);font-weight:700;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;'>🖼️ Portadas y títulos de video <span style='font-weight:400;color:rgba(255,255,255,.22);font-size:.9em;'>(opcional)</span></div>
+            <div style='display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(7px,1.1vw,11px);'>
+              <div>
+                <label for='c12ti0' style='cursor:pointer;display:block;margin-bottom:5px;'>
+                  <div id='c12tprev0' style='aspect-ratio:16/9;background:rgba(99,102,241,.06);border:1.5px dashed rgba(99,102,241,.28);border-radius:7px;display:flex;align-items:center;justify-content:center;transition:border-color .2s;background-size:cover;background-position:center;' onmouseenter='this.style.borderColor="rgba(99,102,241,.65)"' onmouseleave='this.style.borderColor="rgba(99,102,241,.28)"'>
+                    <span id='c12ttxt0' style='font-size:clamp(.7rem,1.1vw,.85rem);color:rgba(255,255,255,.25);'>⬆️</span>
+                  </div>
+                  <input id='c12ti0' type='file' accept='image/*' style='display:none;' onchange='c12prevThumb(this,0)'>
+                </label>
+                <input id='c12tvt0' type='text' placeholder='Título del video 1' maxlength='80' style='width:100%;box-sizing:border-box;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.12);border-radius:7px;padding:clamp(5px,.8vw,8px) clamp(7px,1vw,10px);font-size:clamp(.64rem,1vw,.76rem);color:#fff;outline:none;font-family:inherit;transition:border-color .15s;' onfocus='this.style.borderColor="rgba(99,102,241,.7)"' onblur='this.style.borderColor="rgba(255,255,255,.12)"'>
+              </div>
+              <div>
+                <label for='c12ti1' style='cursor:pointer;display:block;margin-bottom:5px;'>
+                  <div id='c12tprev1' style='aspect-ratio:16/9;background:rgba(99,102,241,.06);border:1.5px dashed rgba(99,102,241,.28);border-radius:7px;display:flex;align-items:center;justify-content:center;transition:border-color .2s;background-size:cover;background-position:center;' onmouseenter='this.style.borderColor="rgba(99,102,241,.65)"' onmouseleave='this.style.borderColor="rgba(99,102,241,.28)"'>
+                    <span id='c12ttxt1' style='font-size:clamp(.7rem,1.1vw,.85rem);color:rgba(255,255,255,.25);'>⬆️</span>
+                  </div>
+                  <input id='c12ti1' type='file' accept='image/*' style='display:none;' onchange='c12prevThumb(this,1)'>
+                </label>
+                <input id='c12tvt1' type='text' placeholder='Título del video 2' maxlength='80' style='width:100%;box-sizing:border-box;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.12);border-radius:7px;padding:clamp(5px,.8vw,8px) clamp(7px,1vw,10px);font-size:clamp(.64rem,1vw,.76rem);color:#fff;outline:none;font-family:inherit;transition:border-color .15s;' onfocus='this.style.borderColor="rgba(99,102,241,.7)"' onblur='this.style.borderColor="rgba(255,255,255,.12)"'>
+              </div>
+              <div>
+                <label for='c12ti2' style='cursor:pointer;display:block;margin-bottom:5px;'>
+                  <div id='c12tprev2' style='aspect-ratio:16/9;background:rgba(99,102,241,.06);border:1.5px dashed rgba(99,102,241,.28);border-radius:7px;display:flex;align-items:center;justify-content:center;transition:border-color .2s;background-size:cover;background-position:center;' onmouseenter='this.style.borderColor="rgba(99,102,241,.65)"' onmouseleave='this.style.borderColor="rgba(99,102,241,.28)"'>
+                    <span id='c12ttxt2' style='font-size:clamp(.7rem,1.1vw,.85rem);color:rgba(255,255,255,.25);'>⬆️</span>
+                  </div>
+                  <input id='c12ti2' type='file' accept='image/*' style='display:none;' onchange='c12prevThumb(this,2)'>
+                </label>
+                <input id='c12tvt2' type='text' placeholder='Título del video 3' maxlength='80' style='width:100%;box-sizing:border-box;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.12);border-radius:7px;padding:clamp(5px,.8vw,8px) clamp(7px,1vw,10px);font-size:clamp(.64rem,1vw,.76rem);color:#fff;outline:none;font-family:inherit;transition:border-color .15s;' onfocus='this.style.borderColor="rgba(99,102,241,.7)"' onblur='this.style.borderColor="rgba(255,255,255,.12)"'>
+              </div>
+            </div>
+          </div>
+
           <button onclick='c12submit()' style='width:100%;padding:clamp(11px,1.7vw,15px);background:linear-gradient(135deg,#4f46e5,#7c3aed);border:none;border-radius:12px;color:#fff;font-size:clamp(.88rem,1.5vw,1.08rem);font-weight:800;cursor:pointer;letter-spacing:.02em;transition:opacity .15s;' onmouseenter='this.style.opacity=".86"' onmouseleave='this.style.opacity="1"'>
             📺 Ver mi canal →
           </button>
@@ -5733,32 +5766,32 @@ Plataforma: TikTok / Reels</pre>
 
             <div style='display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(6px,1vw,10px);padding:clamp(8px,1.3vw,13px) clamp(12px,1.8vw,18px);flex:1;min-height:0;overflow:hidden;'>
               <div class='c12el' data-c12='thumb' onclick='c12show("thumb")' style='cursor:pointer;transition:transform .15s;' onmouseenter='this.style.transform="scale(1.03)"' onmouseleave='this.style.transform="scale(1)"'>
-                <div style='border-radius:8px 8px 0 0;background:linear-gradient(135deg,#1e1b4b,#312e81);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;'>
-                  <div style='font-size:clamp(.52rem,.8vw,.62rem);font-weight:800;color:#facc15;text-align:center;text-transform:uppercase;letter-spacing:.04em;'>PORTADA<br>1280×720</div>
+                <div id='c12tpv0' style='border-radius:8px 8px 0 0;background:linear-gradient(135deg,#1e1b4b,#312e81);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;background-size:cover;background-position:center;'>
+                  <div id='c12tph0' style='font-size:clamp(.52rem,.8vw,.62rem);font-weight:800;color:#facc15;text-align:center;text-transform:uppercase;letter-spacing:.04em;'>PORTADA<br>1280×720</div>
                   <div style='position:absolute;bottom:3px;right:3px;background:rgba(0,0,0,.75);border-radius:3px;padding:1px 4px;font-size:clamp(.44rem,.65vw,.54rem);color:#fff;'>3:24</div>
                 </div>
                 <div style='padding:clamp(4px,.7vw,7px) 0;'>
-                  <div style='font-size:clamp(.6rem,.92vw,.72rem);font-weight:600;color:#fff;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;'>Título del video — mismo estilo siempre</div>
+                  <div id='c12tvl0' style='font-size:clamp(.6rem,.92vw,.72rem);font-weight:600;color:#fff;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;'>Título del video — mismo estilo siempre</div>
                   <div style='font-size:clamp(.5rem,.74vw,.6rem);color:rgba(255,255,255,.34);margin-top:2px;'>1.2K vistas · hace 3 días</div>
                 </div>
               </div>
               <div class='c12el' data-c12='thumb' onclick='c12show("thumb")' style='cursor:pointer;transition:transform .15s;' onmouseenter='this.style.transform="scale(1.03)"' onmouseleave='this.style.transform="scale(1)"'>
-                <div style='border-radius:8px 8px 0 0;background:linear-gradient(135deg,#4c1d95,#6d28d9);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;'>
-                  <div style='font-size:clamp(.52rem,.8vw,.62rem);font-weight:800;color:#facc15;text-align:center;text-transform:uppercase;letter-spacing:.04em;'>PORTADA<br>1280×720</div>
+                <div id='c12tpv1' style='border-radius:8px 8px 0 0;background:linear-gradient(135deg,#4c1d95,#6d28d9);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;background-size:cover;background-position:center;'>
+                  <div id='c12tph1' style='font-size:clamp(.52rem,.8vw,.62rem);font-weight:800;color:#facc15;text-align:center;text-transform:uppercase;letter-spacing:.04em;'>PORTADA<br>1280×720</div>
                   <div style='position:absolute;bottom:3px;right:3px;background:rgba(0,0,0,.75);border-radius:3px;padding:1px 4px;font-size:clamp(.44rem,.65vw,.54rem);color:#fff;'>8:47</div>
                 </div>
                 <div style='padding:clamp(4px,.7vw,7px) 0;'>
-                  <div style='font-size:clamp(.6rem,.92vw,.72rem);font-weight:600;color:#fff;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;'>Otro video con coherencia visual</div>
+                  <div id='c12tvl1' style='font-size:clamp(.6rem,.92vw,.72rem);font-weight:600;color:#fff;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;'>Otro video con coherencia visual</div>
                   <div style='font-size:clamp(.5rem,.74vw,.6rem);color:rgba(255,255,255,.34);margin-top:2px;'>892 vistas · hace 1 semana</div>
                 </div>
               </div>
               <div class='c12el' data-c12='thumb' onclick='c12show("thumb")' style='cursor:pointer;transition:transform .15s;' onmouseenter='this.style.transform="scale(1.03)"' onmouseleave='this.style.transform="scale(1)"'>
-                <div style='border-radius:8px 8px 0 0;background:linear-gradient(135deg,#1e3a8a,#1d4ed8);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;'>
-                  <div style='font-size:clamp(.52rem,.8vw,.62rem);font-weight:800;color:#facc15;text-align:center;text-transform:uppercase;letter-spacing:.04em;'>PORTADA<br>1280×720</div>
+                <div id='c12tpv2' style='border-radius:8px 8px 0 0;background:linear-gradient(135deg,#1e3a8a,#1d4ed8);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;background-size:cover;background-position:center;'>
+                  <div id='c12tph2' style='font-size:clamp(.52rem,.8vw,.62rem);font-weight:800;color:#facc15;text-align:center;text-transform:uppercase;letter-spacing:.04em;'>PORTADA<br>1280×720</div>
                   <div style='position:absolute;bottom:3px;right:3px;background:rgba(0,0,0,.75);border-radius:3px;padding:1px 4px;font-size:clamp(.44rem,.65vw,.54rem);color:#fff;'>12:05</div>
                 </div>
                 <div style='padding:clamp(4px,.7vw,7px) 0;'>
-                  <div style='font-size:clamp(.6rem,.92vw,.72rem);font-weight:600;color:#fff;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;'>Los 3 mantienen el mismo estilo</div>
+                  <div id='c12tvl2' style='font-size:clamp(.6rem,.92vw,.72rem);font-weight:600;color:#fff;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;'>Los 3 mantienen el mismo estilo</div>
                   <div style='font-size:clamp(.5rem,.74vw,.6rem);color:rgba(255,255,255,.34);margin-top:2px;'>2.4K vistas · hace 2 semanas</div>
                 </div>
               </div>
@@ -5805,6 +5838,7 @@ Plataforma: TikTok / Reels</pre>
 // ═══════════════════════════════════════════════════════
 var c12avatarSrc = null;
 var c12bannerSrc = null;
+var c12thumbSrc = [null, null, null];
 
 function c12prevAvatar(input) {
   if (!input.files || !input.files[0]) return;
@@ -5813,6 +5847,19 @@ function c12prevAvatar(input) {
     c12avatarSrc = e.target.result;
     var prev = document.getElementById('c12aprev');
     var txt = document.getElementById('c12atxt');
+    if (prev) { prev.style.background = 'url(' + e.target.result + ') center/cover no-repeat'; prev.style.borderColor = 'rgba(99,102,241,.7)'; }
+    if (txt) txt.style.display = 'none';
+  };
+  reader.readAsDataURL(input.files[0]);
+}
+
+function c12prevThumb(input, idx) {
+  if (!input.files || !input.files[0]) return;
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    c12thumbSrc[idx] = e.target.result;
+    var prev = document.getElementById('c12tprev' + idx);
+    var txt = document.getElementById('c12ttxt' + idx);
     if (prev) { prev.style.background = 'url(' + e.target.result + ') center/cover no-repeat'; prev.style.borderColor = 'rgba(99,102,241,.7)'; }
     if (txt) txt.style.display = 'none';
   };
@@ -5850,6 +5897,17 @@ function c12submit() {
     var bt = document.getElementById('c12bt');
     if (bd) bd.style.background = 'url(' + c12bannerSrc + ') center/cover no-repeat';
     if (bt) bt.style.opacity = '0';
+  }
+  for (var i = 0; i < 3; i++) {
+    var tvt = (document.getElementById('c12tvt' + i) || {}).value || '';
+    var tvl = document.getElementById('c12tvl' + i);
+    if (tvl && tvt) tvl.textContent = tvt;
+    if (c12thumbSrc[i]) {
+      var tpv = document.getElementById('c12tpv' + i);
+      var tph = document.getElementById('c12tph' + i);
+      if (tpv) tpv.style.background = 'url(' + c12thumbSrc[i] + ') center/cover no-repeat';
+      if (tph) tph.style.display = 'none';
+    }
   }
   changeSlide(1);
 }
