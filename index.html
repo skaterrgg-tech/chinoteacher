@@ -5688,55 +5688,6 @@ Plataforma: TikTok / Reels</pre>
             📺 Ver mi canal →
           </button>
         </div>
-        <script>
-        var c12avatarSrc = null;
-        var c12bannerSrc = null;
-        function c12prevAvatar(input) {
-          if (!input.files || !input.files[0]) return;
-          var reader = new FileReader();
-          reader.onload = function(e) {
-            c12avatarSrc = e.target.result;
-            var prev = document.getElementById('c12aprev');
-            var txt = document.getElementById('c12atxt');
-            if (prev) { prev.style.background = 'url(' + e.target.result + ') center/cover no-repeat'; prev.style.borderColor = 'rgba(99,102,241,.7)'; }
-            if (txt) txt.style.display = 'none';
-          };
-          reader.readAsDataURL(input.files[0]);
-        }
-        function c12prevBanner(input) {
-          if (!input.files || !input.files[0]) return;
-          var reader = new FileReader();
-          reader.onload = function(e) {
-            c12bannerSrc = e.target.result;
-            var prev = document.getElementById('c12bprev');
-            var txt = document.getElementById('c12btxt');
-            if (prev) { prev.style.background = 'url(' + e.target.result + ') center/cover no-repeat'; prev.style.borderColor = 'rgba(99,102,241,.7)'; }
-            if (txt) txt.style.display = 'none';
-          };
-          reader.readAsDataURL(input.files[0]);
-        }
-        function c12submit() {
-          var name = (document.getElementById('c12ni') || {}).value || '';
-          var desc = (document.getElementById('c12di') || {}).value || '';
-          var nm = document.getElementById('c12nm');
-          if (nm) nm.textContent = name || 'Tu Canal de YouTube';
-          var ds = document.getElementById('c12ds');
-          if (ds) { if (desc) { ds.textContent = desc; ds.style.display = 'block'; } else ds.style.display = 'none'; }
-          if (c12avatarSrc) {
-            var av = document.getElementById('c12av');
-            var avt = document.getElementById('c12avt');
-            if (av) av.style.background = 'url(' + c12avatarSrc + ') center/cover no-repeat';
-            if (avt) avt.style.display = 'none';
-          }
-          if (c12bannerSrc) {
-            var bd = document.getElementById('c12bd');
-            var bt = document.getElementById('c12bt');
-            if (bd) bd.style.background = 'url(' + c12bannerSrc + ') center/cover no-repeat';
-            if (bt) bt.style.opacity = '0';
-          }
-          changeSlide(1);
-        }
-        <\/script>
       `}},
 
       // 8 — Preview interactivo de YouTube
@@ -5818,19 +5769,6 @@ Plataforma: TikTok / Reels</pre>
             <div style='font-size:clamp(.6rem,.92vw,.7rem);color:rgba(255,255,255,.32);width:100%;text-align:center;'>Haz clic en el <strong style='color:#a5b4fc;'>banner</strong>, la <strong style='color:#a5b4fc;'>foto de perfil</strong> o una <strong style='color:#a5b4fc;'>miniatura</strong></div>
           </div>
         </div>
-        <script>
-        function c12show(type) {
-          var data = {
-            banner: ['🎨 Banner de Canal — 2560 × 1440 px', 'Diseña un banner para mi canal de YouTube sobre [TEMA]. Nombre: [NOMBRE]. Tipografía: [FUENTE]. Paleta: [COLORES HEX]. Refleja [ESTILO]. Formato 2560×1440 px.'],
-            avatar: ['📷 Foto de Perfil — 800 × 800 px', 'Diseña una foto de perfil o logo para mi canal de YouTube. Tema: [TEMA]. Colores: [COLORES HEX]. Debe verse bien en círculo pequeño. Estilo: [minimalista / profesional / moderno / colorido].'],
-            thumb: ['🖼️ Miniatura / Portada — 1280 × 720 px', 'Crea una plantilla de thumbnail para mi canal de [TEMA]. Colores: [COLORES HEX]. Fuente: [FUENTE]. Estructura: [foto izquierda + título derecha / título arriba + fondo imagen]. Aplica este estilo a TODAS mis portadas.']
-          };
-          var label = data[type][0]; var prompt = data[type][1];
-          document.getElementById('c12panel').innerHTML = '<div style="color:#fb923c;font-weight:800;font-size:clamp(.6rem,.92vw,.7rem);margin-bottom:3px;">' + label + '</div><div style="color:rgba(255,255,255,.3);font-size:clamp(.5rem,.76vw,.6rem);margin-bottom:2px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;">Prompt para Claude:</div><div style="color:#c4b5fd;font-size:clamp(.56rem,.86vw,.68rem);line-height:1.45;font-style:italic;">' + prompt + '</div>';
-          document.querySelectorAll('.c12el').forEach(function(e) { e.style.outline = 'none'; });
-          document.querySelectorAll('[data-c12="' + type + '"]').forEach(function(e) { e.style.outline = '2px solid #fb923c'; e.style.borderRadius = type === 'avatar' ? '50%' : '8px'; });
-        }
-        <\/script>
       `}},
 
       // 9 — Cierre
@@ -5861,6 +5799,72 @@ Plataforma: TikTok / Reels</pre>
   }
 
 ];
+
+// ═══════════════════════════════════════════════════════
+//  CLASE 12 — YOUTUBE PRO PREVIEW
+// ═══════════════════════════════════════════════════════
+var c12avatarSrc = null;
+var c12bannerSrc = null;
+
+function c12prevAvatar(input) {
+  if (!input.files || !input.files[0]) return;
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    c12avatarSrc = e.target.result;
+    var prev = document.getElementById('c12aprev');
+    var txt = document.getElementById('c12atxt');
+    if (prev) { prev.style.background = 'url(' + e.target.result + ') center/cover no-repeat'; prev.style.borderColor = 'rgba(99,102,241,.7)'; }
+    if (txt) txt.style.display = 'none';
+  };
+  reader.readAsDataURL(input.files[0]);
+}
+
+function c12prevBanner(input) {
+  if (!input.files || !input.files[0]) return;
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    c12bannerSrc = e.target.result;
+    var prev = document.getElementById('c12bprev');
+    var txt = document.getElementById('c12btxt');
+    if (prev) { prev.style.background = 'url(' + e.target.result + ') center/cover no-repeat'; prev.style.borderColor = 'rgba(99,102,241,.7)'; }
+    if (txt) txt.style.display = 'none';
+  };
+  reader.readAsDataURL(input.files[0]);
+}
+
+function c12submit() {
+  var name = (document.getElementById('c12ni') || {}).value || '';
+  var desc = (document.getElementById('c12di') || {}).value || '';
+  var nm = document.getElementById('c12nm');
+  if (nm) nm.textContent = name || 'Tu Canal de YouTube';
+  var ds = document.getElementById('c12ds');
+  if (ds) { if (desc) { ds.textContent = desc; ds.style.display = 'block'; } else ds.style.display = 'none'; }
+  if (c12avatarSrc) {
+    var av = document.getElementById('c12av');
+    var avt = document.getElementById('c12avt');
+    if (av) av.style.background = 'url(' + c12avatarSrc + ') center/cover no-repeat';
+    if (avt) avt.style.display = 'none';
+  }
+  if (c12bannerSrc) {
+    var bd = document.getElementById('c12bd');
+    var bt = document.getElementById('c12bt');
+    if (bd) bd.style.background = 'url(' + c12bannerSrc + ') center/cover no-repeat';
+    if (bt) bt.style.opacity = '0';
+  }
+  changeSlide(1);
+}
+
+function c12show(type) {
+  var data = {
+    banner: ['🎨 Banner de Canal — 2560 × 1440 px', 'Diseña un banner para mi canal de YouTube sobre [TEMA]. Nombre: [NOMBRE]. Tipografía: [FUENTE]. Paleta: [COLORES HEX]. Refleja [ESTILO]. Formato 2560×1440 px.'],
+    avatar: ['📷 Foto de Perfil — 800 × 800 px', 'Diseña una foto de perfil o logo para mi canal de YouTube. Tema: [TEMA]. Colores: [COLORES HEX]. Debe verse bien en círculo pequeño. Estilo: [minimalista / profesional / moderno / colorido].'],
+    thumb: ['🖼️ Miniatura / Portada — 1280 × 720 px', 'Crea una plantilla de thumbnail para mi canal de [TEMA]. Colores: [COLORES HEX]. Fuente: [FUENTE]. Estructura: [foto izquierda + título derecha / título arriba + fondo imagen]. Aplica este estilo a TODAS mis portadas.']
+  };
+  var label = data[type][0]; var prompt = data[type][1];
+  document.getElementById('c12panel').innerHTML = '<div style="color:#fb923c;font-weight:800;font-size:clamp(.6rem,.92vw,.7rem);margin-bottom:3px;">' + label + '</div><div style="color:rgba(255,255,255,.3);font-size:clamp(.5rem,.76vw,.6rem);margin-bottom:2px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;">Prompt para Claude:</div><div style="color:#c4b5fd;font-size:clamp(.56rem,.86vw,.68rem);line-height:1.45;font-style:italic;">' + prompt + '</div>';
+  document.querySelectorAll('.c12el').forEach(function(e) { e.style.outline = 'none'; });
+  document.querySelectorAll('[data-c12="' + type + '"]').forEach(function(e) { e.style.outline = '2px solid #fb923c'; e.style.borderRadius = type === 'avatar' ? '50%' : '8px'; });
+}
 
 // ═══════════════════════════════════════════════════════
 //  CLASE 04 — INTERACTIVE COLOR CONTROLS
